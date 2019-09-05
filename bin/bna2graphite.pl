@@ -15,26 +15,18 @@
 #
 #  Dependencies     : The following non standard perl modules are needed
 #                     perl-Log-Log4perl perl-Switch
-#
-#  Modification History:
-#
-#  Author           Date        Version         Comment
-#  ===============  =========== =============== =================================================
-#  Drach (td)       26.11.2017  0.1             Initial version
-#
-#  End Modification History
-# ==============================================================================================
-
 
 use strict;
 use warnings;
-use Switch;
 use constant false => 0;
 use constant true  => 1;
-use Log::Log4perl;
-use Getopt::Long;
-use POSIX qw(strftime);
 
+use Getopt::Long;
+use Log::Log4perl;
+use POSIX qw(strftime);
+use Switch;
+
+# variable defaults are set in case no value is found in config file
 #log variables
 my $log; # log4perl logger
 my $logfile = '/opt/bna2graphite/log/bna2graphite.log';
@@ -84,11 +76,11 @@ sub printUsage {
     print("   -register     <name or ALL>   name of the BNA server to be registerd as service\n");
     print("   -deregister   <name or ALL>   name of the BNA server which service should be deregisterd\n");
     print("   -enable       <name or ALL>   activate automatic service start for the BNA server\n");
-    print("   -disable.     <name or ALL>   deactivate automatic service start for the BNA server\n");
-    print("   -start.       <name or ALL>   start for the service for the BNA server\n");
+    print("   -disable      <name or ALL>   deactivate automatic service start for the BNA server\n");
+    print("   -start        <name or ALL>   start for the service for the BNA server\n");
     print("   -stop         <name or ALL>   stop for the service for the BNA server\n");
     print("   -restart      <name or ALL>   restart for the service for the BNA server\n");
-    print("   -status.      <name or ALL>   status of the service for the BNA server\n");
+    print("   -status       <name or ALL>   status of the service for the BNA server\n");
     print("   -h                            print this output\n");
     print("\n");
 }
