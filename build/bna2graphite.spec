@@ -10,7 +10,7 @@ BuildRoot: %{_tmppath}/%{name}-root
 Source0: bna2graphite-%{version}.tar.gz
 BuildArch: noarch
 AutoReqProv: no
-Requires: perl(Getopt::Long) perl(IO::Socket::INET) perl(JSON) perl(LWP::UserAgent) perl(LWP::Protocol::https) perl(Log::Log4perl) perl(POSIX) perl(Switch) perl(Time::HiRes) perl(Time::Local) perl(constant) perl(strict) perl(warnings)
+Requires: perl(Getopt::Long) perl(IO::Socket::INET) perl(JSON) perl(LWP::UserAgent) perl(LWP::Protocol::https) perl(Log::Log4perl) perl(POSIX) perl(Time::HiRes) perl(Time::Local) perl(constant) perl(strict) perl(warnings)
 
 
 
@@ -37,13 +37,13 @@ mkdir -p ${RPM_BUILD_ROOT}/opt/bna2graphite/conf
 mkdir -p ${RPM_BUILD_ROOT}/opt/bna2graphite/log/
 mkdir -p ${RPM_BUILD_ROOT}/opt/bna2graphite/run/
 mkdir -p ${RPM_BUILD_ROOT}/opt/bna2graphite/lib/
-mkdir -p ${RPM_BUILD_ROOT}/opt/bna2graphite/legacy/
+mkdir -p ${RPM_BUILD_ROOT}/opt/bna2graphite/build/
 mkdir -p ${RPM_BUILD_ROOT}/etc/go-carbon/
 mkdir -p ${RPM_BUILD_ROOT}/etc/logrotate.d/
 install -m 655 %{_builddir}/bna2graphite-%{version}/bin/* ${RPM_BUILD_ROOT}/opt/bna2graphite/bin/
 install -m 655 %{_builddir}/bna2graphite-%{version}/conf/*.conf ${RPM_BUILD_ROOT}/opt/bna2graphite/conf/
-install -m 655 %{_builddir}/bna2graphite-%{version}/legacy/*.conf.openiomon ${RPM_BUILD_ROOT}/etc/go-carbon/
-install -m 655 %{_builddir}/bna2graphite-%{version}/legacy/bna2graphite_logrotate ${RPM_BUILD_ROOT}/etc/logrotate.d/bna2graphite
+install -m 655 %{_builddir}/bna2graphite-%{version}/build/*.conf.openiomon ${RPM_BUILD_ROOT}/etc/go-carbon/
+install -m 655 %{_builddir}/bna2graphite-%{version}/build/bna2graphite_logrotate ${RPM_BUILD_ROOT}/etc/logrotate.d/bna2graphite
 
 %clean
 rm -rf ${RPM_BUILD_ROOT}
