@@ -8,7 +8,7 @@
 
 # bna2graphite
 
-A tool to retrieve Broadcom (Brocade) SAN Switch Performance counters from Brocade Network Advisor REST API and write them to a Carbon/Graphite backend.
+A tool to retrieve Broadcom (former Brocade) SAN Switch Performance counters from Brocade Network Advisor REST API and write them to a Carbon/Graphite backend.
 * Written in Perl.
 * tested on RHEL / CentOS 7
 * works with BNA 14.4
@@ -16,7 +16,7 @@ A tool to retrieve Broadcom (Brocade) SAN Switch Performance counters from Broca
 
 ## Features
 * Add one or more BNA server instances
-* configurable retrival time
+* configurable retrieval time
 * configurable metrics
 * Workers run as systemd service
 
@@ -27,7 +27,7 @@ Perl dependencies that are not available in RHEL / CentOS 7 repositories:
 * Log::Log4perl (RPM perl-Log-Log4perl available in [EPEL repository](https://fedoraproject.org/wiki/EPEL))
 * Systemd::Daemon (included in the release package, [view in CPAN](https://metacpan.org/pod/Systemd::Daemon))
 
-For other Linux distributions you can just clone the repository. Default installation folder is `/opt/bna2graphite`. The service operates with a use called "openiomon"
+For other Linux distributions you can just clone the repository. Default installation folder is `/opt/bna2graphite`. The service operates with a user called "openiomon"
 
 ## Configuration
 1. Edit the `/opt/bna2graphite/conf/bna2graphite.conf`, settings you have to edit for a start:
