@@ -30,7 +30,6 @@ use Log::Log4perl;
 use Getopt::Long;
 use Time::Local;
 use JSON;
-use Switch;
 use Systemd::Daemon qw( -hard notify );
 
 my %args;  # variable to store command line options for use with getopts
