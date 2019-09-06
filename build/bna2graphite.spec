@@ -65,7 +65,7 @@ rm -rf ${RPM_BUILD_ROOT}
 ln -s -f /opt/bna2graphite/bin/bna2graphite.pl /bin/bna2graphite
 
 %changelog
-* Mon Aug 28 2019 Timo Drach <timo.drach@googlemail.com>
+* Mon Aug 28 2019 Timo Drach <timo.drach@openiomon.org>
 - Cleanup for publishing RPM on github
 * Wed Sep 12 2018 Timo Drach <timo.drach@cse-ub.de>
 - Fixed issues with wrong perl file in bin folder
