@@ -16,10 +16,9 @@
 #
 # ==============================================================================================
 
-
+use v5.10;
 use strict;
 use warnings;
-use lib '/opt/bna2graphite/lib/perl5/';
 use POSIX qw(strftime);
 use POSIX qw(ceil);
 use Time::HiRes qw(nanosleep usleep gettimeofday tv_interval);
@@ -137,12 +136,10 @@ sub parseCmdArgs{
                     "h"                     => \$help)              # flag
     or die("Error in command line arguments\n");
 
-    # keine Konfigdatei => Script wird beendet.
     if($conf eq "") {
         printUsage();
         exit(1);
     } else {
-        # Einlesen der Konfigdatei.
         readconfig();
     }
     if(($pollinterval<30) || ($pollinterval >1440)) {
@@ -175,29 +172,25 @@ sub parseCmdArgs{
 }
 
 sub readconfig {
-        # öffnen des Config-Files...
-        open my $configfilefp, '<', $conf or die "Can't open file: $!";
-        my $section = "";
-        while(<$configfilefp>) {
-            my $configline = $_;
-            chomp ($configline);
-            # Überspringen von allen Zeilen welche mit # beginnen oder leer sind.
-            if (($configline !~ "^#") && ($configline ne "")){
-                # bestimmen der Config-File Section
-                if ($configline =~ '\[') {
-                    $configline =~ s/\[//g;
-                    $configline =~ s/\]//g;
-                    $configline =~ s/\s//g;
-                    $section = $configline;
-                } else {
-                    # Einlesen der Parameter je nach Config-File-Section
-                    switch($section) {
-                    case "BNA" {
+    open my $configfilefp, '<', $conf or die "Can't open file: $!";
+    my $section = "";
+    while(<$configfilefp>) {
+        my $configline = $_;
+        chomp ($configline);
+        if (($configline !~ "^#") && ($configline ne "")){
+            if ($configline =~ '\[') {
+                $configline =~ s/\[//g;
+                $configline =~ s/\]//g;
+                $configline =~ s/\s//g;
+                $section = $configline;
+            } else {
+                given($section) {
+                    when ('BNA') {
                         my @values = split (";",$configline);
                         $bnaservers{$values[0]}{"user"}=$values[1];
                         $bnaservers{$values[0]}{"passwd"}=$values[2];
                     }
-                    case "Log" {
+                    when ('Log') {
                         my @values = split ("=",$configline);
                         if($configline=~"logdir") {
                             $logfile = $values[1];
@@ -225,7 +218,7 @@ sub readconfig {
                             # otherwise keep default which is INFO
                         }
                     }
-                    case "graphite" {
+                    when ('graphite') {
                         my @values = split ("=",$configline);
                         if($configline =~ "host") {
                             $graphitehost = $values[1];
@@ -235,7 +228,7 @@ sub readconfig {
                             $graphiteport =~ s/\s//g;
                         }
                     }
-                    case "ports" {
+                    when ('ports') {
                         my @values = split ("=",$configline);
                         if($configline =~ "monitor_uports") {
                             if($configline =~ "0") {
@@ -247,13 +240,13 @@ sub readconfig {
                             }
                         }
                     }
-                    case "performance" {
+                    when ('performance') {
                         my @values = split ("=",$configline);
                         if($configline =~ "maxmetricsperminute") {
                             $maxmetricsperminute = $values[1];
                         }
                     }
-                    case "service" {
+                    when ('service') {
                         my @values = split ("=",$configline);
                         if($configline =~ "runeveryhours") {
                             $runeveryhours = $values[1];
@@ -268,14 +261,13 @@ sub readconfig {
                             }
                         }
                     }
-                    case "metrics" {
+                    when ('metrics') {
                         my @values = split("=",$configline);
                         if($configline =~ "logbyport") {
                             my $logbyportline = $values[1];
                             chomp($logbyportline);
                             $logbyportline =~ s/\s//g;
                             @logbyport = split(",",$logbyportline);
-
                         } elsif ($configline =~ "logbyhost") {
                             my $logbyhostline = $values[1];
                             chomp ($logbyhostline);
@@ -708,7 +700,7 @@ sub getportstats {
     foreach my $fabric (sort keys %switchinfo) {
         foreach my $switch (sort keys %{$switchinfo{$fabric}}) {
             if($switch =~ "^fcr_.d_") {
-                #log->debug("Omitting data collection for switch ".$switch." of fabric ".$fabric." since it looks like a fiberchannel routing from domain!");
+                log->debug("Omitting data collection for switch ".$switch." of fabric ".$fabric." since it looks like a fiberchannel routing from domain!");
                 next;
             }
             foreach my $metrictype (sort keys %{$metrics{"port"}}) {
@@ -1108,7 +1100,6 @@ do {
     logstats2graphite();
     logscriptstats("log_allstats",time-$curtime,true);
     logscriptstats("interval_gathered",$pollinterval,true);
-    #console("Socketcnt=".$socketcnt);
     console("Done!");
     $lastsuccessfulrun = $starttime;
     $lastsuccessfulrunend = time;
