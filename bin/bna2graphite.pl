@@ -25,15 +25,16 @@
 #  End Modification History
 # ==============================================================================================
 
-
+use v5.10;
 use strict;
 use warnings;
-use Switch;
 use constant false => 0;
 use constant true  => 1;
 use Log::Log4perl;
 use Getopt::Long;
 use POSIX qw(strftime);
+
+# For all initially initialized variables values represent defaults used if they are not specified via configfile 
 
 #log variables
 my $log; # log4perl logger
@@ -172,8 +173,8 @@ sub readconfig {
                 $section = $configline;
             } else {
                 # Read the config parameters based on the config file section
-                switch($section) {
-                    case "BNA" {
+                given($section) {
+                    when ('BNA') {
                         my @values = split (";",$configline);
                         $bnaservers{$values[0]}{"user"}=$values[1];
                         $bnaservers{$values[0]}{"passwd"}=$values[2];
@@ -186,7 +187,7 @@ sub readconfig {
                         }
                         $bnaservers{$values[0]}{"shortname"} = uc($bnashortname);
                     }
-                    case "Log" {
+                    when ('Log') {
                         my @values = split ("=",$configline);
                         if($configline=~"logdir") {
                             $logfile = $values[1];
@@ -215,7 +216,7 @@ sub readconfig {
                             # otherwise keep default which is INFO
                         }
                     }
-                    case "service" {
+                    when ('service') {
                         my @values = split ("=",$configline);
                         if($configline =~ "runeveryhours") {
                             $runeveryhours = $values[1];
@@ -291,7 +292,7 @@ sub registerservice {
             print $sfh "After=network-online.target\n";
             print $sfh "After=go-carbon.service\n\n";
             print $sfh "[Service]\n";
-            print $sfh "Environment=\"PERL5LIB=".$libdir."perl5/:".$libdir."perl5/x86_64-linux-thread-multi/:/usr/local/lib64/perl5:/usr/local/share/perl5:/usr/lib64/perl5/vendor_perl:/usr/share/perl5/vendor_perl:/usr/lib64/perl5:/usr/share/perl5\"\n";
+            print $sfh "Environment=\"PERL5LIB=".$libdir."perl5/:".$libdir."perl5/x86_64-linux-thread-multi/:".join(":",@INC)."\"\n";
             print $sfh "User=".$serviceuser."\n";
             print $sfh "Group=".$servicegroup."\n";
             print $sfh "Type=notify\n";
