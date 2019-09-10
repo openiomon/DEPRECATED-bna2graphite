@@ -21,7 +21,7 @@ A tool to retrieve Broadcom (former Brocade) SAN Switch Performance counters fro
 * Workers run as systemd service
 
 ## Installation
-Install on RHEL via RPM package: `yum install bna2graphite-0.x.x.rpm`
+Install on RHEL via RPM package: `yum install bna2graphite-0.x-x.rpm`
 
 Perl dependencies that are not available in RHEL / CentOS 7 repositories:
 * Log::Log4perl (RPM perl-Log-Log4perl available in [EPEL repository](https://fedoraproject.org/wiki/EPEL))
