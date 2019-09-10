@@ -20,8 +20,8 @@ Module for integration of Brocade SAN Switch performance and error statistics to
 %pre
 getent group openiomon >/dev/null || groupadd -r openiomon
 getent passwd openiomon >/dev/null || \
-    useradd -r -g openiomon -d /opt/bna2graphite -s /sbin/nologin \
-    -c "This user will be used for modules of openiomon" openiomon
+    useradd -r -g openiomon -d /home/openiomon -s /sbin/nologin \
+    -c "openiomon module daemon user" openiomon
 exit 0
 
 %prep
@@ -38,11 +38,9 @@ mkdir -p ${RPM_BUILD_ROOT}/opt/bna2graphite/log/
 mkdir -p ${RPM_BUILD_ROOT}/opt/bna2graphite/run/
 mkdir -p ${RPM_BUILD_ROOT}/opt/bna2graphite/lib/
 mkdir -p ${RPM_BUILD_ROOT}/opt/bna2graphite/build/
-mkdir -p ${RPM_BUILD_ROOT}/etc/go-carbon/
 mkdir -p ${RPM_BUILD_ROOT}/etc/logrotate.d/
 install -m 655 %{_builddir}/bna2graphite-%{version}/bin/* ${RPM_BUILD_ROOT}/opt/bna2graphite/bin/
 install -m 655 %{_builddir}/bna2graphite-%{version}/conf/*.conf ${RPM_BUILD_ROOT}/opt/bna2graphite/conf/
-install -m 655 %{_builddir}/bna2graphite-%{version}/build/*.conf.openiomon ${RPM_BUILD_ROOT}/etc/go-carbon/
 install -m 655 %{_builddir}/bna2graphite-%{version}/build/bna2graphite_logrotate ${RPM_BUILD_ROOT}/etc/logrotate.d/bna2graphite
 
 %clean
@@ -50,7 +48,6 @@ rm -rf ${RPM_BUILD_ROOT}
 
 %files
 %config(noreplace) %attr(644,openiomon,openiomon) /opt/bna2graphite/conf/*.conf
-%config(noreplace) %attr(644,root,root) /etc/go-carbon/*.conf.openiomon
 %config(noreplace) %attr(644,root,root) /etc/logrotate.d/bna2graphite
 %defattr(644,openiomon,openiomon)
 %attr(755,openiomon,openiomon) /opt/bna2graphite
