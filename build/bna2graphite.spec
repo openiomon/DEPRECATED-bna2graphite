@@ -42,7 +42,8 @@ mkdir -p ${RPM_BUILD_ROOT}/etc/logrotate.d/
 install -m 655 %{_builddir}/bna2graphite-%{version}/bin/* ${RPM_BUILD_ROOT}/opt/bna2graphite/bin/
 install -m 655 %{_builddir}/bna2graphite-%{version}/conf/*.conf ${RPM_BUILD_ROOT}/opt/bna2graphite/conf/
 install -m 655 %{_builddir}/bna2graphite-%{version}/build/bna2graphite_logrotate ${RPM_BUILD_ROOT}/etc/logrotate.d/bna2graphite
-install -m 655 %{_builddir}/bna2graphite-%{version}/lib/* ${RPM_BUILD_ROOT}/opt/bna2graphite/lib
+#install -m 655 %{_builddir}/bna2graphite-%{version}/lib/* ${RPM_BUILD_ROOT}/opt/bna2graphite/lib
+cp -a %{_builddir}/bna2graphite-%{version}/lib/* ${RPM_BUILD_ROOT}/opt/bna2graphite/lib/
 
 %clean
 rm -rf ${RPM_BUILD_ROOT}
@@ -57,7 +58,7 @@ rm -rf ${RPM_BUILD_ROOT}
 #%attr(755,openiomon,openiomon) /opt/bna2graphite/conf
 #%attr(755,openiomon,openiomon) /opt/bna2graphite/log
 #%attr(755,openiomon,openiomon) /opt/bna2graphite/run
-#%attr(755,openiomon,openiomon) /opt/bna2graphite/lib
+%attr(755,openiomon,openiomon) /opt/bna2graphite/lib/perl5/
 
 %post
 ln -s -f /opt/bna2graphite/bin/bna2graphite.pl /bin/bna2graphite
