@@ -2,13 +2,13 @@ Summary: bna2graphite is a module of openiomon which is used to transfer statist
 Name: bna2graphite
 Version: 0.2
 prefix: /opt
-Release: 6
+Release: 7
 URL: http://www.openiomon.org
 License: GPL
 Group: Applications/Internet
 BuildRoot: %{_tmppath}/%{name}-root
 Source0: bna2graphite-%{version}.tar.gz
-BuildArch: noarch
+BuildArch: x86_64
 AutoReqProv: no
 Requires: perl(Getopt::Long) perl(IO::Socket::INET) perl(JSON) perl(LWP::UserAgent) perl(LWP::Protocol::https) perl(Log::Log4perl) perl(POSIX) perl(Time::HiRes) perl(Time::Local) perl(constant) perl(strict) perl(warnings)
 
@@ -42,6 +42,7 @@ mkdir -p ${RPM_BUILD_ROOT}/etc/logrotate.d/
 install -m 655 %{_builddir}/bna2graphite-%{version}/bin/* ${RPM_BUILD_ROOT}/opt/bna2graphite/bin/
 install -m 655 %{_builddir}/bna2graphite-%{version}/conf/*.conf ${RPM_BUILD_ROOT}/opt/bna2graphite/conf/
 install -m 655 %{_builddir}/bna2graphite-%{version}/build/bna2graphite_logrotate ${RPM_BUILD_ROOT}/etc/logrotate.d/bna2graphite
+install -m 655 %{_builddir}/bna2graphite-%{version}/lib/* ${RPM_BUILD_ROOT}/opt/bna2graphite/lib
 
 %clean
 rm -rf ${RPM_BUILD_ROOT}
@@ -49,19 +50,21 @@ rm -rf ${RPM_BUILD_ROOT}
 %files
 %config(noreplace) %attr(644,openiomon,openiomon) /opt/bna2graphite/conf/*.conf
 %config(noreplace) %attr(644,root,root) /etc/logrotate.d/bna2graphite
-%defattr(644,openiomon,openiomon)
-%attr(755,openiomon,openiomon) /opt/bna2graphite
-%attr(755,openiomon,openiomon) /opt/bna2graphite/bin
+%defattr(644,openiomon,openiomon,755)
+#%attr(755,openiomon,openiomon) /opt/bna2graphite
+#%attr(755,openiomon,openiomon) /opt/bna2graphite/bin
 %attr(755,openiomon,openiomon) /opt/bna2graphite/bin/*
-%attr(755,openiomon,openiomon) /opt/bna2graphite/conf
-%attr(755,openiomon,openiomon) /opt/bna2graphite/log
-%attr(755,openiomon,openiomon) /opt/bna2graphite/run
-%attr(755,openiomon,openiomon) /opt/bna2graphite/lib
+#%attr(755,openiomon,openiomon) /opt/bna2graphite/conf
+#%attr(755,openiomon,openiomon) /opt/bna2graphite/log
+#%attr(755,openiomon,openiomon) /opt/bna2graphite/run
+#%attr(755,openiomon,openiomon) /opt/bna2graphite/lib
 
 %post
 ln -s -f /opt/bna2graphite/bin/bna2graphite.pl /bin/bna2graphite
 
 %changelog
+* Wed Sep 18 2019 Timo Drach <timo.drach@openiomon,org>
+- Including the systemd perl library in RPM and changing RPM architecture
 * Mon Aug 28 2019 Timo Drach <timo.drach@openiomon.org>
 - Cleanup for publishing RPM on github
 * Wed Sep 12 2018 Timo Drach <timo.drach@cse-ub.de>
