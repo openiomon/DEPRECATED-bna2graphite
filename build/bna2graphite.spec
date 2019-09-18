@@ -65,7 +65,7 @@ ln -s -f /opt/bna2graphite/bin/bna2graphite.pl /bin/bna2graphite
 %changelog
 * Wed Sep 18 2019 Timo Drach <timo.drach@openiomon,org>
 - Including the systemd perl library in RPM and changing RPM architecture
-* Mon Aug 28 2019 Timo Drach <timo.drach@openiomon.org>
+* Mon Aug 26 2019 Timo Drach <timo.drach@openiomon.org>
 - Cleanup for publishing RPM on github
 * Wed Sep 12 2018 Timo Drach <timo.drach@cse-ub.de>
 - Fixed issues with wrong perl file in bin folder
