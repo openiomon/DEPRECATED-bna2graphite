@@ -10,7 +10,7 @@ BuildRoot: %{_tmppath}/%{name}-root
 Source0: bna2graphite-%{version}.tar.gz
 BuildArch: x86_64
 AutoReqProv: no
-Requires: perl(Getopt::Long) perl(IO::Socket::INET) perl(JSON) perl(LWP::UserAgent) perl(LWP::Protocol::https) perl(Log::Log4perl) perl(POSIX) perl(Time::HiRes) perl(Time::Local) perl(constant) perl(strict) perl(warnings)
+Requires: perl(version) perl(Readonly) perl(Getopt::Long) perl(IO::Socket::INET) perl(JSON) perl(LWP::UserAgent) perl(LWP::Protocol::https) perl(Log::Log4perl) perl(POSIX) perl(Time::HiRes) perl(Time::Local) perl(constant) perl(strict) perl(warnings)
 
 
 
