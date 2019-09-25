@@ -64,7 +64,7 @@ rm -rf ${RPM_BUILD_ROOT}
 ln -s -f /opt/bna2graphite/bin/bna2graphite.pl /bin/bna2graphite
 
 %changelog
-* Weg Sep 25 2019 Timo Dracg <timo.drach@openiomon.org>
+* Wed Sep 25 2019 Timo Drach <timo.drach@openiomon.org>
 - Stripped down version of systed perl library
 * Wed Sep 18 2019 Timo Drach <timo.drach@openiomon,org>
 - Including the systemd perl library in RPM and changing RPM architecture
