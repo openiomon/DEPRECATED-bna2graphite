@@ -2,7 +2,7 @@ Summary: bna2graphite is a module of openiomon which is used to transfer statist
 Name: bna2graphite
 Version: 0.2
 prefix: /opt
-Release: 7
+Release: 8
 URL: http://www.openiomon.org
 License: GPL
 Group: Applications/Internet
@@ -64,6 +64,8 @@ rm -rf ${RPM_BUILD_ROOT}
 ln -s -f /opt/bna2graphite/bin/bna2graphite.pl /bin/bna2graphite
 
 %changelog
+* Weg Sep 25 2019 Timo Dracg <timo.drach@openiomon.org>
+- Stripped down version of systed perl library
 * Wed Sep 18 2019 Timo Drach <timo.drach@openiomon,org>
 - Including the systemd perl library in RPM and changing RPM architecture
 * Mon Aug 26 2019 Timo Drach <timo.drach@openiomon.org>
