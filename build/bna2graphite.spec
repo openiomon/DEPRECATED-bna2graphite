@@ -2,7 +2,7 @@ Summary: bna2graphite is a module of openiomon which is used to transfer statist
 Name: bna2graphite
 Version: 0.2
 prefix: /opt
-Release: 8
+Release: 9
 URL: http://www.openiomon.org
 License: GPL
 Group: Applications/Internet
@@ -41,6 +41,7 @@ mkdir -p ${RPM_BUILD_ROOT}/opt/bna2graphite/build/
 mkdir -p ${RPM_BUILD_ROOT}/etc/logrotate.d/
 install -m 655 %{_builddir}/bna2graphite-%{version}/bin/* ${RPM_BUILD_ROOT}/opt/bna2graphite/bin/
 install -m 655 %{_builddir}/bna2graphite-%{version}/conf/*.conf ${RPM_BUILD_ROOT}/opt/bna2graphite/conf/
+install -m 655 %{_builddir}/bna2graphite-%{version}/conf/*.example ${RPM_BUILD_ROOT}/opt/bna2graphite/conf/
 install -m 655 %{_builddir}/bna2graphite-%{version}/build/bna2graphite_logrotate ${RPM_BUILD_ROOT}/etc/logrotate.d/bna2graphite
 #install -m 655 %{_builddir}/bna2graphite-%{version}/lib/* ${RPM_BUILD_ROOT}/opt/bna2graphite/lib
 cp -a %{_builddir}/bna2graphite-%{version}/lib/* ${RPM_BUILD_ROOT}/opt/bna2graphite/lib/
@@ -64,6 +65,8 @@ rm -rf ${RPM_BUILD_ROOT}
 ln -s -f /opt/bna2graphite/bin/bna2graphite.pl /bin/bna2graphite
 
 %changelog
+* Tue Oct 01 2019 Timo Drach <timo.drach@openiomon.org>
+- Added example go-carbon storageschema configfile
 * Wed Sep 25 2019 Timo Drach <timo.drach@openiomon.org>
 - Stripped down version of systed perl library
 * Wed Sep 18 2019 Timo Drach <timo.drach@openiomon,org>
