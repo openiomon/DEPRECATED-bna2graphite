@@ -1025,7 +1025,7 @@ sub cleanhashes {
     %allenddevices=();
 }
 
-
+# main
 parseCmdArgs();
 
 $logfile .= 'bna2graphite_'.$bnashortname.'.log';
