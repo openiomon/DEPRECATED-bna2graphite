@@ -51,6 +51,11 @@ For other Linux distributions you can just clone the repository. Default install
 `/opt/bna2graphite/bin/bna2graphite.pl -start <Server name>`
 
 ## Changelog
+
+### 0.2.10
+* Includes JSON files for dashboards and utilities for backup and restore the dashboards.
+* Fixes some issues with DOS file formats
+
 ### 0.2.5
 * First public release
 
