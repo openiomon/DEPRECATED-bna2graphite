@@ -41,12 +41,12 @@ mkdir -p ${RPM_BUILD_ROOT}/opt/bna2graphite/dashboards/
 mkdir -p ${RPM_BUILD_ROOT}/opt/bna2graphite/build/
 mkdir -p ${RPM_BUILD_ROOT}/etc/logrotate.d/
 install -m 655 %{_builddir}/bna2graphite-%{version}/bin/* ${RPM_BUILD_ROOT}/opt/bna2graphite/bin/
-install -m 655 %{_builddir}/bna2graphite-%{version}/dashboards/* ${RPM_BUILD_ROOT}/opt/bna2graphite/dashboards/
 install -m 655 %{_builddir}/bna2graphite-%{version}/conf/*.conf ${RPM_BUILD_ROOT}/opt/bna2graphite/conf/
 install -m 655 %{_builddir}/bna2graphite-%{version}/conf/*.example ${RPM_BUILD_ROOT}/opt/bna2graphite/conf/
 install -m 655 %{_builddir}/bna2graphite-%{version}/build/bna2graphite_logrotate ${RPM_BUILD_ROOT}/etc/logrotate.d/bna2graphite
 #install -m 655 %{_builddir}/bna2graphite-%{version}/lib/* ${RPM_BUILD_ROOT}/opt/bna2graphite/lib
 cp -a %{_builddir}/bna2graphite-%{version}/lib/* ${RPM_BUILD_ROOT}/opt/bna2graphite/lib/
+cp -a %{_builddir}/bna2graphite-%{version}/dashboards/*.json ${RPM_BUILD_ROOT}/opt/bna2graphite/dashboards/
 
 %clean
 rm -rf ${RPM_BUILD_ROOT}
