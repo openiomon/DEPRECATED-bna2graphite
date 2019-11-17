@@ -1,0 +1,1695 @@
+{
+    "meta": {
+        "type": "db",
+        "canSave": true,
+        "canEdit": true,
+        "canAdmin": false,
+        "canStar": true,
+        "slug": "brocade-port-error-details",
+        "url": "/d/4RVplLezk/brocade-port-error-details",
+        "expires": "0001-01-01T00:00:00Z",
+        "created": "2018-05-14T09:11:59+02:00",
+        "updated": "2019-01-23T14:51:00+01:00",
+        "updatedBy": "XNE6009W",
+        "createdBy": "Anonymous",
+        "version": 4,
+        "hasAcl": false,
+        "isFolder": false,
+        "folderId": 143,
+        "folderTitle": "Brocade",
+        "folderUrl": "/dashboards/f/b0xePvnmz/brocade",
+        "provisioned": false,
+        "provisionedExternalId": ""
+    },
+    "dashboard": {
+        "annotations": {
+            "list": [
+                {
+                    "builtIn": 1,
+                    "datasource": "default",
+                    "enable": true,
+                    "hide": true,
+                    "iconColor": "rgba(0, 211, 255, 1)",
+                    "name": "Annotations & Alerts",
+                    "type": "dashboard"
+                }
+            ]
+        },
+        "editable": true,
+        "gnetId": null,
+        "graphTooltip": 0,
+        "id": null,
+        "iteration": 1548251453749,
+        "links": [
+
+        ],
+        "panels": [
+            {
+                "collapsed": false,
+                "gridPos": {
+                    "h": 1,
+                    "w": 24,
+                    "x": 0,
+                    "y": 0
+                },
+                "id": 14,
+                "panels": [
+
+                ],
+                "repeat": null,
+                "title": "Link Errors",
+                "type": "row"
+            },
+            {
+                "aliasColors": {
+
+                },
+                "bars": false,
+                "dashLength": 10,
+                "dashes": false,
+                "datasource": "default",
+                "fill": 1,
+                "gridPos": {
+                    "h": 8,
+                    "w": 8,
+                    "x": 0,
+                    "y": 1
+                },
+                "id": 1,
+                "legend": {
+                    "alignAsTable": true,
+                    "avg": false,
+                    "current": false,
+                    "max": true,
+                    "min": false,
+                    "show": true,
+                    "total": false,
+                    "values": true
+                },
+                "lines": true,
+                "linewidth": 1,
+                "links": [
+
+                ],
+                "nullPointMode": "connected",
+                "percentage": false,
+                "pointradius": 5,
+                "points": false,
+                "renderer": "flot",
+                "seriesOverrides": [
+
+                ],
+                "spaceLength": 10,
+                "stack": false,
+                "steppedLine": false,
+                "targets": [
+                    {
+                        "refId": "A",
+                        "target": "aliasByNode(consolidateBy(sortByMaxima(highestAverage(brocade.stats.ports.$Fabric.$Switch.$Porttype.$Slot.$Port.timeseriessignallosses, 10)), 'max'), 3, -5, -4, -3, -2)",
+                        "textEditor": true
+                    }
+                ],
+                "thresholds": [
+
+                ],
+                "timeFrom": null,
+                "timeRegions": [
+
+                ],
+                "timeShift": null,
+                "title": "Top 10 Ports with Loss of Signal",
+                "tooltip": {
+                    "shared": true,
+                    "sort": 0,
+                    "value_type": "individual"
+                },
+                "type": "graph",
+                "xaxis": {
+                    "buckets": null,
+                    "mode": "time",
+                    "name": null,
+                    "show": true,
+                    "values": [
+
+                    ]
+                },
+                "yaxes": [
+                    {
+                        "decimals": null,
+                        "format": "short",
+                        "label": null,
+                        "logBase": 1,
+                        "max": null,
+                        "min": "0",
+                        "show": true
+                    },
+                    {
+                        "format": "short",
+                        "label": null,
+                        "logBase": 1,
+                        "max": null,
+                        "min": null,
+                        "show": true
+                    }
+                ],
+                "yaxis": {
+                    "align": false,
+                    "alignLevel": null
+                }
+            },
+            {
+                "aliasColors": {
+
+                },
+                "bars": false,
+                "dashLength": 10,
+                "dashes": false,
+                "datasource": "default",
+                "fill": 1,
+                "gridPos": {
+                    "h": 8,
+                    "w": 8,
+                    "x": 8,
+                    "y": 1
+                },
+                "id": 2,
+                "legend": {
+                    "alignAsTable": true,
+                    "avg": false,
+                    "current": false,
+                    "hideZero": false,
+                    "max": true,
+                    "min": false,
+                    "show": true,
+                    "sort": null,
+                    "sortDesc": null,
+                    "total": false,
+                    "values": true
+                },
+                "lines": true,
+                "linewidth": 1,
+                "links": [
+
+                ],
+                "nullPointMode": "connected",
+                "percentage": false,
+                "pointradius": 5,
+                "points": false,
+                "renderer": "flot",
+                "seriesOverrides": [
+
+                ],
+                "spaceLength": 10,
+                "stack": false,
+                "steppedLine": false,
+                "targets": [
+                    {
+                        "refId": "A",
+                        "target": "aliasByNode(consolidateBy(sortByMaxima(highestAverage(brocade.stats.ports.$Fabric.$Switch.$Porttype.$Slot.$Port.timeseriessynclosses, 10)), 'max'), 3, -5, -4, -3, -2)",
+                        "textEditor": true
+                    }
+                ],
+                "thresholds": [
+
+                ],
+                "timeFrom": null,
+                "timeRegions": [
+
+                ],
+                "timeShift": null,
+                "title": "Top 10 Ports with Loss of Sync",
+                "tooltip": {
+                    "shared": true,
+                    "sort": 0,
+                    "value_type": "individual"
+                },
+                "type": "graph",
+                "xaxis": {
+                    "buckets": null,
+                    "mode": "time",
+                    "name": null,
+                    "show": true,
+                    "values": [
+
+                    ]
+                },
+                "yaxes": [
+                    {
+                        "format": "short",
+                        "label": null,
+                        "logBase": 1,
+                        "max": null,
+                        "min": "0",
+                        "show": true
+                    },
+                    {
+                        "format": "short",
+                        "label": null,
+                        "logBase": 1,
+                        "max": null,
+                        "min": null,
+                        "show": true
+                    }
+                ],
+                "yaxis": {
+                    "align": false,
+                    "alignLevel": null
+                }
+            },
+            {
+                "aliasColors": {
+
+                },
+                "bars": false,
+                "dashLength": 10,
+                "dashes": false,
+                "datasource": "default",
+                "fill": 1,
+                "gridPos": {
+                    "h": 8,
+                    "w": 8,
+                    "x": 16,
+                    "y": 1
+                },
+                "id": 3,
+                "legend": {
+                    "alignAsTable": true,
+                    "avg": false,
+                    "current": false,
+                    "hideZero": true,
+                    "max": true,
+                    "min": false,
+                    "rightSide": false,
+                    "show": true,
+                    "total": false,
+                    "values": true
+                },
+                "lines": true,
+                "linewidth": 1,
+                "links": [
+
+                ],
+                "nullPointMode": "connected",
+                "percentage": false,
+                "pointradius": 5,
+                "points": false,
+                "renderer": "flot",
+                "seriesOverrides": [
+
+                ],
+                "spaceLength": 10,
+                "stack": false,
+                "steppedLine": false,
+                "targets": [
+                    {
+                        "refId": "A",
+                        "target": "aliasByNode(consolidateBy(sortByMaxima(highestAverage(brocade.stats.ports.$Fabric.$Switch.$Porttype.$Slot.$Port.timeserieslinkresets.in, 10)), 'max'), 3, -6, -5, -4, -3, -1)",
+                        "textEditor": true
+                    },
+                    {
+                        "refId": "B",
+                        "target": "aliasByNode(consolidateBy(sortByMaxima(highestAverage(brocade.stats.ports.$Fabric.$Switch.$Porttype.$Slot.$Port.timeserieslinkresets.out, 10)), 'max'), 3, -6, -5, -4, -3, -1)",
+                        "textEditor": true
+                    }
+                ],
+                "thresholds": [
+
+                ],
+                "timeFrom": null,
+                "timeRegions": [
+
+                ],
+                "timeShift": null,
+                "title": "Top 10 Ports with Link Resets",
+                "tooltip": {
+                    "shared": true,
+                    "sort": 0,
+                    "value_type": "individual"
+                },
+                "type": "graph",
+                "xaxis": {
+                    "buckets": null,
+                    "mode": "time",
+                    "name": null,
+                    "show": true,
+                    "values": [
+
+                    ]
+                },
+                "yaxes": [
+                    {
+                        "format": "short",
+                        "label": null,
+                        "logBase": 1,
+                        "max": null,
+                        "min": "0",
+                        "show": true
+                    },
+                    {
+                        "format": "short",
+                        "label": null,
+                        "logBase": 1,
+                        "max": null,
+                        "min": null,
+                        "show": true
+                    }
+                ],
+                "yaxis": {
+                    "align": false,
+                    "alignLevel": null
+                }
+            },
+            {
+                "collapsed": false,
+                "gridPos": {
+                    "h": 1,
+                    "w": 24,
+                    "x": 0,
+                    "y": 9
+                },
+                "id": 15,
+                "panels": [
+
+                ],
+                "repeat": null,
+                "title": "C3 Discards Overview",
+                "type": "row"
+            },
+            {
+                "aliasColors": {
+
+                },
+                "bars": false,
+                "dashLength": 10,
+                "dashes": false,
+                "datasource": "default",
+                "fill": 1,
+                "gridPos": {
+                    "h": 7,
+                    "w": 24,
+                    "x": 0,
+                    "y": 10
+                },
+                "id": 4,
+                "legend": {
+                    "avg": false,
+                    "current": false,
+                    "hideZero": true,
+                    "max": true,
+                    "min": false,
+                    "show": true,
+                    "total": false,
+                    "values": true
+                },
+                "lines": true,
+                "linewidth": 1,
+                "links": [
+
+                ],
+                "nullPointMode": "connected",
+                "percentage": false,
+                "pointradius": 5,
+                "points": false,
+                "renderer": "flot",
+                "seriesOverrides": [
+
+                ],
+                "spaceLength": 10,
+                "stack": false,
+                "steppedLine": false,
+                "targets": [
+                    {
+                        "refId": "A",
+                        "target": "aliasByNode(sortByMaxima(highestAverage(brocade.stats.ports.$Fabric.$Switch.$Porttype.$Slot.$Port.timeseriesc3discards, 10)), 3, -5, -4, -3, -2)",
+                        "textEditor": true
+                    }
+                ],
+                "thresholds": [
+
+                ],
+                "timeFrom": null,
+                "timeRegions": [
+
+                ],
+                "timeShift": null,
+                "title": "Top 10 Ports with Discarded C3 Frames",
+                "tooltip": {
+                    "shared": true,
+                    "sort": 0,
+                    "value_type": "individual"
+                },
+                "type": "graph",
+                "xaxis": {
+                    "buckets": null,
+                    "mode": "time",
+                    "name": null,
+                    "show": true,
+                    "values": [
+
+                    ]
+                },
+                "yaxes": [
+                    {
+                        "format": "short",
+                        "label": "",
+                        "logBase": 1,
+                        "max": null,
+                        "min": "0",
+                        "show": true
+                    },
+                    {
+                        "format": "short",
+                        "label": null,
+                        "logBase": 1,
+                        "max": null,
+                        "min": null,
+                        "show": true
+                    }
+                ],
+                "yaxis": {
+                    "align": false,
+                    "alignLevel": null
+                }
+            },
+            {
+                "collapsed": false,
+                "gridPos": {
+                    "h": 1,
+                    "w": 24,
+                    "x": 0,
+                    "y": 17
+                },
+                "id": 16,
+                "panels": [
+
+                ],
+                "repeat": null,
+                "title": "C3 Discards Details",
+                "type": "row"
+            },
+            {
+                "aliasColors": {
+
+                },
+                "bars": false,
+                "dashLength": 10,
+                "dashes": false,
+                "datasource": "default",
+                "fill": 1,
+                "gridPos": {
+                    "h": 10,
+                    "w": 6,
+                    "x": 0,
+                    "y": 18
+                },
+                "id": 5,
+                "legend": {
+                    "alignAsTable": true,
+                    "avg": false,
+                    "current": false,
+                    "max": true,
+                    "min": false,
+                    "show": true,
+                    "total": false,
+                    "values": true
+                },
+                "lines": true,
+                "linewidth": 1,
+                "links": [
+
+                ],
+                "nullPointMode": "connected",
+                "percentage": false,
+                "pointradius": 5,
+                "points": false,
+                "renderer": "flot",
+                "seriesOverrides": [
+
+                ],
+                "spaceLength": 10,
+                "stack": false,
+                "steppedLine": false,
+                "targets": [
+                    {
+                        "refId": "A",
+                        "target": "aliasByNode(sortByMaxima(highestAverage(brocade.stats.ports.$Fabric.$Switch.$Porttype.$Slot.$Port.timeseriesc3discardsrxto, 10)), 3, -5, -4, -3, -2)",
+                        "textEditor": true
+                    }
+                ],
+                "thresholds": [
+
+                ],
+                "timeFrom": null,
+                "timeRegions": [
+
+                ],
+                "timeShift": null,
+                "title": "Top 10 Ports with Discarded C3 Frames (RX Timeout)",
+                "tooltip": {
+                    "shared": true,
+                    "sort": 0,
+                    "value_type": "individual"
+                },
+                "type": "graph",
+                "xaxis": {
+                    "buckets": null,
+                    "mode": "time",
+                    "name": null,
+                    "show": true,
+                    "values": [
+
+                    ]
+                },
+                "yaxes": [
+                    {
+                        "format": "short",
+                        "label": "",
+                        "logBase": 1,
+                        "max": null,
+                        "min": "0",
+                        "show": true
+                    },
+                    {
+                        "format": "short",
+                        "label": null,
+                        "logBase": 1,
+                        "max": null,
+                        "min": null,
+                        "show": true
+                    }
+                ],
+                "yaxis": {
+                    "align": false,
+                    "alignLevel": null
+                }
+            },
+            {
+                "aliasColors": {
+
+                },
+                "bars": false,
+                "dashLength": 10,
+                "dashes": false,
+                "datasource": "default",
+                "fill": 1,
+                "gridPos": {
+                    "h": 10,
+                    "w": 6,
+                    "x": 6,
+                    "y": 18
+                },
+                "id": 6,
+                "legend": {
+                    "alignAsTable": true,
+                    "avg": false,
+                    "current": false,
+                    "max": true,
+                    "min": false,
+                    "show": true,
+                    "total": false,
+                    "values": true
+                },
+                "lines": true,
+                "linewidth": 1,
+                "links": [
+
+                ],
+                "nullPointMode": "connected",
+                "percentage": false,
+                "pointradius": 5,
+                "points": false,
+                "renderer": "flot",
+                "seriesOverrides": [
+
+                ],
+                "spaceLength": 10,
+                "stack": false,
+                "steppedLine": false,
+                "targets": [
+                    {
+                        "refId": "A",
+                        "target": "aliasByNode(sortByMaxima(highestAverage(brocade.stats.ports.$Fabric.$Switch.$Porttype.$Slot.$Port.timeseriesc3discardstxto, 10)), 3, -5, -4, -3, -2)",
+                        "textEditor": true
+                    }
+                ],
+                "thresholds": [
+
+                ],
+                "timeFrom": null,
+                "timeRegions": [
+
+                ],
+                "timeShift": null,
+                "title": "Top 10 Ports with Discarded C3 Frames (TX Timeout)",
+                "tooltip": {
+                    "shared": true,
+                    "sort": 0,
+                    "value_type": "individual"
+                },
+                "type": "graph",
+                "xaxis": {
+                    "buckets": null,
+                    "mode": "time",
+                    "name": null,
+                    "show": true,
+                    "values": [
+
+                    ]
+                },
+                "yaxes": [
+                    {
+                        "format": "short",
+                        "label": "",
+                        "logBase": 1,
+                        "max": null,
+                        "min": "0",
+                        "show": true
+                    },
+                    {
+                        "format": "short",
+                        "label": null,
+                        "logBase": 1,
+                        "max": null,
+                        "min": null,
+                        "show": true
+                    }
+                ],
+                "yaxis": {
+                    "align": false,
+                    "alignLevel": null
+                }
+            },
+            {
+                "aliasColors": {
+
+                },
+                "bars": false,
+                "dashLength": 10,
+                "dashes": false,
+                "datasource": "default",
+                "fill": 1,
+                "gridPos": {
+                    "h": 10,
+                    "w": 6,
+                    "x": 12,
+                    "y": 18
+                },
+                "id": 8,
+                "legend": {
+                    "alignAsTable": true,
+                    "avg": false,
+                    "current": false,
+                    "hideZero": false,
+                    "max": true,
+                    "min": false,
+                    "show": true,
+                    "total": false,
+                    "values": true
+                },
+                "lines": true,
+                "linewidth": 1,
+                "links": [
+
+                ],
+                "nullPointMode": "connected",
+                "percentage": false,
+                "pointradius": 5,
+                "points": false,
+                "renderer": "flot",
+                "seriesOverrides": [
+
+                ],
+                "spaceLength": 10,
+                "stack": false,
+                "steppedLine": false,
+                "targets": [
+                    {
+                        "refId": "A",
+                        "target": "aliasByNode(sortByMaxima(highestAverage(brocade.stats.ports.$Fabric.$Switch.$Porttype.$Slot.$Port.timeseriesc3discardsother, 10)), 3, -5, -4, -3, -2)",
+                        "textEditor": true
+                    }
+                ],
+                "thresholds": [
+
+                ],
+                "timeFrom": null,
+                "timeRegions": [
+
+                ],
+                "timeShift": null,
+                "title": "Top 10 Ports with Discarded C3 Frames (other Discards)",
+                "tooltip": {
+                    "shared": true,
+                    "sort": 0,
+                    "value_type": "individual"
+                },
+                "type": "graph",
+                "xaxis": {
+                    "buckets": null,
+                    "mode": "time",
+                    "name": null,
+                    "show": true,
+                    "values": [
+
+                    ]
+                },
+                "yaxes": [
+                    {
+                        "format": "short",
+                        "label": "",
+                        "logBase": 1,
+                        "max": null,
+                        "min": "0",
+                        "show": true
+                    },
+                    {
+                        "format": "short",
+                        "label": null,
+                        "logBase": 1,
+                        "max": null,
+                        "min": null,
+                        "show": true
+                    }
+                ],
+                "yaxis": {
+                    "align": false,
+                    "alignLevel": null
+                }
+            },
+            {
+                "aliasColors": {
+
+                },
+                "bars": false,
+                "dashLength": 10,
+                "dashes": false,
+                "datasource": "default",
+                "fill": 1,
+                "gridPos": {
+                    "h": 10,
+                    "w": 6,
+                    "x": 18,
+                    "y": 18
+                },
+                "id": 7,
+                "legend": {
+                    "alignAsTable": true,
+                    "avg": false,
+                    "current": false,
+                    "hideEmpty": false,
+                    "hideZero": false,
+                    "max": true,
+                    "min": false,
+                    "show": true,
+                    "total": false,
+                    "values": true
+                },
+                "lines": true,
+                "linewidth": 1,
+                "links": [
+
+                ],
+                "nullPointMode": "connected",
+                "percentage": false,
+                "pointradius": 5,
+                "points": false,
+                "renderer": "flot",
+                "seriesOverrides": [
+
+                ],
+                "spaceLength": 10,
+                "stack": false,
+                "steppedLine": false,
+                "targets": [
+                    {
+                        "refId": "A",
+                        "target": "aliasByNode(sortByMaxima(highestAverage(brocade.stats.ports.$Fabric.$Switch.$Porttype.$Slot.$Port.timeseriesc3discardsunreachable, 10)), 3, -5, -4, -3, -2)",
+                        "textEditor": true
+                    }
+                ],
+                "thresholds": [
+
+                ],
+                "timeFrom": null,
+                "timeRegions": [
+
+                ],
+                "timeShift": null,
+                "title": "Top 10 Ports with Discarded C3 Frames (Destination unreachable)",
+                "tooltip": {
+                    "shared": true,
+                    "sort": 0,
+                    "value_type": "individual"
+                },
+                "type": "graph",
+                "xaxis": {
+                    "buckets": null,
+                    "mode": "time",
+                    "name": null,
+                    "show": true,
+                    "values": [
+
+                    ]
+                },
+                "yaxes": [
+                    {
+                        "format": "short",
+                        "label": "",
+                        "logBase": 1,
+                        "max": null,
+                        "min": "0",
+                        "show": true
+                    },
+                    {
+                        "format": "short",
+                        "label": null,
+                        "logBase": 1,
+                        "max": null,
+                        "min": null,
+                        "show": true
+                    }
+                ],
+                "yaxis": {
+                    "align": false,
+                    "alignLevel": null
+                }
+            },
+            {
+                "collapsed": false,
+                "gridPos": {
+                    "h": 1,
+                    "w": 24,
+                    "x": 0,
+                    "y": 28
+                },
+                "id": 17,
+                "panels": [
+
+                ],
+                "repeat": null,
+                "title": "Pyhsical Errors",
+                "type": "row"
+            },
+            {
+                "aliasColors": {
+
+                },
+                "bars": false,
+                "dashLength": 10,
+                "dashes": false,
+                "datasource": "default",
+                "fill": 1,
+                "gridPos": {
+                    "h": 7,
+                    "w": 6,
+                    "x": 0,
+                    "y": 29
+                },
+                "id": 9,
+                "legend": {
+                    "avg": false,
+                    "current": false,
+                    "max": false,
+                    "min": false,
+                    "show": true,
+                    "total": false,
+                    "values": false
+                },
+                "lines": true,
+                "linewidth": 1,
+                "links": [
+
+                ],
+                "nullPointMode": "connected",
+                "percentage": false,
+                "pointradius": 5,
+                "points": false,
+                "renderer": "flot",
+                "seriesOverrides": [
+
+                ],
+                "spaceLength": 10,
+                "stack": false,
+                "steppedLine": false,
+                "targets": [
+                    {
+                        "refId": "A",
+                        "target": "aliasByNode(sortByMaxima(highestAverage(brocade.stats.ports.$Fabric.$Switch.$Porttype.$Slot.$Port.timeseriesencodeerrorout, 10)), 3, -5, -4, -3, -2)",
+                        "textEditor": true
+                    }
+                ],
+                "thresholds": [
+
+                ],
+                "timeFrom": null,
+                "timeRegions": [
+
+                ],
+                "timeShift": null,
+                "title": "Ports with Encoding Out Errors",
+                "tooltip": {
+                    "shared": true,
+                    "sort": 0,
+                    "value_type": "individual"
+                },
+                "type": "graph",
+                "xaxis": {
+                    "buckets": null,
+                    "mode": "time",
+                    "name": null,
+                    "show": true,
+                    "values": [
+
+                    ]
+                },
+                "yaxes": [
+                    {
+                        "format": "short",
+                        "label": null,
+                        "logBase": 1,
+                        "max": null,
+                        "min": "0",
+                        "show": true
+                    },
+                    {
+                        "format": "short",
+                        "label": null,
+                        "logBase": 1,
+                        "max": null,
+                        "min": null,
+                        "show": true
+                    }
+                ],
+                "yaxis": {
+                    "align": false,
+                    "alignLevel": null
+                }
+            },
+            {
+                "aliasColors": {
+
+                },
+                "bars": false,
+                "dashLength": 10,
+                "dashes": false,
+                "datasource": "default",
+                "fill": 1,
+                "gridPos": {
+                    "h": 7,
+                    "w": 6,
+                    "x": 6,
+                    "y": 29
+                },
+                "id": 10,
+                "legend": {
+                    "avg": false,
+                    "current": false,
+                    "max": false,
+                    "min": false,
+                    "show": true,
+                    "total": false,
+                    "values": false
+                },
+                "lines": true,
+                "linewidth": 1,
+                "links": [
+
+                ],
+                "nullPointMode": "connected",
+                "percentage": false,
+                "pointradius": 5,
+                "points": false,
+                "renderer": "flot",
+                "seriesOverrides": [
+
+                ],
+                "spaceLength": 10,
+                "stack": false,
+                "steppedLine": false,
+                "targets": [
+                    {
+                        "refId": "A",
+                        "target": "aliasByNode(sortByMaxima(highestAverage(brocade.stats.ports.$Fabric.$Switch.$Porttype.$Slot.$Port.timeseriesinvalidtransmissions, 10)), 3, -5, -4, -3, -2)",
+                        "textEditor": true
+                    }
+                ],
+                "thresholds": [
+
+                ],
+                "timeFrom": null,
+                "timeRegions": [
+
+                ],
+                "timeShift": null,
+                "title": "Ports with Invalid Transmission Word",
+                "tooltip": {
+                    "shared": true,
+                    "sort": 0,
+                    "value_type": "individual"
+                },
+                "type": "graph",
+                "xaxis": {
+                    "buckets": null,
+                    "mode": "time",
+                    "name": null,
+                    "show": true,
+                    "values": [
+
+                    ]
+                },
+                "yaxes": [
+                    {
+                        "format": "short",
+                        "label": null,
+                        "logBase": 1,
+                        "max": null,
+                        "min": "0",
+                        "show": true
+                    },
+                    {
+                        "format": "short",
+                        "label": null,
+                        "logBase": 1,
+                        "max": null,
+                        "min": null,
+                        "show": true
+                    }
+                ],
+                "yaxis": {
+                    "align": false,
+                    "alignLevel": null
+                }
+            },
+            {
+                "aliasColors": {
+
+                },
+                "bars": false,
+                "dashLength": 10,
+                "dashes": false,
+                "datasource": "default",
+                "fill": 1,
+                "gridPos": {
+                    "h": 7,
+                    "w": 6,
+                    "x": 12,
+                    "y": 29
+                },
+                "id": 11,
+                "legend": {
+                    "alignAsTable": true,
+                    "avg": false,
+                    "current": false,
+                    "hideZero": false,
+                    "max": true,
+                    "min": false,
+                    "show": true,
+                    "sort": "max",
+                    "sortDesc": true,
+                    "total": false,
+                    "values": true
+                },
+                "lines": true,
+                "linewidth": 1,
+                "links": [
+
+                ],
+                "nullPointMode": "connected",
+                "percentage": false,
+                "pointradius": 5,
+                "points": false,
+                "renderer": "flot",
+                "seriesOverrides": [
+
+                ],
+                "spaceLength": 10,
+                "stack": false,
+                "steppedLine": false,
+                "targets": [
+                    {
+                        "refId": "A",
+                        "target": "aliasByNode(sortByMaxima(highestAverage(brocade.stats.ports.$Fabric.$Switch.$Porttype.$Slot.$Port.timeseriescrcerrors, 10)), 3, -5, -4, -3, -2)",
+                        "textEditor": true
+                    }
+                ],
+                "thresholds": [
+
+                ],
+                "timeFrom": null,
+                "timeRegions": [
+
+                ],
+                "timeShift": null,
+                "title": "Ports with CRC Errors",
+                "tooltip": {
+                    "shared": true,
+                    "sort": 0,
+                    "value_type": "individual"
+                },
+                "type": "graph",
+                "xaxis": {
+                    "buckets": null,
+                    "mode": "time",
+                    "name": null,
+                    "show": true,
+                    "values": [
+
+                    ]
+                },
+                "yaxes": [
+                    {
+                        "format": "short",
+                        "label": null,
+                        "logBase": 1,
+                        "max": null,
+                        "min": "0",
+                        "show": true
+                    },
+                    {
+                        "format": "short",
+                        "label": null,
+                        "logBase": 1,
+                        "max": null,
+                        "min": null,
+                        "show": true
+                    }
+                ],
+                "yaxis": {
+                    "align": false,
+                    "alignLevel": null
+                }
+            },
+            {
+                "aliasColors": {
+
+                },
+                "bars": false,
+                "dashLength": 10,
+                "dashes": false,
+                "datasource": "default",
+                "fill": 1,
+                "gridPos": {
+                    "h": 7,
+                    "w": 6,
+                    "x": 18,
+                    "y": 29
+                },
+                "id": 19,
+                "legend": {
+                    "alignAsTable": true,
+                    "avg": false,
+                    "current": false,
+                    "hideZero": false,
+                    "max": true,
+                    "min": false,
+                    "show": true,
+                    "sort": "max",
+                    "sortDesc": true,
+                    "total": false,
+                    "values": true
+                },
+                "lines": true,
+                "linewidth": 1,
+                "links": [
+
+                ],
+                "nullPointMode": "connected",
+                "percentage": false,
+                "pointradius": 5,
+                "points": false,
+                "renderer": "flot",
+                "seriesOverrides": [
+
+                ],
+                "spaceLength": 10,
+                "stack": false,
+                "steppedLine": false,
+                "targets": [
+                    {
+                        "refId": "A",
+                        "target": "aliasByNode(sortByMaxima(highestAverage(brocade.stats.ports.$Fabric.$Switch.$Porttype.$Slot.$Port.timeseriesinvalidorderedsets, 10)), 3, -5, -4, -3, -2)",
+                        "textEditor": false
+                    }
+                ],
+                "thresholds": [
+
+                ],
+                "timeFrom": null,
+                "timeRegions": [
+
+                ],
+                "timeShift": null,
+                "title": "Invalid Orderd Set",
+                "tooltip": {
+                    "shared": true,
+                    "sort": 0,
+                    "value_type": "individual"
+                },
+                "type": "graph",
+                "xaxis": {
+                    "buckets": null,
+                    "mode": "time",
+                    "name": null,
+                    "show": true,
+                    "values": [
+
+                    ]
+                },
+                "yaxes": [
+                    {
+                        "format": "short",
+                        "label": null,
+                        "logBase": 1,
+                        "max": null,
+                        "min": "0",
+                        "show": true
+                    },
+                    {
+                        "format": "short",
+                        "label": null,
+                        "logBase": 1,
+                        "max": null,
+                        "min": null,
+                        "show": true
+                    }
+                ],
+                "yaxis": {
+                    "align": false,
+                    "alignLevel": null
+                }
+            },
+            {
+                "collapsed": false,
+                "gridPos": {
+                    "h": 1,
+                    "w": 24,
+                    "x": 0,
+                    "y": 36
+                },
+                "id": 18,
+                "panels": [
+
+                ],
+                "repeat": null,
+                "title": "SFP Statistics",
+                "type": "row"
+            },
+            {
+                "aliasColors": {
+
+                },
+                "bars": false,
+                "dashLength": 10,
+                "dashes": false,
+                "datasource": "default",
+                "fill": 0,
+                "gridPos": {
+                    "h": 7,
+                    "w": 12,
+                    "x": 0,
+                    "y": 37
+                },
+                "id": 12,
+                "legend": {
+                    "alignAsTable": true,
+                    "avg": false,
+                    "current": true,
+                    "max": false,
+                    "min": false,
+                    "show": true,
+                    "total": false,
+                    "values": true
+                },
+                "lines": true,
+                "linewidth": 2,
+                "links": [
+
+                ],
+                "nullPointMode": "connected",
+                "percentage": false,
+                "pointradius": 5,
+                "points": false,
+                "renderer": "flot",
+                "seriesOverrides": [
+
+                ],
+                "spaceLength": 10,
+                "stack": false,
+                "steppedLine": false,
+                "targets": [
+                    {
+                        "refId": "A",
+                        "target": "lowestAverage(removeEmptySeries(brocade.stats.ports.$Fabric.$Switch.$Porttype.$Slot.$Port.timeseriessfppower.rxp), 10)",
+                        "textEditor": false
+                    }
+                ],
+                "thresholds": [
+
+                ],
+                "timeFrom": null,
+                "timeRegions": [
+
+                ],
+                "timeShift": null,
+                "title": "SFP RX Power",
+                "tooltip": {
+                    "shared": true,
+                    "sort": 0,
+                    "value_type": "individual"
+                },
+                "type": "graph",
+                "xaxis": {
+                    "buckets": null,
+                    "mode": "time",
+                    "name": null,
+                    "show": true,
+                    "values": [
+
+                    ]
+                },
+                "yaxes": [
+                    {
+                        "decimals": 1,
+                        "format": "dBm",
+                        "label": null,
+                        "logBase": 1,
+                        "max": "0",
+                        "min": null,
+                        "show": true
+                    },
+                    {
+                        "format": "short",
+                        "label": null,
+                        "logBase": 1,
+                        "max": null,
+                        "min": null,
+                        "show": true
+                    }
+                ],
+                "yaxis": {
+                    "align": false,
+                    "alignLevel": null
+                }
+            },
+            {
+                "aliasColors": {
+
+                },
+                "bars": false,
+                "dashLength": 10,
+                "dashes": false,
+                "datasource": "default",
+                "fill": 0,
+                "gridPos": {
+                    "h": 7,
+                    "w": 12,
+                    "x": 12,
+                    "y": 37
+                },
+                "id": 13,
+                "legend": {
+                    "alignAsTable": true,
+                    "avg": false,
+                    "current": true,
+                    "max": false,
+                    "min": false,
+                    "show": true,
+                    "total": false,
+                    "values": true
+                },
+                "lines": true,
+                "linewidth": 2,
+                "links": [
+
+                ],
+                "nullPointMode": "connected",
+                "percentage": false,
+                "pointradius": 5,
+                "points": false,
+                "renderer": "flot",
+                "seriesOverrides": [
+
+                ],
+                "spaceLength": 10,
+                "stack": false,
+                "steppedLine": false,
+                "targets": [
+                    {
+                        "refId": "B",
+                        "target": "lowestAverage(removeEmptySeries(brocade.stats.ports.$Fabric.$Switch.$Porttype.$Slot.$Port.timeseriessfppower.txp), 10)",
+                        "textEditor": false
+                    }
+                ],
+                "thresholds": [
+
+                ],
+                "timeFrom": null,
+                "timeRegions": [
+
+                ],
+                "timeShift": null,
+                "title": "SFP TX Power",
+                "tooltip": {
+                    "shared": true,
+                    "sort": 0,
+                    "value_type": "individual"
+                },
+                "type": "graph",
+                "xaxis": {
+                    "buckets": null,
+                    "mode": "time",
+                    "name": null,
+                    "show": true,
+                    "values": [
+
+                    ]
+                },
+                "yaxes": [
+                    {
+                        "decimals": 1,
+                        "format": "dBm",
+                        "label": null,
+                        "logBase": 1,
+                        "max": "0",
+                        "min": null,
+                        "show": true
+                    },
+                    {
+                        "format": "short",
+                        "label": null,
+                        "logBase": 1,
+                        "max": null,
+                        "min": null,
+                        "show": true
+                    }
+                ],
+                "yaxis": {
+                    "align": false,
+                    "alignLevel": null
+                }
+            }
+        ],
+        "refresh": false,
+        "schemaVersion": 16,
+        "style": "dark",
+        "tags": [
+            "Brocade"
+        ],
+        "templating": {
+            "list": [
+                {
+                    "allValue": null,
+                    "current": {
+                        "tags": [
+
+                        ],
+                        "text": "NetApp_MCC1_1 + NetApp_MCC1_2",
+                        "value": [
+                            "NetApp_MCC1_1",
+                            "NetApp_MCC1_2"
+                        ]
+                    },
+                    "datasource": "default",
+                    "definition": "",
+                    "hide": 0,
+                    "includeAll": true,
+                    "label": null,
+                    "multi": true,
+                    "name": "Fabric",
+                    "options": [
+
+                    ],
+                    "query": "brocade.stats.ports.*",
+                    "refresh": 1,
+                    "regex": "",
+                    "skipUrlSync": false,
+                    "sort": 0,
+                    "tagValuesQuery": "",
+                    "tags": [
+
+                    ],
+                    "tagsQuery": "",
+                    "type": "query",
+                    "useTags": false
+                },
+                {
+                    "allValue": null,
+                    "current": {
+                        "text": "All",
+                        "value": "$__all"
+                    },
+                    "datasource": "default",
+                    "definition": "",
+                    "hide": 0,
+                    "includeAll": true,
+                    "label": null,
+                    "multi": true,
+                    "name": "Switch",
+                    "options": [
+
+                    ],
+                    "query": "brocade.stats.ports.$Fabric.*",
+                    "refresh": 1,
+                    "regex": "",
+                    "skipUrlSync": false,
+                    "sort": 0,
+                    "tagValuesQuery": "",
+                    "tags": [
+
+                    ],
+                    "tagsQuery": "",
+                    "type": "query",
+                    "useTags": false
+                },
+                {
+                    "allValue": null,
+                    "current": {
+                        "tags": [
+
+                        ],
+                        "text": "LE_PORT",
+                        "value": [
+                            "LE_PORT"
+                        ]
+                    },
+                    "datasource": "default",
+                    "definition": "",
+                    "hide": 0,
+                    "includeAll": true,
+                    "label": null,
+                    "multi": true,
+                    "name": "Porttype",
+                    "options": [
+
+                    ],
+                    "query": "brocade.stats.ports.$Fabric.$Switch.*",
+                    "refresh": 1,
+                    "regex": "",
+                    "skipUrlSync": false,
+                    "sort": 3,
+                    "tagValuesQuery": "",
+                    "tags": [
+
+                    ],
+                    "tagsQuery": "",
+                    "type": "query",
+                    "useTags": false
+                },
+                {
+                    "allValue": null,
+                    "current": {
+                        "text": "All",
+                        "value": "$__all"
+                    },
+                    "datasource": "default",
+                    "definition": "",
+                    "hide": 0,
+                    "includeAll": true,
+                    "label": null,
+                    "multi": true,
+                    "name": "Slot",
+                    "options": [
+
+                    ],
+                    "query": "brocade.stats.ports.$Fabric.$Switch.$Porttype.*",
+                    "refresh": 1,
+                    "regex": "",
+                    "skipUrlSync": false,
+                    "sort": 3,
+                    "tagValuesQuery": "",
+                    "tags": [
+
+                    ],
+                    "tagsQuery": "",
+                    "type": "query",
+                    "useTags": false
+                },
+                {
+                    "allValue": null,
+                    "current": {
+                        "text": "All",
+                        "value": [
+                            "$__all"
+                        ]
+                    },
+                    "datasource": "default",
+                    "definition": "",
+                    "hide": 0,
+                    "includeAll": true,
+                    "label": null,
+                    "multi": true,
+                    "name": "Port",
+                    "options": [
+
+                    ],
+                    "query": "brocade.stats.ports.$Fabric.$Switch.$Porttype.$Slot.*",
+                    "refresh": 1,
+                    "regex": "",
+                    "skipUrlSync": false,
+                    "sort": 3,
+                    "tagValuesQuery": "",
+                    "tags": [
+
+                    ],
+                    "tagsQuery": "",
+                    "type": "query",
+                    "useTags": false
+                }
+            ]
+        },
+        "time": {
+            "from": "now-24h",
+            "to": "now"
+        },
+        "timepicker": {
+            "refresh_intervals": [
+                "5s",
+                "10s",
+                "30s",
+                "1m",
+                "5m",
+                "15m",
+                "30m",
+                "1h",
+                "2h",
+                "1d"
+            ],
+            "time_options": [
+                "5m",
+                "15m",
+                "1h",
+                "6h",
+                "12h",
+                "24h",
+                "2d",
+                "7d",
+                "30d"
+            ]
+        },
+        "timezone": "browser",
+        "title": "Brocade: Port Error Details",
+        "uid": "4RVplLezk",
+        "version": 4
+    },
+    "overwrite": true
+}

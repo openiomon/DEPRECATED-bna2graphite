@@ -1,0 +1,202 @@
+{
+    "meta": {
+        "type": "db",
+        "canSave": true,
+        "canEdit": true,
+        "canAdmin": false,
+        "canStar": true,
+        "slug": "brocade-host-error-link-db",
+        "url": "/d/Q17tlL6kz/brocade-host-error-link-db",
+        "expires": "0001-01-01T00:00:00Z",
+        "created": "2018-05-14T09:11:58+02:00",
+        "updated": "2018-05-14T09:12:50+02:00",
+        "updatedBy": "XNE6009W",
+        "createdBy": "Anonymous",
+        "version": 2,
+        "hasAcl": false,
+        "isFolder": false,
+        "folderId": 143,
+        "folderTitle": "Brocade",
+        "folderUrl": "/dashboards/f/b0xePvnmz/brocade",
+        "provisioned": false,
+        "provisionedExternalId": ""
+    },
+    "dashboard": {
+        "annotations": {
+            "list": [
+                {
+                    "builtIn": 1,
+                    "datasource": "default",
+                    "enable": true,
+                    "hide": true,
+                    "iconColor": "rgba(0, 211, 255, 1)",
+                    "name": "Annotations & Alerts",
+                    "type": "dashboard"
+                }
+            ]
+        },
+        "editable": false,
+        "gnetId": null,
+        "graphTooltip": 0,
+        "id": null,
+        "links": [
+
+        ],
+        "panels": [
+            {
+                "aliasColors": {
+
+                },
+                "bars": false,
+                "dashLength": 10,
+                "dashes": false,
+                "datasource": "default",
+                "fill": 1,
+                "gridPos": {
+                    "h": 7,
+                    "w": 24,
+                    "x": 0,
+                    "y": 0
+                },
+                "id": 1,
+                "legend": {
+                    "avg": false,
+                    "current": false,
+                    "max": false,
+                    "min": false,
+                    "show": true,
+                    "total": false,
+                    "values": false
+                },
+                "lines": true,
+                "linewidth": 1,
+                "links": [
+
+                ],
+                "nullPointMode": "null",
+                "percentage": false,
+                "pointradius": 5,
+                "points": false,
+                "renderer": "flot",
+                "seriesOverrides": [
+
+                ],
+                "spaceLength": 10,
+                "stack": false,
+                "steppedLine": false,
+                "targets": [
+                    {
+                        "refId": "A",
+                        "target": "brocade.stats.hosts.*.$parameter",
+                        "textEditor": true
+                    }
+                ],
+                "thresholds": [
+
+                ],
+                "timeFrom": null,
+                "timeShift": null,
+                "title": "Details Errors Statistic called by: $parameter",
+                "tooltip": {
+                    "shared": true,
+                    "sort": 0,
+                    "value_type": "individual"
+                },
+                "type": "graph",
+                "xaxis": {
+                    "buckets": null,
+                    "mode": "time",
+                    "name": null,
+                    "show": true,
+                    "values": [
+
+                    ]
+                },
+                "yaxes": [
+                    {
+                        "format": "short",
+                        "label": null,
+                        "logBase": 1,
+                        "max": null,
+                        "min": "0",
+                        "show": true
+                    },
+                    {
+                        "format": "short",
+                        "label": null,
+                        "logBase": 1,
+                        "max": null,
+                        "min": null,
+                        "show": true
+                    }
+                ]
+            }
+        ],
+        "schemaVersion": 16,
+        "style": "dark",
+        "tags": [
+            "Brocade",
+            "Link Dashboard",
+            "BETA"
+        ],
+        "templating": {
+            "list": [
+                {
+                    "allValue": null,
+                    "current": {
+                        "text": "1",
+                        "value": "1"
+                    },
+                    "hide": 2,
+                    "includeAll": false,
+                    "label": null,
+                    "multi": false,
+                    "name": "parameter",
+                    "options": [
+                        {
+                            "selected": true,
+                            "text": "1",
+                            "value": "1"
+                        }
+                    ],
+                    "query": "1",
+                    "type": "custom"
+                }
+            ]
+        },
+        "time": {
+            "from": "now-24h",
+            "to": "now"
+        },
+        "timepicker": {
+            "refresh_intervals": [
+                "5s",
+                "10s",
+                "30s",
+                "1m",
+                "5m",
+                "15m",
+                "30m",
+                "1h",
+                "2h",
+                "1d"
+            ],
+            "time_options": [
+                "5m",
+                "15m",
+                "1h",
+                "6h",
+                "12h",
+                "24h",
+                "2d",
+                "7d",
+                "30d"
+            ]
+        },
+        "timezone": "",
+        "title": "Brocade: Host Error Link DB",
+        "uid": "Q17tlL6kz",
+        "version": 2
+    },
+    "overwrite": true
+}

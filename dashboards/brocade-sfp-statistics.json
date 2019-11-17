@@ -1,0 +1,987 @@
+{
+    "meta": {
+        "type": "db",
+        "canSave": true,
+        "canEdit": true,
+        "canAdmin": false,
+        "canStar": true,
+        "slug": "brocade-sfp-statistics",
+        "url": "/d/pGVp_Yezz/brocade-sfp-statistics",
+        "expires": "0001-01-01T00:00:00Z",
+        "created": "2018-05-14T09:11:59+02:00",
+        "updated": "2018-05-14T09:12:51+02:00",
+        "updatedBy": "XNE6009W",
+        "createdBy": "Anonymous",
+        "version": 2,
+        "hasAcl": false,
+        "isFolder": false,
+        "folderId": 143,
+        "folderTitle": "Brocade",
+        "folderUrl": "/dashboards/f/b0xePvnmz/brocade",
+        "provisioned": false,
+        "provisionedExternalId": ""
+    },
+    "dashboard": {
+        "annotations": {
+            "list": [
+                {
+                    "builtIn": 1,
+                    "datasource": "default",
+                    "enable": true,
+                    "hide": true,
+                    "iconColor": "rgba(0, 211, 255, 1)",
+                    "name": "Annotations & Alerts",
+                    "type": "dashboard"
+                }
+            ]
+        },
+        "editable": true,
+        "gnetId": null,
+        "graphTooltip": 0,
+        "id": null,
+        "links": [
+
+        ],
+        "panels": [
+            {
+                "collapsed": false,
+                "gridPos": {
+                    "h": 10,
+                    "w": 24,
+                    "x": 0,
+                    "y": 0
+                },
+                "id": 10,
+                "panels": [
+
+                ],
+                "repeat": null,
+                "title": "E-Ports",
+                "type": "row"
+            },
+            {
+                "columns": [
+                    {
+                        "text": "Avg",
+                        "value": "avg"
+                    },
+                    {
+                        "text": "Max",
+                        "value": "max"
+                    },
+                    {
+                        "text": "Min",
+                        "value": "min"
+                    }
+                ],
+                "datasource": "default",
+                "fontSize": "100%",
+                "gridPos": {
+                    "h": 10,
+                    "w": 12,
+                    "x": 0,
+                    "y": 1
+                },
+                "id": 1,
+                "links": [
+
+                ],
+                "pageSize": null,
+                "scroll": true,
+                "showHeader": true,
+                "sort": {
+                    "col": 1,
+                    "desc": false
+                },
+                "styles": [
+                    {
+                        "alias": "Time",
+                        "dateFormat": "YYYY-MM-DD HH:mm:ss",
+                        "pattern": "Time",
+                        "type": "date"
+                    },
+                    {
+                        "alias": "Switch.Slot.Port",
+                        "colorMode": null,
+                        "colors": [
+                            "rgba(245, 54, 54, 0.9)",
+                            "rgba(237, 129, 40, 0.89)",
+                            "rgba(50, 172, 45, 0.97)"
+                        ],
+                        "dateFormat": "YYYY-MM-DD HH:mm:ss",
+                        "decimals": 2,
+                        "link": true,
+                        "linkTargetBlank": true,
+                        "linkTooltip": "Go to details",
+                        "linkUrl": "/dashboard/db/brocade-port-error-link-dashboad?orgId=1&var-linkinfo=$__cell_0",
+                        "pattern": "/^Metric/",
+                        "thresholds": [
+
+                        ],
+                        "type": "number",
+                        "unit": "short"
+                    },
+                    {
+                        "alias": "",
+                        "colorMode": null,
+                        "colors": [
+                            "rgba(245, 54, 54, 0.9)",
+                            "rgba(237, 129, 40, 0.89)",
+                            "rgba(50, 172, 45, 0.97)"
+                        ],
+                        "decimals": 2,
+                        "link": true,
+                        "linkTargetBlank": true,
+                        "linkTooltip": "Go to details",
+                        "linkUrl": "/dashboard/db/brocade-port-error-link-dashboad?orgId=1&var-linkinfo=$__cell_0",
+                        "pattern": "/.*/",
+                        "thresholds": [
+
+                        ],
+                        "type": "number",
+                        "unit": "dBm"
+                    }
+                ],
+                "targets": [
+                    {
+                        "refId": "A",
+                        "target": "aliasByNode(removeEmptySeries(averageBelow(sortByMaxima(brocade.stats.ports.$Fabric.*.*E_PORT.[01234569].*.timeseriessfppower.txp), $Density)), 4, 5, 6, 7)"
+                    }
+                ],
+                "title": "E-Port TX Power",
+                "transform": "timeseries_aggregations",
+                "type": "table"
+            },
+            {
+                "columns": [
+                    {
+                        "text": "Avg",
+                        "value": "avg"
+                    },
+                    {
+                        "text": "Max",
+                        "value": "max"
+                    },
+                    {
+                        "text": "Min",
+                        "value": "min"
+                    }
+                ],
+                "datasource": "default",
+                "fontSize": "100%",
+                "gridPos": {
+                    "h": 10,
+                    "w": 12,
+                    "x": 12,
+                    "y": 1
+                },
+                "id": 2,
+                "links": [
+
+                ],
+                "pageSize": null,
+                "scroll": true,
+                "showHeader": true,
+                "sort": {
+                    "col": 1,
+                    "desc": false
+                },
+                "styles": [
+                    {
+                        "alias": "Time",
+                        "dateFormat": "YYYY-MM-DD HH:mm:ss",
+                        "pattern": "Time",
+                        "type": "date"
+                    },
+                    {
+                        "alias": "Switch.Slot.Port",
+                        "colorMode": null,
+                        "colors": [
+                            "rgba(245, 54, 54, 0.9)",
+                            "rgba(237, 129, 40, 0.89)",
+                            "rgba(50, 172, 45, 0.97)"
+                        ],
+                        "dateFormat": "YYYY-MM-DD HH:mm:ss",
+                        "decimals": 2,
+                        "link": true,
+                        "linkTargetBlank": true,
+                        "linkTooltip": "Go to details",
+                        "linkUrl": "/dashboard/db/brocade-port-error-link-dashboad?orgId=1&var-linkinfo=$__cell_0",
+                        "pattern": "/^Metric/",
+                        "thresholds": [
+
+                        ],
+                        "type": "number",
+                        "unit": "short"
+                    },
+                    {
+                        "alias": "",
+                        "colorMode": null,
+                        "colors": [
+                            "rgba(245, 54, 54, 0.9)",
+                            "rgba(237, 129, 40, 0.89)",
+                            "rgba(50, 172, 45, 0.97)"
+                        ],
+                        "decimals": 2,
+                        "link": true,
+                        "linkTargetBlank": true,
+                        "linkTooltip": "Go to details",
+                        "linkUrl": "/dashboard/db/brocade-port-error-link-dashboad?orgId=1&var-linkinfo=$__cell_0",
+                        "pattern": "/.*/",
+                        "thresholds": [
+
+                        ],
+                        "type": "number",
+                        "unit": "dBm"
+                    }
+                ],
+                "targets": [
+                    {
+                        "refId": "A",
+                        "target": "aliasByNode(removeEmptySeries(averageBelow(sortByMaxima(brocade.stats.ports.$Fabric.*.*E_PORT.[01234569].*.timeseriessfppower.rxp), $Density)), 4, 5, 6, 7)"
+                    }
+                ],
+                "title": "E-Port RX Power",
+                "transform": "timeseries_aggregations",
+                "type": "table"
+            },
+            {
+                "collapsed": false,
+                "gridPos": {
+                    "h": 10,
+                    "w": 24,
+                    "x": 0,
+                    "y": 11
+                },
+                "id": 11,
+                "panels": [
+
+                ],
+                "repeat": null,
+                "title": "F-Ports",
+                "type": "row"
+            },
+            {
+                "columns": [
+                    {
+                        "text": "Avg",
+                        "value": "avg"
+                    },
+                    {
+                        "text": "Max",
+                        "value": "max"
+                    },
+                    {
+                        "text": "Min",
+                        "value": "min"
+                    }
+                ],
+                "datasource": "default",
+                "fontSize": "100%",
+                "gridPos": {
+                    "h": 10,
+                    "w": 12,
+                    "x": 0,
+                    "y": 12
+                },
+                "id": 3,
+                "links": [
+
+                ],
+                "pageSize": null,
+                "scroll": true,
+                "showHeader": true,
+                "sort": {
+                    "col": 1,
+                    "desc": false
+                },
+                "styles": [
+                    {
+                        "alias": "Time",
+                        "dateFormat": "YYYY-MM-DD HH:mm:ss",
+                        "pattern": "Time",
+                        "type": "date"
+                    },
+                    {
+                        "alias": "Switch.Slot.Port",
+                        "colorMode": null,
+                        "colors": [
+                            "rgba(245, 54, 54, 0.9)",
+                            "rgba(237, 129, 40, 0.89)",
+                            "rgba(50, 172, 45, 0.97)"
+                        ],
+                        "dateFormat": "YYYY-MM-DD HH:mm:ss",
+                        "decimals": 2,
+                        "link": true,
+                        "linkTargetBlank": true,
+                        "linkTooltip": "Go to details",
+                        "linkUrl": "/dashboard/db/brocade-port-error-link-dashboad?orgId=1&var-linkinfo=$__cell_0",
+                        "pattern": "/^Metric/",
+                        "thresholds": [
+
+                        ],
+                        "type": "number",
+                        "unit": "short"
+                    },
+                    {
+                        "alias": "",
+                        "colorMode": null,
+                        "colors": [
+                            "rgba(245, 54, 54, 0.9)",
+                            "rgba(237, 129, 40, 0.89)",
+                            "rgba(50, 172, 45, 0.97)"
+                        ],
+                        "decimals": 2,
+                        "link": true,
+                        "linkTargetBlank": true,
+                        "linkTooltip": "Go to details",
+                        "linkUrl": "/dashboard/db/brocade-port-error-link-dashboad?orgId=1&var-linkinfo=$__cell_0",
+                        "pattern": "/.*/",
+                        "thresholds": [
+
+                        ],
+                        "type": "number",
+                        "unit": "dBm"
+                    }
+                ],
+                "targets": [
+                    {
+                        "refId": "A",
+                        "target": "aliasByNode(removeEmptySeries(averageBelow(sortByMaxima(brocade.stats.ports.$Fabric.*.F_PORT.*.*.timeseriessfppower.txp), $Density)), 4, 5, 6, 7)"
+                    }
+                ],
+                "title": "F-Port TX Power",
+                "transform": "timeseries_aggregations",
+                "type": "table"
+            },
+            {
+                "columns": [
+                    {
+                        "text": "Avg",
+                        "value": "avg"
+                    },
+                    {
+                        "text": "Max",
+                        "value": "max"
+                    },
+                    {
+                        "text": "Min",
+                        "value": "min"
+                    }
+                ],
+                "datasource": "default",
+                "fontSize": "100%",
+                "gridPos": {
+                    "h": 10,
+                    "w": 12,
+                    "x": 12,
+                    "y": 12
+                },
+                "id": 4,
+                "links": [
+
+                ],
+                "pageSize": null,
+                "scroll": true,
+                "showHeader": true,
+                "sort": {
+                    "col": 1,
+                    "desc": false
+                },
+                "styles": [
+                    {
+                        "alias": "Time",
+                        "dateFormat": "YYYY-MM-DD HH:mm:ss",
+                        "pattern": "Time",
+                        "type": "date"
+                    },
+                    {
+                        "alias": "Switch.Slot.Port",
+                        "colorMode": null,
+                        "colors": [
+                            "rgba(245, 54, 54, 0.9)",
+                            "rgba(237, 129, 40, 0.89)",
+                            "rgba(50, 172, 45, 0.97)"
+                        ],
+                        "dateFormat": "YYYY-MM-DD HH:mm:ss",
+                        "decimals": 2,
+                        "link": true,
+                        "linkTargetBlank": true,
+                        "linkTooltip": "Go to details",
+                        "linkUrl": "/dashboard/db/brocade-port-error-link-dashboad?orgId=1&var-linkinfo=$__cell_0",
+                        "pattern": "/^Metric/",
+                        "thresholds": [
+
+                        ],
+                        "type": "number",
+                        "unit": "short"
+                    },
+                    {
+                        "alias": "",
+                        "colorMode": null,
+                        "colors": [
+                            "rgba(245, 54, 54, 0.9)",
+                            "rgba(237, 129, 40, 0.89)",
+                            "rgba(50, 172, 45, 0.97)"
+                        ],
+                        "decimals": 2,
+                        "link": true,
+                        "linkTargetBlank": true,
+                        "linkTooltip": "Go to details",
+                        "linkUrl": "/dashboard/db/brocade-port-error-link-dashboad?orgId=1&var-linkinfo=$__cell_0",
+                        "pattern": "/.*/",
+                        "thresholds": [
+
+                        ],
+                        "type": "number",
+                        "unit": "dBm"
+                    }
+                ],
+                "targets": [
+                    {
+                        "refId": "A",
+                        "target": "aliasByNode(removeEmptySeries(averageBelow(sortByMaxima(brocade.stats.ports.$Fabric.*.F_PORT.*.*.timeseriessfppower.rxp), $Density)), 4, 5, 6, 7)"
+                    }
+                ],
+                "title": "F-Port RX Power",
+                "transform": "timeseries_aggregations",
+                "type": "table"
+            },
+            {
+                "collapsed": false,
+                "gridPos": {
+                    "h": 10,
+                    "w": 24,
+                    "x": 0,
+                    "y": 22
+                },
+                "id": 12,
+                "panels": [
+
+                ],
+                "repeat": null,
+                "title": "Storage Ports",
+                "type": "row"
+            },
+            {
+                "columns": [
+                    {
+                        "text": "Avg",
+                        "value": "avg"
+                    },
+                    {
+                        "text": "Max",
+                        "value": "max"
+                    },
+                    {
+                        "text": "Min",
+                        "value": "min"
+                    }
+                ],
+                "datasource": "default",
+                "fontSize": "100%",
+                "gridPos": {
+                    "h": 10,
+                    "w": 12,
+                    "x": 0,
+                    "y": 23
+                },
+                "id": 5,
+                "links": [
+
+                ],
+                "pageSize": null,
+                "scroll": true,
+                "showHeader": true,
+                "sort": {
+                    "col": 1,
+                    "desc": false
+                },
+                "styles": [
+                    {
+                        "alias": "Time",
+                        "dateFormat": "YYYY-MM-DD HH:mm:ss",
+                        "pattern": "Time",
+                        "type": "date"
+                    },
+                    {
+                        "alias": "Storagesystem.WWPN",
+                        "colorMode": null,
+                        "colors": [
+                            "rgba(245, 54, 54, 0.9)",
+                            "rgba(237, 129, 40, 0.89)",
+                            "rgba(50, 172, 45, 0.97)"
+                        ],
+                        "dateFormat": "YYYY-MM-DD HH:mm:ss",
+                        "decimals": 2,
+                        "pattern": "/^Metric/",
+                        "thresholds": [
+
+                        ],
+                        "type": "number",
+                        "unit": "short"
+                    },
+                    {
+                        "alias": "",
+                        "colorMode": null,
+                        "colors": [
+                            "rgba(245, 54, 54, 0.9)",
+                            "rgba(237, 129, 40, 0.89)",
+                            "rgba(50, 172, 45, 0.97)"
+                        ],
+                        "decimals": 2,
+                        "pattern": "/.*/",
+                        "thresholds": [
+
+                        ],
+                        "type": "number",
+                        "unit": "dBm"
+                    }
+                ],
+                "targets": [
+                    {
+                        "refId": "A",
+                        "target": "aliasByNode(removeEmptySeries(averageBelow(brocade.stats.hosts.target.$Fabric.*.*.timeseriessfppower.txp, $Density)), 5, 6)"
+                    }
+                ],
+                "title": "F-Port TX Power",
+                "transform": "timeseries_aggregations",
+                "type": "table"
+            },
+            {
+                "columns": [
+                    {
+                        "text": "Avg",
+                        "value": "avg"
+                    },
+                    {
+                        "text": "Max",
+                        "value": "max"
+                    },
+                    {
+                        "text": "Min",
+                        "value": "min"
+                    }
+                ],
+                "datasource": "default",
+                "fontSize": "100%",
+                "gridPos": {
+                    "h": 10,
+                    "w": 12,
+                    "x": 12,
+                    "y": 23
+                },
+                "id": 8,
+                "links": [
+
+                ],
+                "pageSize": null,
+                "scroll": true,
+                "showHeader": true,
+                "sort": {
+                    "col": 1,
+                    "desc": false
+                },
+                "styles": [
+                    {
+                        "alias": "Time",
+                        "dateFormat": "YYYY-MM-DD HH:mm:ss",
+                        "pattern": "Time",
+                        "type": "date"
+                    },
+                    {
+                        "alias": "Storagesystem.WWPN",
+                        "colorMode": null,
+                        "colors": [
+                            "rgba(245, 54, 54, 0.9)",
+                            "rgba(237, 129, 40, 0.89)",
+                            "rgba(50, 172, 45, 0.97)"
+                        ],
+                        "dateFormat": "YYYY-MM-DD HH:mm:ss",
+                        "decimals": 2,
+                        "pattern": "/^Metric/",
+                        "thresholds": [
+
+                        ],
+                        "type": "number",
+                        "unit": "short"
+                    },
+                    {
+                        "alias": "",
+                        "colorMode": null,
+                        "colors": [
+                            "rgba(245, 54, 54, 0.9)",
+                            "rgba(237, 129, 40, 0.89)",
+                            "rgba(50, 172, 45, 0.97)"
+                        ],
+                        "decimals": 2,
+                        "pattern": "/.*/",
+                        "thresholds": [
+
+                        ],
+                        "type": "number",
+                        "unit": "dBm"
+                    }
+                ],
+                "targets": [
+                    {
+                        "refId": "A",
+                        "target": "aliasByNode(removeEmptySeries(averageBelow(brocade.stats.hosts.target.$Fabric.*.*.timeseriessfppower.rxp, $Density)), 5, 6)"
+                    }
+                ],
+                "title": "F-Port RX Power",
+                "transform": "timeseries_aggregations",
+                "type": "table"
+            },
+            {
+                "collapsed": false,
+                "gridPos": {
+                    "h": 10,
+                    "w": 24,
+                    "x": 0,
+                    "y": 33
+                },
+                "id": 13,
+                "panels": [
+
+                ],
+                "repeat": null,
+                "title": "Server Ports",
+                "type": "row"
+            },
+            {
+                "columns": [
+                    {
+                        "text": "Avg",
+                        "value": "avg"
+                    },
+                    {
+                        "text": "Max",
+                        "value": "max"
+                    },
+                    {
+                        "text": "Min",
+                        "value": "min"
+                    }
+                ],
+                "datasource": "default",
+                "fontSize": "100%",
+                "gridPos": {
+                    "h": 10,
+                    "w": 12,
+                    "x": 0,
+                    "y": 34
+                },
+                "id": 7,
+                "links": [
+
+                ],
+                "pageSize": null,
+                "scroll": true,
+                "showHeader": true,
+                "sort": {
+                    "col": 1,
+                    "desc": false
+                },
+                "styles": [
+                    {
+                        "alias": "Time",
+                        "dateFormat": "YYYY-MM-DD HH:mm:ss",
+                        "pattern": "Time",
+                        "type": "date"
+                    },
+                    {
+                        "alias": "Hostname.WWPN",
+                        "colorMode": null,
+                        "colors": [
+                            "rgba(245, 54, 54, 0.9)",
+                            "rgba(237, 129, 40, 0.89)",
+                            "rgba(50, 172, 45, 0.97)"
+                        ],
+                        "dateFormat": "YYYY-MM-DD HH:mm:ss",
+                        "decimals": 2,
+                        "pattern": "/^Metric/",
+                        "thresholds": [
+
+                        ],
+                        "type": "number",
+                        "unit": "short"
+                    },
+                    {
+                        "alias": "",
+                        "colorMode": null,
+                        "colors": [
+                            "rgba(245, 54, 54, 0.9)",
+                            "rgba(237, 129, 40, 0.89)",
+                            "rgba(50, 172, 45, 0.97)"
+                        ],
+                        "decimals": 2,
+                        "pattern": "/.*/",
+                        "thresholds": [
+
+                        ],
+                        "type": "number",
+                        "unit": "dBm"
+                    }
+                ],
+                "targets": [
+                    {
+                        "refId": "A",
+                        "target": "aliasByNode(removeEmptySeries(averageBelow(brocade.stats.hosts.initiator.$Fabric.*.*.timeseriessfppower.txp, $Density)), 5, 6)"
+                    }
+                ],
+                "title": "F-Port TX Power",
+                "transform": "timeseries_aggregations",
+                "type": "table"
+            },
+            {
+                "columns": [
+                    {
+                        "text": "Avg",
+                        "value": "avg"
+                    },
+                    {
+                        "text": "Max",
+                        "value": "max"
+                    },
+                    {
+                        "text": "Min",
+                        "value": "min"
+                    }
+                ],
+                "datasource": "default",
+                "fontSize": "100%",
+                "gridPos": {
+                    "h": 10,
+                    "w": 12,
+                    "x": 12,
+                    "y": 34
+                },
+                "id": 9,
+                "links": [
+
+                ],
+                "pageSize": null,
+                "scroll": true,
+                "showHeader": true,
+                "sort": {
+                    "col": 1,
+                    "desc": false
+                },
+                "styles": [
+                    {
+                        "alias": "Time",
+                        "dateFormat": "YYYY-MM-DD HH:mm:ss",
+                        "pattern": "Time",
+                        "type": "date"
+                    },
+                    {
+                        "alias": "Hostname.WWPN",
+                        "colorMode": null,
+                        "colors": [
+                            "rgba(245, 54, 54, 0.9)",
+                            "rgba(237, 129, 40, 0.89)",
+                            "rgba(50, 172, 45, 0.97)"
+                        ],
+                        "dateFormat": "YYYY-MM-DD HH:mm:ss",
+                        "decimals": 2,
+                        "pattern": "/^Metric/",
+                        "thresholds": [
+
+                        ],
+                        "type": "number",
+                        "unit": "short"
+                    },
+                    {
+                        "alias": "",
+                        "colorMode": null,
+                        "colors": [
+                            "rgba(245, 54, 54, 0.9)",
+                            "rgba(237, 129, 40, 0.89)",
+                            "rgba(50, 172, 45, 0.97)"
+                        ],
+                        "decimals": 2,
+                        "pattern": "/.*/",
+                        "thresholds": [
+
+                        ],
+                        "type": "number",
+                        "unit": "dBm"
+                    }
+                ],
+                "targets": [
+                    {
+                        "refId": "A",
+                        "target": "aliasByNode(removeEmptySeries(averageBelow(brocade.stats.hosts.initiator.$Fabric.*.*.timeseriessfppower.rxp, $Density)), 5, 6)"
+                    }
+                ],
+                "title": "F-Port RX Power",
+                "transform": "timeseries_aggregations",
+                "type": "table"
+            }
+        ],
+        "schemaVersion": 16,
+        "style": "dark",
+        "tags": [
+            "Brocade",
+            "Beta"
+        ],
+        "templating": {
+            "list": [
+                {
+                    "allValue": null,
+                    "current": {
+                        "text": "Fabric1 + Fabric2",
+                        "value": [
+                            "Fabric1",
+                            "Fabric2"
+                        ]
+                    },
+                    "datasource": "default",
+                    "hide": 0,
+                    "includeAll": true,
+                    "label": null,
+                    "multi": true,
+                    "name": "Fabric",
+                    "options": [
+
+                    ],
+                    "query": "brocade.stats.ports.*",
+                    "refresh": 1,
+                    "regex": "",
+                    "sort": 0,
+                    "tagValuesQuery": "",
+                    "tags": [
+
+                    ],
+                    "tagsQuery": "",
+                    "type": "query",
+                    "useTags": false
+                },
+                {
+                    "allValue": null,
+                    "current": {
+                        "tags": [
+
+                        ],
+                        "text": "-6.0",
+                        "value": "-6.0"
+                    },
+                    "hide": 0,
+                    "includeAll": false,
+                    "label": "Density-Limit (dB)",
+                    "multi": false,
+                    "name": "Density",
+                    "options": [
+                        {
+                            "selected": false,
+                            "text": "-1.0",
+                            "value": "-1.0"
+                        },
+                        {
+                            "selected": false,
+                            "text": "-2.0",
+                            "value": "-2.0"
+                        },
+                        {
+                            "selected": false,
+                            "text": "-3.0",
+                            "value": "-3.0"
+                        },
+                        {
+                            "selected": false,
+                            "text": "-4.0",
+                            "value": "-4.0"
+                        },
+                        {
+                            "selected": false,
+                            "text": "-5.0",
+                            "value": "-5.0"
+                        },
+                        {
+                            "selected": true,
+                            "text": "-6.0",
+                            "value": "-6.0"
+                        },
+                        {
+                            "selected": false,
+                            "text": "-7.0",
+                            "value": "-7.0"
+                        },
+                        {
+                            "selected": false,
+                            "text": "-8.0",
+                            "value": "-8.0"
+                        },
+                        {
+                            "selected": false,
+                            "text": "-9.0",
+                            "value": "-9.0"
+                        },
+                        {
+                            "selected": false,
+                            "text": "-10.0",
+                            "value": "-10.0"
+                        },
+                        {
+                            "selected": false,
+                            "text": "-11.0",
+                            "value": "-11.0"
+                        },
+                        {
+                            "selected": false,
+                            "text": "-12.0",
+                            "value": "-12.0"
+                        },
+                        {
+                            "selected": false,
+                            "text": "-13.0",
+                            "value": "-13.0"
+                        },
+                        {
+                            "selected": false,
+                            "text": "-14.0",
+                            "value": "-14.0"
+                        }
+                    ],
+                    "query": "-1.0,-2.0,-3.0,-4.0,-5.0,-6.0,-7.0,-8.0,-9.0,-10.0,-11.0,-12.0,-13.0,-14.0",
+                    "type": "custom"
+                }
+            ]
+        },
+        "time": {
+            "from": "now-24h",
+            "to": "now"
+        },
+        "timepicker": {
+            "refresh_intervals": [
+                "5s",
+                "10s",
+                "30s",
+                "1m",
+                "5m",
+                "15m",
+                "30m",
+                "1h",
+                "2h",
+                "1d"
+            ],
+            "time_options": [
+                "5m",
+                "15m",
+                "1h",
+                "6h",
+                "12h",
+                "24h",
+                "2d",
+                "7d",
+                "30d"
+            ]
+        },
+        "timezone": "",
+        "title": "Brocade: SFP Statistics",
+        "uid": "pGVp_Yezz",
+        "version": 2
+    },
+    "overwrite": true
+}
