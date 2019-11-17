@@ -54,14 +54,14 @@ rm -rf ${RPM_BUILD_ROOT}
 %files
 %config(noreplace) %attr(644,openiomon,openiomon) /opt/bna2graphite/conf/*.conf
 %config(noreplace) %attr(644,root,root) /etc/logrotate.d/bna2graphite
-%defattr(644,openiomon,openiomon,755)
-#%attr(755,openiomon,openiomon) /opt/bna2graphite
-#%attr(755,openiomon,openiomon) /opt/bna2graphite/bin
 %attr(755,openiomon,openiomon) /opt/bna2graphite/bin/*
-#%attr(755,openiomon,openiomon) /opt/bna2graphite/conf
-#%attr(755,openiomon,openiomon) /opt/bna2graphite/log
-#%attr(755,openiomon,openiomon) /opt/bna2graphite/run
 %attr(755,openiomon,openiomon) /opt/bna2graphite/lib/perl5/
+%defattr(644,openiomon,openiomon,755)
+/opt/bna2graphite/conf/storage-schemas.conf.example
+/opt/bna2graphite/dashboards/*
+/opt/bna2graphite/log/
+/opt/bna2graphite/run/
+
 
 %post
 ln -s -f /opt/bna2graphite/bin/bna2graphite.pl /bin/bna2graphite
