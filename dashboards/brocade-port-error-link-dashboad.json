@@ -1588,8 +1588,8 @@
                 {
                     "allValue": null,
                     "current": {
-                        "text": "DFRFFC02-2.F_PORT.3.44",
-                        "value": "DFRFFC02-2.F_PORT.3.44"
+                        "text": "SW123FC02-2.F_PORT.3.44",
+                        "value": "SW123FC02-2.F_PORT.3.44"
                     },
                     "hide": 2,
                     "includeAll": false,

@@ -391,9 +391,9 @@
                 {
                     "allValue": null,
                     "current": {
-                        "text": "DFRFFC01-1",
+                        "text": "SW123FC01-1",
                         "value": [
-                            "DFRFFC01-1"
+                            "SW123FC01-1"
                         ]
                     },
                     "datasource": "default",
