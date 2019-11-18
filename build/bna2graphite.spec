@@ -67,8 +67,8 @@ rm -rf ${RPM_BUILD_ROOT}
 ln -s -f /opt/bna2graphite/bin/bna2graphite.pl /bin/bna2graphite
 
 %changelog
-* Sun Nov 17 2019 Timo Drach <timo.dracg@openiomon,org>
-- Added dashboards und dashboard-untilities to RPM package
+* Sun Nov 17 2019 Timo Drach <timo.drach@openiomon.org>
+- Added dashboards and dashboard-utilities to RPM package
 * Tue Oct 01 2019 Timo Drach <timo.drach@openiomon.org>
 - Added example go-carbon storageschema configfile
 * Wed Sep 25 2019 Timo Drach <timo.drach@openiomon.org>
