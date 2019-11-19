@@ -1,0 +1,3106 @@
+{
+    "meta": {
+        "type": "db",
+        "canSave": true,
+        "canEdit": true,
+        "canAdmin": false,
+        "canStar": true,
+        "slug": "brocade-isl-status",
+        "url": "/d/U8np_Yezz/brocade-isl-status",
+        "expires": "0001-01-01T00:00:00Z",
+        "created": "2018-05-14T09:11:59+02:00",
+        "updated": "2018-05-14T09:12:50+02:00",
+<<<<<<< HEAD
+        "updatedBy": "USER",
+=======
+        "updatedBy": "XNE6009W",
+>>>>>>> 822f8dd00b189dd05b171b5b837105ffd32323a3
+        "createdBy": "Anonymous",
+        "version": 2,
+        "hasAcl": false,
+        "isFolder": false,
+        "folderId": 143,
+        "folderTitle": "Brocade",
+        "folderUrl": "/dashboards/f/b0xePvnmz/brocade",
+        "provisioned": false,
+        "provisionedExternalId": ""
+    },
+    "dashboard": {
+        "annotations": {
+            "list": [
+                {
+                    "builtIn": 1,
+                    "datasource": "default",
+                    "enable": true,
+                    "hide": true,
+                    "iconColor": "rgba(0, 211, 255, 1)",
+                    "name": "Annotations & Alerts",
+                    "type": "dashboard"
+                }
+            ]
+        },
+        "editable": true,
+        "gnetId": null,
+        "graphTooltip": 0,
+        "id": null,
+        "links": [
+
+        ],
+        "panels": [
+            {
+                "collapsed": false,
+                "gridPos": {
+                    "h": 1,
+                    "w": 24,
+                    "x": 0,
+                    "y": 0
+                },
+                "id": 42,
+                "panels": [
+
+                ],
+                "repeat": null,
+                "title": "Performance: Long Distance ISLs",
+                "type": "row"
+            },
+            {
+                "aliasColors": {
+
+                },
+                "bars": false,
+                "dashLength": 10,
+                "dashes": false,
+                "datasource": "default",
+                "fill": 0,
+                "gridPos": {
+                    "h": 10,
+                    "w": 8,
+                    "x": 0,
+                    "y": 1
+                },
+                "id": 1,
+                "legend": {
+                    "alignAsTable": true,
+                    "avg": true,
+                    "current": false,
+                    "max": true,
+                    "min": true,
+                    "show": true,
+                    "sort": "max",
+                    "sortDesc": true,
+                    "total": false,
+                    "values": true
+                },
+                "lines": true,
+                "linewidth": 1,
+                "links": [
+
+                ],
+                "nullPointMode": "null",
+                "percentage": false,
+                "pointradius": 5,
+                "points": false,
+                "renderer": "flot",
+                "seriesOverrides": [
+
+                ],
+                "spaceLength": 10,
+                "stack": false,
+                "steppedLine": false,
+                "targets": [
+                    {
+                        "refId": "A",
+                        "target": "aliasByNode(sortByMaxima(brocade.stats.ports.$Fabric.*.LE_PORT.*.*.timeseriestraffic.rx), 4, 6, 7)"
+                    }
+                ],
+                "thresholds": [
+
+                ],
+                "timeFrom": null,
+                "timeShift": null,
+                "title": "RX Throughput for Long Distance ISLs of $Fabric",
+                "tooltip": {
+                    "shared": true,
+                    "sort": 2,
+                    "value_type": "individual"
+                },
+                "type": "graph",
+                "xaxis": {
+                    "buckets": null,
+                    "mode": "time",
+                    "name": null,
+                    "show": true,
+                    "values": [
+
+                    ]
+                },
+                "yaxes": [
+                    {
+                        "format": "MBs",
+                        "label": null,
+                        "logBase": 1,
+                        "max": null,
+                        "min": null,
+                        "show": true
+                    },
+                    {
+                        "format": "short",
+                        "label": null,
+                        "logBase": 1,
+                        "max": null,
+                        "min": null,
+                        "show": true
+                    }
+                ]
+            },
+            {
+                "cacheTimeout": null,
+                "colorBackground": false,
+                "colorValue": false,
+                "colors": [
+                    "#299c46",
+                    "rgba(237, 129, 40, 0.89)",
+                    "#d44a3a"
+                ],
+                "datasource": "default",
+                "format": "MBs",
+                "gauge": {
+                    "maxValue": 100,
+                    "minValue": 0,
+                    "show": false,
+                    "thresholdLabels": false,
+                    "thresholdMarkers": false
+                },
+                "gridPos": {
+                    "h": 10,
+                    "w": 4,
+                    "x": 8,
+                    "y": 1
+                },
+                "id": 3,
+                "interval": null,
+                "links": [
+
+                ],
+                "mappingType": 1,
+                "mappingTypes": [
+                    {
+                        "name": "value to text",
+                        "value": 1
+                    },
+                    {
+                        "name": "range to text",
+                        "value": 2
+                    }
+                ],
+                "maxDataPoints": 100,
+                "nullPointMode": "connected",
+                "nullText": null,
+                "postfix": "",
+                "postfixFontSize": "50%",
+                "prefix": "",
+                "prefixFontSize": "50%",
+                "rangeMaps": [
+                    {
+                        "from": "null",
+                        "text": "N/A",
+                        "to": "null"
+                    }
+                ],
+                "sparkline": {
+                    "fillColor": "rgba(31, 118, 189, 0.18)",
+                    "full": false,
+                    "lineColor": "rgb(31, 120, 193)",
+                    "show": true
+                },
+                "tableColumn": "",
+                "targets": [
+                    {
+                        "refId": "A",
+                        "target": "averageSeries(brocade.stats.ports.$Fabric.*.LE_PORT.*.*.timeseriestraffic.rx)"
+                    }
+                ],
+                "thresholds": "",
+                "title": "Avg RX Throughput for Long Distance ISLs",
+                "type": "singlestat",
+                "valueFontSize": "80%",
+                "valueMaps": [
+                    {
+                        "op": "=",
+                        "text": "N/A",
+                        "value": "null"
+                    }
+                ],
+                "valueName": "avg"
+            },
+            {
+                "aliasColors": {
+
+                },
+                "bars": false,
+                "dashLength": 10,
+                "dashes": false,
+                "datasource": "default",
+                "fill": 0,
+                "gridPos": {
+                    "h": 10,
+                    "w": 8,
+                    "x": 12,
+                    "y": 1
+                },
+                "id": 2,
+                "legend": {
+                    "alignAsTable": true,
+                    "avg": true,
+                    "current": false,
+                    "max": true,
+                    "min": true,
+                    "show": true,
+                    "sort": "max",
+                    "sortDesc": true,
+                    "total": false,
+                    "values": true
+                },
+                "lines": true,
+                "linewidth": 1,
+                "links": [
+
+                ],
+                "nullPointMode": "null",
+                "percentage": false,
+                "pointradius": 5,
+                "points": false,
+                "renderer": "flot",
+                "seriesOverrides": [
+
+                ],
+                "spaceLength": 10,
+                "stack": false,
+                "steppedLine": false,
+                "targets": [
+                    {
+                        "refId": "A",
+                        "target": "aliasByNode(sortByMaxima(brocade.stats.ports.$Fabric.*.LE_PORT.*.*.timeseriestraffic.tx), 4, 6, 7)"
+                    }
+                ],
+                "thresholds": [
+
+                ],
+                "timeFrom": null,
+                "timeShift": null,
+                "title": "TX Throughput for Long Distance ISLs of $Fabric",
+                "tooltip": {
+                    "shared": true,
+                    "sort": 2,
+                    "value_type": "individual"
+                },
+                "type": "graph",
+                "xaxis": {
+                    "buckets": null,
+                    "mode": "time",
+                    "name": null,
+                    "show": true,
+                    "values": [
+
+                    ]
+                },
+                "yaxes": [
+                    {
+                        "format": "MBs",
+                        "label": null,
+                        "logBase": 1,
+                        "max": null,
+                        "min": null,
+                        "show": true
+                    },
+                    {
+                        "format": "short",
+                        "label": null,
+                        "logBase": 1,
+                        "max": null,
+                        "min": null,
+                        "show": true
+                    }
+                ]
+            },
+            {
+                "cacheTimeout": null,
+                "colorBackground": false,
+                "colorValue": false,
+                "colors": [
+                    "#299c46",
+                    "rgba(237, 129, 40, 0.89)",
+                    "#d44a3a"
+                ],
+                "datasource": "default",
+                "format": "MBs",
+                "gauge": {
+                    "maxValue": 100,
+                    "minValue": 0,
+                    "show": false,
+                    "thresholdLabels": false,
+                    "thresholdMarkers": false
+                },
+                "gridPos": {
+                    "h": 10,
+                    "w": 4,
+                    "x": 20,
+                    "y": 1
+                },
+                "id": 4,
+                "interval": null,
+                "links": [
+
+                ],
+                "mappingType": 1,
+                "mappingTypes": [
+                    {
+                        "name": "value to text",
+                        "value": 1
+                    },
+                    {
+                        "name": "range to text",
+                        "value": 2
+                    }
+                ],
+                "maxDataPoints": 100,
+                "nullPointMode": "connected",
+                "nullText": null,
+                "postfix": "",
+                "postfixFontSize": "50%",
+                "prefix": "",
+                "prefixFontSize": "50%",
+                "rangeMaps": [
+                    {
+                        "from": "null",
+                        "text": "N/A",
+                        "to": "null"
+                    }
+                ],
+                "sparkline": {
+                    "fillColor": "rgba(31, 118, 189, 0.18)",
+                    "full": false,
+                    "lineColor": "rgb(31, 120, 193)",
+                    "show": true
+                },
+                "tableColumn": "",
+                "targets": [
+                    {
+                        "refId": "A",
+                        "target": "averageSeries(brocade.stats.ports.$Fabric.*.LE_PORT.*.*.timeseriestraffic.tx)"
+                    }
+                ],
+                "thresholds": "",
+                "title": "Avg TX Throughput for Long Distance ISLs",
+                "type": "singlestat",
+                "valueFontSize": "80%",
+                "valueMaps": [
+                    {
+                        "op": "=",
+                        "text": "N/A",
+                        "value": "null"
+                    }
+                ],
+                "valueName": "avg"
+            },
+            {
+                "aliasColors": {
+
+                },
+                "bars": false,
+                "dashLength": 10,
+                "dashes": false,
+                "datasource": "default",
+                "fill": 0,
+                "gridPos": {
+                    "h": 10,
+                    "w": 8,
+                    "x": 0,
+                    "y": 11
+                },
+                "id": 5,
+                "legend": {
+                    "alignAsTable": true,
+                    "avg": true,
+                    "current": false,
+                    "max": true,
+                    "min": true,
+                    "show": true,
+                    "sort": "max",
+                    "sortDesc": true,
+                    "total": false,
+                    "values": true
+                },
+                "lines": true,
+                "linewidth": 1,
+                "links": [
+
+                ],
+                "nullPointMode": "null",
+                "percentage": false,
+                "pointradius": 5,
+                "points": false,
+                "renderer": "flot",
+                "seriesOverrides": [
+
+                ],
+                "spaceLength": 10,
+                "stack": false,
+                "steppedLine": false,
+                "targets": [
+                    {
+                        "refId": "A",
+                        "target": "aliasByNode(sortByMaxima(brocade.stats.ports.$Fabric.*.LE_PORT.*.*.timeseriesutilpercentage.rx), 4, 6, 7)"
+                    }
+                ],
+                "thresholds": [
+                    {
+                        "colorMode": "critical",
+                        "fill": true,
+                        "line": true,
+                        "op": "gt",
+                        "value": 95
+                    }
+                ],
+                "timeFrom": null,
+                "timeShift": null,
+                "title": "RX Utilization for Long Distance ISLs of $Fabric",
+                "tooltip": {
+                    "shared": true,
+                    "sort": 2,
+                    "value_type": "individual"
+                },
+                "type": "graph",
+                "xaxis": {
+                    "buckets": null,
+                    "mode": "time",
+                    "name": null,
+                    "show": true,
+                    "values": [
+
+                    ]
+                },
+                "yaxes": [
+                    {
+                        "format": "percent",
+                        "label": null,
+                        "logBase": 1,
+                        "max": "100",
+                        "min": "0",
+                        "show": true
+                    },
+                    {
+                        "format": "short",
+                        "label": null,
+                        "logBase": 1,
+                        "max": null,
+                        "min": null,
+                        "show": true
+                    }
+                ]
+            },
+            {
+                "cacheTimeout": null,
+                "colorBackground": false,
+                "colorValue": false,
+                "colors": [
+                    "#299c46",
+                    "rgba(237, 129, 40, 0.89)",
+                    "#d44a3a"
+                ],
+                "datasource": "default",
+                "format": "percent",
+                "gauge": {
+                    "maxValue": 100,
+                    "minValue": 0,
+                    "show": true,
+                    "thresholdLabels": false,
+                    "thresholdMarkers": true
+                },
+                "gridPos": {
+                    "h": 10,
+                    "w": 4,
+                    "x": 8,
+                    "y": 11
+                },
+                "id": 6,
+                "interval": null,
+                "links": [
+
+                ],
+                "mappingType": 1,
+                "mappingTypes": [
+                    {
+                        "name": "value to text",
+                        "value": 1
+                    },
+                    {
+                        "name": "range to text",
+                        "value": 2
+                    }
+                ],
+                "maxDataPoints": 100,
+                "nullPointMode": "connected",
+                "nullText": null,
+                "postfix": "",
+                "postfixFontSize": "50%",
+                "prefix": "",
+                "prefixFontSize": "50%",
+                "rangeMaps": [
+                    {
+                        "from": "null",
+                        "text": "N/A",
+                        "to": "null"
+                    }
+                ],
+                "sparkline": {
+                    "fillColor": "rgba(31, 118, 189, 0.18)",
+                    "full": false,
+                    "lineColor": "rgb(31, 120, 193)",
+                    "show": true
+                },
+                "tableColumn": "",
+                "targets": [
+                    {
+                        "refId": "A",
+                        "target": "averageSeries(brocade.stats.ports.$Fabric.*.LE_PORT.*.*.timeseriesutilpercentage.rx)"
+                    }
+                ],
+                "thresholds": "75,95",
+                "title": "Avg RX Utilization for Long Distance ISLs",
+                "type": "singlestat",
+                "valueFontSize": "80%",
+                "valueMaps": [
+                    {
+                        "op": "=",
+                        "text": "N/A",
+                        "value": "null"
+                    }
+                ],
+                "valueName": "avg"
+            },
+            {
+                "aliasColors": {
+
+                },
+                "bars": false,
+                "dashLength": 10,
+                "dashes": false,
+                "datasource": "default",
+                "fill": 0,
+                "gridPos": {
+                    "h": 10,
+                    "w": 8,
+                    "x": 12,
+                    "y": 11
+                },
+                "id": 7,
+                "legend": {
+                    "alignAsTable": true,
+                    "avg": true,
+                    "current": false,
+                    "max": true,
+                    "min": true,
+                    "show": true,
+                    "sort": "max",
+                    "sortDesc": true,
+                    "total": false,
+                    "values": true
+                },
+                "lines": true,
+                "linewidth": 1,
+                "links": [
+
+                ],
+                "nullPointMode": "null",
+                "percentage": false,
+                "pointradius": 5,
+                "points": false,
+                "renderer": "flot",
+                "seriesOverrides": [
+
+                ],
+                "spaceLength": 10,
+                "stack": false,
+                "steppedLine": false,
+                "targets": [
+                    {
+                        "refId": "A",
+                        "target": "aliasByNode(sortByMaxima(brocade.stats.ports.$Fabric.*.LE_PORT.*.*.timeseriesutilpercentage.tx), 4, 6, 7)"
+                    }
+                ],
+                "thresholds": [
+                    {
+                        "colorMode": "critical",
+                        "fill": true,
+                        "line": true,
+                        "op": "gt",
+                        "value": 95
+                    }
+                ],
+                "timeFrom": null,
+                "timeShift": null,
+                "title": "TX Utilizartion for Long Distance ISLs of $Fabric",
+                "tooltip": {
+                    "shared": true,
+                    "sort": 2,
+                    "value_type": "individual"
+                },
+                "type": "graph",
+                "xaxis": {
+                    "buckets": null,
+                    "mode": "time",
+                    "name": null,
+                    "show": true,
+                    "values": [
+
+                    ]
+                },
+                "yaxes": [
+                    {
+                        "format": "percent",
+                        "label": null,
+                        "logBase": 1,
+                        "max": "100",
+                        "min": "0",
+                        "show": true
+                    },
+                    {
+                        "format": "short",
+                        "label": null,
+                        "logBase": 1,
+                        "max": null,
+                        "min": null,
+                        "show": true
+                    }
+                ]
+            },
+            {
+                "cacheTimeout": null,
+                "colorBackground": false,
+                "colorValue": false,
+                "colors": [
+                    "#299c46",
+                    "rgba(237, 129, 40, 0.89)",
+                    "#d44a3a"
+                ],
+                "datasource": "default",
+                "format": "percent",
+                "gauge": {
+                    "maxValue": 100,
+                    "minValue": 0,
+                    "show": true,
+                    "thresholdLabels": false,
+                    "thresholdMarkers": true
+                },
+                "gridPos": {
+                    "h": 10,
+                    "w": 4,
+                    "x": 20,
+                    "y": 11
+                },
+                "id": 8,
+                "interval": null,
+                "links": [
+
+                ],
+                "mappingType": 1,
+                "mappingTypes": [
+                    {
+                        "name": "value to text",
+                        "value": 1
+                    },
+                    {
+                        "name": "range to text",
+                        "value": 2
+                    }
+                ],
+                "maxDataPoints": 100,
+                "nullPointMode": "connected",
+                "nullText": null,
+                "postfix": "",
+                "postfixFontSize": "50%",
+                "prefix": "",
+                "prefixFontSize": "50%",
+                "rangeMaps": [
+                    {
+                        "from": "null",
+                        "text": "N/A",
+                        "to": "null"
+                    }
+                ],
+                "sparkline": {
+                    "fillColor": "rgba(31, 118, 189, 0.18)",
+                    "full": false,
+                    "lineColor": "rgb(31, 120, 193)",
+                    "show": true
+                },
+                "tableColumn": "",
+                "targets": [
+                    {
+                        "refId": "A",
+                        "target": "averageSeries(brocade.stats.ports.$Fabric.*.LE_PORT.*.*.timeseriesutilpercentage.tx)"
+                    }
+                ],
+                "thresholds": "75,95",
+                "title": "Avg TX Throughput for Long Distance ISLs",
+                "type": "singlestat",
+                "valueFontSize": "80%",
+                "valueMaps": [
+                    {
+                        "op": "=",
+                        "text": "N/A",
+                        "value": "null"
+                    }
+                ],
+                "valueName": "avg"
+            },
+            {
+                "collapsed": true,
+                "gridPos": {
+                    "h": 1,
+                    "w": 24,
+                    "x": 0,
+                    "y": 21
+                },
+                "id": 43,
+                "panels": [
+                    {
+                        "columns": [
+                            {
+                                "text": "Avg",
+                                "value": "avg"
+                            },
+                            {
+                                "text": "Max",
+                                "value": "max"
+                            }
+                        ],
+                        "datasource": "default",
+                        "fontSize": "100%",
+                        "gridPos": {
+                            "h": 10,
+                            "w": 6,
+                            "x": 0,
+                            "y": 22
+                        },
+                        "id": 17,
+                        "links": [
+
+                        ],
+                        "pageSize": null,
+                        "scroll": true,
+                        "showHeader": true,
+                        "sort": {
+                            "col": 1,
+                            "desc": true
+                        },
+                        "styles": [
+                            {
+                                "alias": "Time",
+                                "dateFormat": "YYYY-MM-DD HH:mm:ss",
+                                "pattern": "Time",
+                                "type": "date"
+                            },
+                            {
+                                "alias": "",
+                                "colorMode": "row",
+                                "colors": [
+                                    "rgba(50, 172, 45, 0.97)",
+                                    "rgba(237, 129, 40, 0.89)",
+                                    "rgba(245, 54, 54, 0.9)"
+                                ],
+                                "decimals": 2,
+                                "pattern": "/.*/",
+                                "thresholds": [
+                                    "1"
+                                ],
+                                "type": "number",
+                                "unit": "short"
+                            }
+                        ],
+                        "targets": [
+                            {
+                                "refId": "A",
+                                "target": "aliasByNode(highestAverage(brocade.stats.ports.$Fabric.*.LE_PORT.*.*.timeserieslinkresets.*, 20), 4, 6, 7, 9)"
+                            }
+                        ],
+                        "title": "Link Resets for $Fabric",
+                        "transform": "timeseries_aggregations",
+                        "type": "table"
+                    },
+                    {
+                        "columns": [
+                            {
+                                "text": "Avg",
+                                "value": "avg"
+                            },
+                            {
+                                "text": "Max",
+                                "value": "max"
+                            }
+                        ],
+                        "datasource": "default",
+                        "fontSize": "100%",
+                        "gridPos": {
+                            "h": 10,
+                            "w": 6,
+                            "x": 6,
+                            "y": 22
+                        },
+                        "id": 25,
+                        "links": [
+
+                        ],
+                        "pageSize": null,
+                        "scroll": true,
+                        "showHeader": true,
+                        "sort": {
+                            "col": 1,
+                            "desc": true
+                        },
+                        "styles": [
+                            {
+                                "alias": "Time",
+                                "dateFormat": "YYYY-MM-DD HH:mm:ss",
+                                "pattern": "Time",
+                                "type": "date"
+                            },
+                            {
+                                "alias": "",
+                                "colorMode": "row",
+                                "colors": [
+                                    "rgba(50, 172, 45, 0.97)",
+                                    "rgba(237, 129, 40, 0.89)",
+                                    "rgba(245, 54, 54, 0.9)"
+                                ],
+                                "decimals": 2,
+                                "pattern": "/.*/",
+                                "thresholds": [
+                                    "1"
+                                ],
+                                "type": "number",
+                                "unit": "short"
+                            }
+                        ],
+                        "targets": [
+                            {
+                                "refId": "A",
+                                "target": "aliasByNode(highestAverage(brocade.stats.ports.$Fabric.*.LE_PORT.*.*.timeserieslinkfailures, 20), 4, 6, 7)"
+                            }
+                        ],
+                        "title": "Link Failures for $Fabric",
+                        "transform": "timeseries_aggregations",
+                        "type": "table"
+                    },
+                    {
+                        "columns": [
+                            {
+                                "text": "Avg",
+                                "value": "avg"
+                            },
+                            {
+                                "text": "Max",
+                                "value": "max"
+                            }
+                        ],
+                        "datasource": "default",
+                        "fontSize": "100%",
+                        "gridPos": {
+                            "h": 10,
+                            "w": 6,
+                            "x": 12,
+                            "y": 22
+                        },
+                        "id": 27,
+                        "links": [
+
+                        ],
+                        "pageSize": null,
+                        "scroll": true,
+                        "showHeader": true,
+                        "sort": {
+                            "col": 1,
+                            "desc": true
+                        },
+                        "styles": [
+                            {
+                                "alias": "Time",
+                                "dateFormat": "YYYY-MM-DD HH:mm:ss",
+                                "pattern": "Time",
+                                "type": "date"
+                            },
+                            {
+                                "alias": "",
+                                "colorMode": "row",
+                                "colors": [
+                                    "rgba(50, 172, 45, 0.97)",
+                                    "rgba(237, 129, 40, 0.89)",
+                                    "rgba(245, 54, 54, 0.9)"
+                                ],
+                                "decimals": 2,
+                                "pattern": "/.*/",
+                                "thresholds": [
+                                    "1"
+                                ],
+                                "type": "number",
+                                "unit": "short"
+                            }
+                        ],
+                        "targets": [
+                            {
+                                "refId": "A",
+                                "target": "aliasByNode(highestAverage(brocade.stats.ports.$Fabric.*.LE_PORT.*.*.timeseriessignallosses, 20), 4, 6, 7)"
+                            }
+                        ],
+                        "title": "Loss of Signal for $Fabric",
+                        "transform": "timeseries_aggregations",
+                        "type": "table"
+                    },
+                    {
+                        "columns": [
+                            {
+                                "text": "Avg",
+                                "value": "avg"
+                            },
+                            {
+                                "text": "Max",
+                                "value": "max"
+                            }
+                        ],
+                        "datasource": "default",
+                        "fontSize": "100%",
+                        "gridPos": {
+                            "h": 10,
+                            "w": 6,
+                            "x": 18,
+                            "y": 22
+                        },
+                        "id": 28,
+                        "links": [
+
+                        ],
+                        "pageSize": null,
+                        "scroll": true,
+                        "showHeader": true,
+                        "sort": {
+                            "col": 1,
+                            "desc": true
+                        },
+                        "styles": [
+                            {
+                                "alias": "Time",
+                                "dateFormat": "YYYY-MM-DD HH:mm:ss",
+                                "pattern": "Time",
+                                "type": "date"
+                            },
+                            {
+                                "alias": "",
+                                "colorMode": "row",
+                                "colors": [
+                                    "rgba(50, 172, 45, 0.97)",
+                                    "rgba(237, 129, 40, 0.89)",
+                                    "rgba(245, 54, 54, 0.9)"
+                                ],
+                                "decimals": 2,
+                                "pattern": "/.*/",
+                                "thresholds": [
+                                    "1"
+                                ],
+                                "type": "number",
+                                "unit": "short"
+                            }
+                        ],
+                        "targets": [
+                            {
+                                "refId": "A",
+                                "target": "aliasByNode(highestAverage(brocade.stats.ports.$Fabric.*.LE_PORT.*.*.timeseriessynclosses, 20), 4, 6, 7)"
+                            }
+                        ],
+                        "title": "Loss os Sync for $Fabric",
+                        "transform": "timeseries_aggregations",
+                        "type": "table"
+                    },
+                    {
+                        "columns": [
+                            {
+                                "text": "Avg",
+                                "value": "avg"
+                            },
+                            {
+                                "text": "Max",
+                                "value": "max"
+                            }
+                        ],
+                        "datasource": "default",
+                        "fontSize": "100%",
+                        "gridPos": {
+                            "h": 10,
+                            "w": 6,
+                            "x": 0,
+                            "y": 32
+                        },
+                        "id": 18,
+                        "links": [
+
+                        ],
+                        "pageSize": null,
+                        "scroll": true,
+                        "showHeader": true,
+                        "sort": {
+                            "col": 1,
+                            "desc": true
+                        },
+                        "styles": [
+                            {
+                                "alias": "Time",
+                                "dateFormat": "YYYY-MM-DD HH:mm:ss",
+                                "pattern": "Time",
+                                "type": "date"
+                            },
+                            {
+                                "alias": "",
+                                "colorMode": "row",
+                                "colors": [
+                                    "rgba(50, 172, 45, 0.97)",
+                                    "rgba(237, 129, 40, 0.89)",
+                                    "rgba(245, 54, 54, 0.9)"
+                                ],
+                                "decimals": 2,
+                                "pattern": "/.*/",
+                                "thresholds": [
+                                    "1"
+                                ],
+                                "type": "number",
+                                "unit": "short"
+                            }
+                        ],
+                        "targets": [
+                            {
+                                "refId": "A",
+                                "target": "aliasByNode(highestAverage(brocade.stats.ports.$Fabric.*.LE_PORT.*.*.timeseriesc3discards, 20), 4, 6, 7)"
+                            }
+                        ],
+                        "title": "C3 Discards for $Fabric",
+                        "transform": "timeseries_aggregations",
+                        "type": "table"
+                    },
+                    {
+                        "columns": [
+                            {
+                                "text": "Avg",
+                                "value": "avg"
+                            },
+                            {
+                                "text": "Max",
+                                "value": "max"
+                            }
+                        ],
+                        "datasource": "default",
+                        "fontSize": "100%",
+                        "gridPos": {
+                            "h": 10,
+                            "w": 6,
+                            "x": 6,
+                            "y": 32
+                        },
+                        "id": 19,
+                        "links": [
+
+                        ],
+                        "pageSize": null,
+                        "scroll": true,
+                        "showHeader": true,
+                        "sort": {
+                            "col": 1,
+                            "desc": true
+                        },
+                        "styles": [
+                            {
+                                "alias": "Time",
+                                "dateFormat": "YYYY-MM-DD HH:mm:ss",
+                                "pattern": "Time",
+                                "type": "date"
+                            },
+                            {
+                                "alias": "",
+                                "colorMode": "row",
+                                "colors": [
+                                    "rgba(50, 172, 45, 0.97)",
+                                    "rgba(237, 129, 40, 0.89)",
+                                    "rgba(245, 54, 54, 0.9)"
+                                ],
+                                "decimals": 2,
+                                "pattern": "/.*/",
+                                "thresholds": [
+                                    "1"
+                                ],
+                                "type": "number",
+                                "unit": "short"
+                            }
+                        ],
+                        "targets": [
+                            {
+                                "refId": "A",
+                                "target": "aliasByNode(highestAverage(brocade.stats.ports.$Fabric.*.LE_PORT.*.*.timeseriesc3discardsother, 20), 4, 6, 7)"
+                            }
+                        ],
+                        "title": "Other C3 Discards for $Fabric",
+                        "transform": "timeseries_aggregations",
+                        "type": "table"
+                    },
+                    {
+                        "columns": [
+                            {
+                                "text": "Avg",
+                                "value": "avg"
+                            },
+                            {
+                                "text": "Max",
+                                "value": "max"
+                            }
+                        ],
+                        "datasource": "default",
+                        "fontSize": "100%",
+                        "gridPos": {
+                            "h": 10,
+                            "w": 6,
+                            "x": 12,
+                            "y": 32
+                        },
+                        "id": 20,
+                        "links": [
+
+                        ],
+                        "pageSize": null,
+                        "scroll": true,
+                        "showHeader": true,
+                        "sort": {
+                            "col": 1,
+                            "desc": true
+                        },
+                        "styles": [
+                            {
+                                "alias": "Time",
+                                "dateFormat": "YYYY-MM-DD HH:mm:ss",
+                                "pattern": "Time",
+                                "type": "date"
+                            },
+                            {
+                                "alias": "",
+                                "colorMode": "row",
+                                "colors": [
+                                    "rgba(50, 172, 45, 0.97)",
+                                    "rgba(237, 129, 40, 0.89)",
+                                    "rgba(245, 54, 54, 0.9)"
+                                ],
+                                "decimals": 2,
+                                "pattern": "/.*/",
+                                "thresholds": [
+                                    "1"
+                                ],
+                                "type": "number",
+                                "unit": "short"
+                            }
+                        ],
+                        "targets": [
+                            {
+                                "refId": "A",
+                                "target": "aliasByNode(highestAverage(brocade.stats.ports.$Fabric.*.LE_PORT.*.*.timeseriesc3discardsrxto, 20), 4, 6, 7)"
+                            }
+                        ],
+                        "title": "TX Timeout C3 Discards for $Fabric",
+                        "transform": "timeseries_aggregations",
+                        "type": "table"
+                    },
+                    {
+                        "columns": [
+                            {
+                                "text": "Avg",
+                                "value": "avg"
+                            },
+                            {
+                                "text": "Max",
+                                "value": "max"
+                            }
+                        ],
+                        "datasource": "default",
+                        "fontSize": "100%",
+                        "gridPos": {
+                            "h": 10,
+                            "w": 6,
+                            "x": 18,
+                            "y": 32
+                        },
+                        "id": 21,
+                        "links": [
+
+                        ],
+                        "pageSize": null,
+                        "scroll": true,
+                        "showHeader": true,
+                        "sort": {
+                            "col": 1,
+                            "desc": true
+                        },
+                        "styles": [
+                            {
+                                "alias": "Time",
+                                "dateFormat": "YYYY-MM-DD HH:mm:ss",
+                                "pattern": "Time",
+                                "type": "date"
+                            },
+                            {
+                                "alias": "",
+                                "colorMode": "row",
+                                "colors": [
+                                    "rgba(50, 172, 45, 0.97)",
+                                    "rgba(237, 129, 40, 0.89)",
+                                    "rgba(245, 54, 54, 0.9)"
+                                ],
+                                "decimals": 2,
+                                "pattern": "/.*/",
+                                "thresholds": [
+                                    "1"
+                                ],
+                                "type": "number",
+                                "unit": "short"
+                            }
+                        ],
+                        "targets": [
+                            {
+                                "refId": "A",
+                                "target": "aliasByNode(highestAverage(brocade.stats.ports.$Fabric.*.LE_PORT.*.*.timeseriesc3discardstxto, 20), 4, 6, 7)"
+                            }
+                        ],
+                        "title": "TX Timeout C3 Discards for $Fabric",
+                        "transform": "timeseries_aggregations",
+                        "type": "table"
+                    },
+                    {
+                        "columns": [
+                            {
+                                "text": "Avg",
+                                "value": "avg"
+                            },
+                            {
+                                "text": "Max",
+                                "value": "max"
+                            }
+                        ],
+                        "datasource": "default",
+                        "fontSize": "100%",
+                        "gridPos": {
+                            "h": 10,
+                            "w": 6,
+                            "x": 0,
+                            "y": 42
+                        },
+                        "id": 22,
+                        "links": [
+
+                        ],
+                        "pageSize": null,
+                        "scroll": true,
+                        "showHeader": true,
+                        "sort": {
+                            "col": 1,
+                            "desc": true
+                        },
+                        "styles": [
+                            {
+                                "alias": "Time",
+                                "dateFormat": "YYYY-MM-DD HH:mm:ss",
+                                "pattern": "Time",
+                                "type": "date"
+                            },
+                            {
+                                "alias": "",
+                                "colorMode": "row",
+                                "colors": [
+                                    "rgba(50, 172, 45, 0.97)",
+                                    "rgba(237, 129, 40, 0.89)",
+                                    "rgba(245, 54, 54, 0.9)"
+                                ],
+                                "decimals": 2,
+                                "pattern": "/.*/",
+                                "thresholds": [
+                                    "1"
+                                ],
+                                "type": "number",
+                                "unit": "short"
+                            }
+                        ],
+                        "targets": [
+                            {
+                                "refId": "A",
+                                "target": "aliasByNode(highestAverage(brocade.stats.ports.$Fabric.*.LE_PORT.*.*.timeseriesc3discardsunreachable, 20), 4, 6, 7)"
+                            }
+                        ],
+                        "title": "Destination Unreachable C3 Discards for $Fabric",
+                        "transform": "timeseries_aggregations",
+                        "type": "table"
+                    },
+                    {
+                        "columns": [
+                            {
+                                "text": "Avg",
+                                "value": "avg"
+                            },
+                            {
+                                "text": "Max",
+                                "value": "max"
+                            }
+                        ],
+                        "datasource": "default",
+                        "fontSize": "100%",
+                        "gridPos": {
+                            "h": 10,
+                            "w": 6,
+                            "x": 6,
+                            "y": 42
+                        },
+                        "id": 23,
+                        "links": [
+
+                        ],
+                        "pageSize": null,
+                        "scroll": true,
+                        "showHeader": true,
+                        "sort": {
+                            "col": 1,
+                            "desc": true
+                        },
+                        "styles": [
+                            {
+                                "alias": "Time",
+                                "dateFormat": "YYYY-MM-DD HH:mm:ss",
+                                "pattern": "Time",
+                                "type": "date"
+                            },
+                            {
+                                "alias": "",
+                                "colorMode": "row",
+                                "colors": [
+                                    "rgba(50, 172, 45, 0.97)",
+                                    "rgba(237, 129, 40, 0.89)",
+                                    "rgba(245, 54, 54, 0.9)"
+                                ],
+                                "decimals": 2,
+                                "pattern": "/.*/",
+                                "thresholds": [
+                                    "1"
+                                ],
+                                "type": "number",
+                                "unit": "short"
+                            }
+                        ],
+                        "targets": [
+                            {
+                                "refId": "A",
+                                "target": "aliasByNode(highestAverage(brocade.stats.ports.$Fabric.*.LE_PORT.*.*.timeseriesinvalidorderedsets, 20), 4, 6, 7)"
+                            }
+                        ],
+                        "title": "Invalid Ordered Set for $Fabric",
+                        "transform": "timeseries_aggregations",
+                        "type": "table"
+                    },
+                    {
+                        "columns": [
+                            {
+                                "text": "Avg",
+                                "value": "avg"
+                            },
+                            {
+                                "text": "Max",
+                                "value": "max"
+                            }
+                        ],
+                        "datasource": "default",
+                        "fontSize": "100%",
+                        "gridPos": {
+                            "h": 10,
+                            "w": 6,
+                            "x": 12,
+                            "y": 42
+                        },
+                        "id": 24,
+                        "links": [
+
+                        ],
+                        "pageSize": null,
+                        "scroll": true,
+                        "showHeader": true,
+                        "sort": {
+                            "col": 1,
+                            "desc": true
+                        },
+                        "styles": [
+                            {
+                                "alias": "Time",
+                                "dateFormat": "YYYY-MM-DD HH:mm:ss",
+                                "pattern": "Time",
+                                "type": "date"
+                            },
+                            {
+                                "alias": "",
+                                "colorMode": "row",
+                                "colors": [
+                                    "rgba(50, 172, 45, 0.97)",
+                                    "rgba(237, 129, 40, 0.89)",
+                                    "rgba(245, 54, 54, 0.9)"
+                                ],
+                                "decimals": 2,
+                                "pattern": "/.*/",
+                                "thresholds": [
+                                    "1"
+                                ],
+                                "type": "number",
+                                "unit": "short"
+                            }
+                        ],
+                        "targets": [
+                            {
+                                "refId": "A",
+                                "target": "aliasByNode(highestAverage(brocade.stats.ports.$Fabric.*.LE_PORT.*.*.timeseriesinvalidtransmissions, 20), 4, 6, 7)"
+                            }
+                        ],
+                        "title": "Invalid Transmission Words for $Fabric",
+                        "transform": "timeseries_aggregations",
+                        "type": "table"
+                    },
+                    {
+                        "columns": [
+                            {
+                                "text": "Avg",
+                                "value": "avg"
+                            },
+                            {
+                                "text": "Max",
+                                "value": "max"
+                            }
+                        ],
+                        "datasource": "default",
+                        "fontSize": "100%",
+                        "gridPos": {
+                            "h": 10,
+                            "w": 6,
+                            "x": 18,
+                            "y": 42
+                        },
+                        "id": 26,
+                        "links": [
+
+                        ],
+                        "pageSize": null,
+                        "scroll": true,
+                        "showHeader": true,
+                        "sort": {
+                            "col": 1,
+                            "desc": true
+                        },
+                        "styles": [
+                            {
+                                "alias": "Time",
+                                "dateFormat": "YYYY-MM-DD HH:mm:ss",
+                                "pattern": "Time",
+                                "type": "date"
+                            },
+                            {
+                                "alias": "",
+                                "colorMode": "row",
+                                "colors": [
+                                    "rgba(50, 172, 45, 0.97)",
+                                    "rgba(237, 129, 40, 0.89)",
+                                    "rgba(245, 54, 54, 0.9)"
+                                ],
+                                "decimals": 2,
+                                "pattern": "/.*/",
+                                "thresholds": [
+                                    "1"
+                                ],
+                                "type": "number",
+                                "unit": "short"
+                            }
+                        ],
+                        "targets": [
+                            {
+                                "refId": "A",
+                                "target": "aliasByNode(highestAverage(brocade.stats.ports.$Fabric.*.LE_PORT.*.*.timeseriessequenceerrors, 20), 4, 6, 7)"
+                            }
+                        ],
+                        "title": "Sequence Errors for $Fabric",
+                        "transform": "timeseries_aggregations",
+                        "type": "table"
+                    }
+                ],
+                "repeat": null,
+                "title": "Errors: Long Distance ISLs",
+                "type": "row"
+            },
+            {
+                "collapsed": true,
+                "gridPos": {
+                    "h": 1,
+                    "w": 24,
+                    "x": 0,
+                    "y": 22
+                },
+                "id": 44,
+                "panels": [
+                    {
+                        "aliasColors": {
+
+                        },
+                        "bars": false,
+                        "dashLength": 10,
+                        "dashes": false,
+                        "datasource": "default",
+                        "fill": 0,
+                        "gridPos": {
+                            "h": 10,
+                            "w": 8,
+                            "x": 0,
+                            "y": 23
+                        },
+                        "id": 9,
+                        "legend": {
+                            "alignAsTable": true,
+                            "avg": true,
+                            "current": false,
+                            "max": true,
+                            "min": true,
+                            "show": true,
+                            "sort": "max",
+                            "sortDesc": true,
+                            "total": false,
+                            "values": true
+                        },
+                        "lines": true,
+                        "linewidth": 1,
+                        "links": [
+
+                        ],
+                        "nullPointMode": "null",
+                        "percentage": false,
+                        "pointradius": 5,
+                        "points": false,
+                        "renderer": "flot",
+                        "seriesOverrides": [
+
+                        ],
+                        "spaceLength": 10,
+                        "stack": false,
+                        "steppedLine": false,
+                        "targets": [
+                            {
+                                "refId": "A",
+                                "target": "aliasByNode(sortByMaxima(brocade.stats.ports.$Fabric.*.E_PORT.*.*.timeseriestraffic.rx), 4, 6, 7)"
+                            }
+                        ],
+                        "thresholds": [
+
+                        ],
+                        "timeFrom": null,
+                        "timeShift": null,
+                        "title": "RX Throughput for ISLs of $Fabric",
+                        "tooltip": {
+                            "shared": true,
+                            "sort": 2,
+                            "value_type": "individual"
+                        },
+                        "type": "graph",
+                        "xaxis": {
+                            "buckets": null,
+                            "mode": "time",
+                            "name": null,
+                            "show": true,
+                            "values": [
+
+                            ]
+                        },
+                        "yaxes": [
+                            {
+                                "format": "MBs",
+                                "label": null,
+                                "logBase": 1,
+                                "max": null,
+                                "min": null,
+                                "show": true
+                            },
+                            {
+                                "format": "short",
+                                "label": null,
+                                "logBase": 1,
+                                "max": null,
+                                "min": null,
+                                "show": true
+                            }
+                        ]
+                    },
+                    {
+                        "cacheTimeout": null,
+                        "colorBackground": false,
+                        "colorValue": false,
+                        "colors": [
+                            "#299c46",
+                            "rgba(237, 129, 40, 0.89)",
+                            "#d44a3a"
+                        ],
+                        "datasource": "default",
+                        "format": "MBs",
+                        "gauge": {
+                            "maxValue": 100,
+                            "minValue": 0,
+                            "show": false,
+                            "thresholdLabels": false,
+                            "thresholdMarkers": false
+                        },
+                        "gridPos": {
+                            "h": 10,
+                            "w": 4,
+                            "x": 8,
+                            "y": 23
+                        },
+                        "id": 10,
+                        "interval": null,
+                        "links": [
+
+                        ],
+                        "mappingType": 1,
+                        "mappingTypes": [
+                            {
+                                "name": "value to text",
+                                "value": 1
+                            },
+                            {
+                                "name": "range to text",
+                                "value": 2
+                            }
+                        ],
+                        "maxDataPoints": 100,
+                        "nullPointMode": "connected",
+                        "nullText": null,
+                        "postfix": "",
+                        "postfixFontSize": "50%",
+                        "prefix": "",
+                        "prefixFontSize": "50%",
+                        "rangeMaps": [
+                            {
+                                "from": "null",
+                                "text": "N/A",
+                                "to": "null"
+                            }
+                        ],
+                        "sparkline": {
+                            "fillColor": "rgba(31, 118, 189, 0.18)",
+                            "full": false,
+                            "lineColor": "rgb(31, 120, 193)",
+                            "show": true
+                        },
+                        "tableColumn": "",
+                        "targets": [
+                            {
+                                "refId": "A",
+                                "target": "averageSeries(brocade.stats.ports.$Fabric.*.E_PORT.*.*.timeseriestraffic.rx)"
+                            }
+                        ],
+                        "thresholds": "",
+                        "title": "Average RX Throughput for ISLs for $Fabric",
+                        "type": "singlestat",
+                        "valueFontSize": "80%",
+                        "valueMaps": [
+                            {
+                                "op": "=",
+                                "text": "N/A",
+                                "value": "null"
+                            }
+                        ],
+                        "valueName": "avg"
+                    },
+                    {
+                        "aliasColors": {
+
+                        },
+                        "bars": false,
+                        "dashLength": 10,
+                        "dashes": false,
+                        "datasource": "default",
+                        "fill": 0,
+                        "gridPos": {
+                            "h": 10,
+                            "w": 8,
+                            "x": 12,
+                            "y": 23
+                        },
+                        "id": 11,
+                        "legend": {
+                            "alignAsTable": true,
+                            "avg": true,
+                            "current": false,
+                            "max": true,
+                            "min": true,
+                            "show": true,
+                            "sort": "max",
+                            "sortDesc": true,
+                            "total": false,
+                            "values": true
+                        },
+                        "lines": true,
+                        "linewidth": 1,
+                        "links": [
+
+                        ],
+                        "nullPointMode": "null",
+                        "percentage": false,
+                        "pointradius": 5,
+                        "points": false,
+                        "renderer": "flot",
+                        "seriesOverrides": [
+
+                        ],
+                        "spaceLength": 10,
+                        "stack": false,
+                        "steppedLine": false,
+                        "targets": [
+                            {
+                                "refId": "A",
+                                "target": "aliasByNode(sortByMaxima(brocade.stats.ports.$Fabric.*.E_PORT.*.*.timeseriestraffic.tx), 4, 6, 7)"
+                            }
+                        ],
+                        "thresholds": [
+
+                        ],
+                        "timeFrom": null,
+                        "timeShift": null,
+                        "title": "TX Throughput for ISLs of $Fabric",
+                        "tooltip": {
+                            "shared": true,
+                            "sort": 2,
+                            "value_type": "individual"
+                        },
+                        "type": "graph",
+                        "xaxis": {
+                            "buckets": null,
+                            "mode": "time",
+                            "name": null,
+                            "show": true,
+                            "values": [
+
+                            ]
+                        },
+                        "yaxes": [
+                            {
+                                "format": "MBs",
+                                "label": null,
+                                "logBase": 1,
+                                "max": null,
+                                "min": null,
+                                "show": true
+                            },
+                            {
+                                "format": "short",
+                                "label": null,
+                                "logBase": 1,
+                                "max": null,
+                                "min": null,
+                                "show": true
+                            }
+                        ]
+                    },
+                    {
+                        "cacheTimeout": null,
+                        "colorBackground": false,
+                        "colorValue": false,
+                        "colors": [
+                            "#299c46",
+                            "rgba(237, 129, 40, 0.89)",
+                            "#d44a3a"
+                        ],
+                        "datasource": "default",
+                        "format": "MBs",
+                        "gauge": {
+                            "maxValue": 100,
+                            "minValue": 0,
+                            "show": false,
+                            "thresholdLabels": false,
+                            "thresholdMarkers": false
+                        },
+                        "gridPos": {
+                            "h": 10,
+                            "w": 4,
+                            "x": 20,
+                            "y": 23
+                        },
+                        "id": 12,
+                        "interval": null,
+                        "links": [
+
+                        ],
+                        "mappingType": 1,
+                        "mappingTypes": [
+                            {
+                                "name": "value to text",
+                                "value": 1
+                            },
+                            {
+                                "name": "range to text",
+                                "value": 2
+                            }
+                        ],
+                        "maxDataPoints": 100,
+                        "nullPointMode": "connected",
+                        "nullText": null,
+                        "postfix": "",
+                        "postfixFontSize": "50%",
+                        "prefix": "",
+                        "prefixFontSize": "50%",
+                        "rangeMaps": [
+                            {
+                                "from": "null",
+                                "text": "N/A",
+                                "to": "null"
+                            }
+                        ],
+                        "sparkline": {
+                            "fillColor": "rgba(31, 118, 189, 0.18)",
+                            "full": false,
+                            "lineColor": "rgb(31, 120, 193)",
+                            "show": true
+                        },
+                        "tableColumn": "",
+                        "targets": [
+                            {
+                                "refId": "A",
+                                "target": "averageSeries(brocade.stats.ports.$Fabric.*.E_PORT.*.*.timeseriestraffic.tx)"
+                            }
+                        ],
+                        "thresholds": "",
+                        "title": "Average TX Throughput for ISLs for $Fabric",
+                        "type": "singlestat",
+                        "valueFontSize": "80%",
+                        "valueMaps": [
+                            {
+                                "op": "=",
+                                "text": "N/A",
+                                "value": "null"
+                            }
+                        ],
+                        "valueName": "avg"
+                    },
+                    {
+                        "aliasColors": {
+
+                        },
+                        "bars": false,
+                        "dashLength": 10,
+                        "dashes": false,
+                        "datasource": "default",
+                        "fill": 0,
+                        "gridPos": {
+                            "h": 10,
+                            "w": 8,
+                            "x": 0,
+                            "y": 33
+                        },
+                        "id": 13,
+                        "legend": {
+                            "alignAsTable": true,
+                            "avg": true,
+                            "current": false,
+                            "max": true,
+                            "min": true,
+                            "show": true,
+                            "sort": "max",
+                            "sortDesc": true,
+                            "total": false,
+                            "values": true
+                        },
+                        "lines": true,
+                        "linewidth": 1,
+                        "links": [
+
+                        ],
+                        "nullPointMode": "null",
+                        "percentage": false,
+                        "pointradius": 5,
+                        "points": false,
+                        "renderer": "flot",
+                        "seriesOverrides": [
+
+                        ],
+                        "spaceLength": 10,
+                        "stack": false,
+                        "steppedLine": false,
+                        "targets": [
+                            {
+                                "refId": "A",
+                                "target": "aliasByNode(sortByMaxima(brocade.stats.ports.$Fabric.*.E_PORT.*.*.timeseriesutilpercentage.rx), 4, 6, 7)"
+                            }
+                        ],
+                        "thresholds": [
+                            {
+                                "colorMode": "critical",
+                                "fill": true,
+                                "line": true,
+                                "op": "gt",
+                                "value": 95
+                            }
+                        ],
+                        "timeFrom": null,
+                        "timeShift": null,
+                        "title": "RX Utilization for ISLs of $Fabric",
+                        "tooltip": {
+                            "shared": true,
+                            "sort": 2,
+                            "value_type": "individual"
+                        },
+                        "type": "graph",
+                        "xaxis": {
+                            "buckets": null,
+                            "mode": "time",
+                            "name": null,
+                            "show": true,
+                            "values": [
+
+                            ]
+                        },
+                        "yaxes": [
+                            {
+                                "format": "percent",
+                                "label": null,
+                                "logBase": 1,
+                                "max": "100",
+                                "min": "0",
+                                "show": true
+                            },
+                            {
+                                "format": "short",
+                                "label": null,
+                                "logBase": 1,
+                                "max": null,
+                                "min": null,
+                                "show": true
+                            }
+                        ]
+                    },
+                    {
+                        "cacheTimeout": null,
+                        "colorBackground": false,
+                        "colorValue": false,
+                        "colors": [
+                            "#299c46",
+                            "rgba(237, 129, 40, 0.89)",
+                            "#d44a3a"
+                        ],
+                        "datasource": "default",
+                        "format": "percent",
+                        "gauge": {
+                            "maxValue": 100,
+                            "minValue": 0,
+                            "show": true,
+                            "thresholdLabels": false,
+                            "thresholdMarkers": true
+                        },
+                        "gridPos": {
+                            "h": 10,
+                            "w": 4,
+                            "x": 8,
+                            "y": 33
+                        },
+                        "id": 14,
+                        "interval": null,
+                        "links": [
+
+                        ],
+                        "mappingType": 1,
+                        "mappingTypes": [
+                            {
+                                "name": "value to text",
+                                "value": 1
+                            },
+                            {
+                                "name": "range to text",
+                                "value": 2
+                            }
+                        ],
+                        "maxDataPoints": 100,
+                        "nullPointMode": "connected",
+                        "nullText": null,
+                        "postfix": "",
+                        "postfixFontSize": "50%",
+                        "prefix": "",
+                        "prefixFontSize": "50%",
+                        "rangeMaps": [
+                            {
+                                "from": "null",
+                                "text": "N/A",
+                                "to": "null"
+                            }
+                        ],
+                        "sparkline": {
+                            "fillColor": "rgba(31, 118, 189, 0.18)",
+                            "full": false,
+                            "lineColor": "rgb(31, 120, 193)",
+                            "show": true
+                        },
+                        "tableColumn": "",
+                        "targets": [
+                            {
+                                "refId": "A",
+                                "target": "averageSeries(brocade.stats.ports.$Fabric.*.E_PORT.*.*.timeseriesutilpercentage.rx)"
+                            }
+                        ],
+                        "thresholds": "75,95",
+                        "title": "Average RX Utilization for ISLs for $Fabric",
+                        "type": "singlestat",
+                        "valueFontSize": "80%",
+                        "valueMaps": [
+                            {
+                                "op": "=",
+                                "text": "N/A",
+                                "value": "null"
+                            }
+                        ],
+                        "valueName": "avg"
+                    },
+                    {
+                        "aliasColors": {
+
+                        },
+                        "bars": false,
+                        "dashLength": 10,
+                        "dashes": false,
+                        "datasource": "default",
+                        "fill": 0,
+                        "gridPos": {
+                            "h": 10,
+                            "w": 8,
+                            "x": 12,
+                            "y": 33
+                        },
+                        "id": 15,
+                        "legend": {
+                            "alignAsTable": true,
+                            "avg": true,
+                            "current": false,
+                            "max": true,
+                            "min": true,
+                            "show": true,
+                            "sort": "max",
+                            "sortDesc": true,
+                            "total": false,
+                            "values": true
+                        },
+                        "lines": true,
+                        "linewidth": 1,
+                        "links": [
+
+                        ],
+                        "nullPointMode": "null",
+                        "percentage": false,
+                        "pointradius": 5,
+                        "points": false,
+                        "renderer": "flot",
+                        "seriesOverrides": [
+
+                        ],
+                        "spaceLength": 10,
+                        "stack": false,
+                        "steppedLine": false,
+                        "targets": [
+                            {
+                                "refId": "A",
+                                "target": "aliasByNode(sortByMaxima(brocade.stats.ports.$Fabric.*.E_PORT.*.*.timeseriesutilpercentage.tx), 4, 6, 7)"
+                            }
+                        ],
+                        "thresholds": [
+                            {
+                                "colorMode": "critical",
+                                "fill": true,
+                                "line": true,
+                                "op": "gt",
+                                "value": 95
+                            }
+                        ],
+                        "timeFrom": null,
+                        "timeShift": null,
+                        "title": "TX Utilizartion for ISLs of $Fabric",
+                        "tooltip": {
+                            "shared": true,
+                            "sort": 2,
+                            "value_type": "individual"
+                        },
+                        "type": "graph",
+                        "xaxis": {
+                            "buckets": null,
+                            "mode": "time",
+                            "name": null,
+                            "show": true,
+                            "values": [
+
+                            ]
+                        },
+                        "yaxes": [
+                            {
+                                "format": "percent",
+                                "label": null,
+                                "logBase": 1,
+                                "max": "100",
+                                "min": "0",
+                                "show": true
+                            },
+                            {
+                                "format": "short",
+                                "label": null,
+                                "logBase": 1,
+                                "max": null,
+                                "min": null,
+                                "show": true
+                            }
+                        ]
+                    },
+                    {
+                        "cacheTimeout": null,
+                        "colorBackground": false,
+                        "colorValue": false,
+                        "colors": [
+                            "#299c46",
+                            "rgba(237, 129, 40, 0.89)",
+                            "#d44a3a"
+                        ],
+                        "datasource": "default",
+                        "format": "percent",
+                        "gauge": {
+                            "maxValue": 100,
+                            "minValue": 0,
+                            "show": true,
+                            "thresholdLabels": false,
+                            "thresholdMarkers": true
+                        },
+                        "gridPos": {
+                            "h": 10,
+                            "w": 4,
+                            "x": 20,
+                            "y": 33
+                        },
+                        "id": 16,
+                        "interval": null,
+                        "links": [
+
+                        ],
+                        "mappingType": 1,
+                        "mappingTypes": [
+                            {
+                                "name": "value to text",
+                                "value": 1
+                            },
+                            {
+                                "name": "range to text",
+                                "value": 2
+                            }
+                        ],
+                        "maxDataPoints": 100,
+                        "nullPointMode": "connected",
+                        "nullText": null,
+                        "postfix": "",
+                        "postfixFontSize": "50%",
+                        "prefix": "",
+                        "prefixFontSize": "50%",
+                        "rangeMaps": [
+                            {
+                                "from": "null",
+                                "text": "N/A",
+                                "to": "null"
+                            }
+                        ],
+                        "sparkline": {
+                            "fillColor": "rgba(31, 118, 189, 0.18)",
+                            "full": false,
+                            "lineColor": "rgb(31, 120, 193)",
+                            "show": true
+                        },
+                        "tableColumn": "",
+                        "targets": [
+                            {
+                                "refId": "A",
+                                "target": "averageSeries(brocade.stats.ports.$Fabric.*.E_PORT.*.*.timeseriesutilpercentage.tx)"
+                            }
+                        ],
+                        "thresholds": "75,95",
+                        "title": "Average TX Throughput for ISLs for $Fabric",
+                        "type": "singlestat",
+                        "valueFontSize": "80%",
+                        "valueMaps": [
+                            {
+                                "op": "=",
+                                "text": "N/A",
+                                "value": "null"
+                            }
+                        ],
+                        "valueName": "avg"
+                    }
+                ],
+                "repeat": null,
+                "title": "Performance: Standard Distance ISLs",
+                "type": "row"
+            },
+            {
+                "collapsed": true,
+                "gridPos": {
+                    "h": 1,
+                    "w": 24,
+                    "x": 0,
+                    "y": 23
+                },
+                "id": 45,
+                "panels": [
+                    {
+                        "columns": [
+                            {
+                                "text": "Avg",
+                                "value": "avg"
+                            },
+                            {
+                                "text": "Max",
+                                "value": "max"
+                            }
+                        ],
+                        "datasource": "default",
+                        "fontSize": "100%",
+                        "gridPos": {
+                            "h": 10,
+                            "w": 6,
+                            "x": 0,
+                            "y": 54
+                        },
+                        "id": 29,
+                        "links": [
+
+                        ],
+                        "pageSize": null,
+                        "scroll": true,
+                        "showHeader": true,
+                        "sort": {
+                            "col": 1,
+                            "desc": true
+                        },
+                        "styles": [
+                            {
+                                "alias": "Time",
+                                "dateFormat": "YYYY-MM-DD HH:mm:ss",
+                                "pattern": "Time",
+                                "type": "date"
+                            },
+                            {
+                                "alias": "",
+                                "colorMode": "row",
+                                "colors": [
+                                    "rgba(50, 172, 45, 0.97)",
+                                    "rgba(237, 129, 40, 0.89)",
+                                    "rgba(245, 54, 54, 0.9)"
+                                ],
+                                "decimals": 2,
+                                "pattern": "/.*/",
+                                "thresholds": [
+                                    "1"
+                                ],
+                                "type": "number",
+                                "unit": "short"
+                            }
+                        ],
+                        "targets": [
+                            {
+                                "refId": "A",
+                                "target": "aliasByNode(highestAverage(brocade.stats.ports.$Fabric.*.E_PORT.*.*.timeserieslinkresets.*, 20), 4, 6, 7, 9)"
+                            }
+                        ],
+                        "title": "Link Resets for $Fabric",
+                        "transform": "timeseries_aggregations",
+                        "type": "table"
+                    },
+                    {
+                        "columns": [
+                            {
+                                "text": "Avg",
+                                "value": "avg"
+                            },
+                            {
+                                "text": "Max",
+                                "value": "max"
+                            }
+                        ],
+                        "datasource": "default",
+                        "fontSize": "100%",
+                        "gridPos": {
+                            "h": 10,
+                            "w": 6,
+                            "x": 6,
+                            "y": 54
+                        },
+                        "id": 39,
+                        "links": [
+
+                        ],
+                        "pageSize": null,
+                        "scroll": true,
+                        "showHeader": true,
+                        "sort": {
+                            "col": 1,
+                            "desc": true
+                        },
+                        "styles": [
+                            {
+                                "alias": "Time",
+                                "dateFormat": "YYYY-MM-DD HH:mm:ss",
+                                "pattern": "Time",
+                                "type": "date"
+                            },
+                            {
+                                "alias": "",
+                                "colorMode": "row",
+                                "colors": [
+                                    "rgba(50, 172, 45, 0.97)",
+                                    "rgba(237, 129, 40, 0.89)",
+                                    "rgba(245, 54, 54, 0.9)"
+                                ],
+                                "decimals": 2,
+                                "pattern": "/.*/",
+                                "thresholds": [
+                                    "1"
+                                ],
+                                "type": "number",
+                                "unit": "short"
+                            }
+                        ],
+                        "targets": [
+                            {
+                                "refId": "A",
+                                "target": "aliasByNode(highestAverage(brocade.stats.ports.$Fabric.*.E_PORT.*.*.timeserieslinkfailures, 20), 4, 6, 7)"
+                            }
+                        ],
+                        "title": "Link Failures for $Fabric",
+                        "transform": "timeseries_aggregations",
+                        "type": "table"
+                    },
+                    {
+                        "columns": [
+                            {
+                                "text": "Avg",
+                                "value": "avg"
+                            },
+                            {
+                                "text": "Max",
+                                "value": "max"
+                            }
+                        ],
+                        "datasource": "default",
+                        "fontSize": "100%",
+                        "gridPos": {
+                            "h": 10,
+                            "w": 6,
+                            "x": 12,
+                            "y": 54
+                        },
+                        "id": 31,
+                        "links": [
+
+                        ],
+                        "pageSize": null,
+                        "scroll": true,
+                        "showHeader": true,
+                        "sort": {
+                            "col": 1,
+                            "desc": true
+                        },
+                        "styles": [
+                            {
+                                "alias": "Time",
+                                "dateFormat": "YYYY-MM-DD HH:mm:ss",
+                                "pattern": "Time",
+                                "type": "date"
+                            },
+                            {
+                                "alias": "",
+                                "colorMode": "row",
+                                "colors": [
+                                    "rgba(50, 172, 45, 0.97)",
+                                    "rgba(237, 129, 40, 0.89)",
+                                    "rgba(245, 54, 54, 0.9)"
+                                ],
+                                "decimals": 2,
+                                "pattern": "/.*/",
+                                "thresholds": [
+                                    "1"
+                                ],
+                                "type": "number",
+                                "unit": "short"
+                            }
+                        ],
+                        "targets": [
+                            {
+                                "refId": "A",
+                                "target": "aliasByNode(highestAverage(brocade.stats.ports.$Fabric.*.E_PORT.*.*.timeseriessignallosses, 20), 4, 6, 7)"
+                            }
+                        ],
+                        "title": "Loss of Signal for $Fabric",
+                        "transform": "timeseries_aggregations",
+                        "type": "table"
+                    },
+                    {
+                        "columns": [
+                            {
+                                "text": "Avg",
+                                "value": "avg"
+                            },
+                            {
+                                "text": "Max",
+                                "value": "max"
+                            }
+                        ],
+                        "datasource": "default",
+                        "fontSize": "100%",
+                        "gridPos": {
+                            "h": 10,
+                            "w": 6,
+                            "x": 18,
+                            "y": 54
+                        },
+                        "id": 32,
+                        "links": [
+
+                        ],
+                        "pageSize": null,
+                        "scroll": true,
+                        "showHeader": true,
+                        "sort": {
+                            "col": 1,
+                            "desc": true
+                        },
+                        "styles": [
+                            {
+                                "alias": "Time",
+                                "dateFormat": "YYYY-MM-DD HH:mm:ss",
+                                "pattern": "Time",
+                                "type": "date"
+                            },
+                            {
+                                "alias": "",
+                                "colorMode": "row",
+                                "colors": [
+                                    "rgba(50, 172, 45, 0.97)",
+                                    "rgba(237, 129, 40, 0.89)",
+                                    "rgba(245, 54, 54, 0.9)"
+                                ],
+                                "decimals": 2,
+                                "pattern": "/.*/",
+                                "thresholds": [
+                                    "1"
+                                ],
+                                "type": "number",
+                                "unit": "short"
+                            }
+                        ],
+                        "targets": [
+                            {
+                                "refId": "A",
+                                "target": "aliasByNode(highestAverage(brocade.stats.ports.$Fabric.*.E_PORT.*.*.timeseriessynclosses, 20), 4, 6, 7)"
+                            }
+                        ],
+                        "title": "Loss os Sync for $Fabric",
+                        "transform": "timeseries_aggregations",
+                        "type": "table"
+                    },
+                    {
+                        "columns": [
+                            {
+                                "text": "Avg",
+                                "value": "avg"
+                            },
+                            {
+                                "text": "Max",
+                                "value": "max"
+                            }
+                        ],
+                        "datasource": "default",
+                        "fontSize": "100%",
+                        "gridPos": {
+                            "h": 10,
+                            "w": 6,
+                            "x": 0,
+                            "y": 64
+                        },
+                        "id": 30,
+                        "links": [
+
+                        ],
+                        "pageSize": null,
+                        "scroll": true,
+                        "showHeader": true,
+                        "sort": {
+                            "col": 1,
+                            "desc": true
+                        },
+                        "styles": [
+                            {
+                                "alias": "Time",
+                                "dateFormat": "YYYY-MM-DD HH:mm:ss",
+                                "pattern": "Time",
+                                "type": "date"
+                            },
+                            {
+                                "alias": "",
+                                "colorMode": "row",
+                                "colors": [
+                                    "rgba(50, 172, 45, 0.97)",
+                                    "rgba(237, 129, 40, 0.89)",
+                                    "rgba(245, 54, 54, 0.9)"
+                                ],
+                                "decimals": 2,
+                                "pattern": "/.*/",
+                                "thresholds": [
+                                    "1"
+                                ],
+                                "type": "number",
+                                "unit": "short"
+                            }
+                        ],
+                        "targets": [
+                            {
+                                "refId": "A",
+                                "target": "aliasByNode(highestAverage(brocade.stats.ports.$Fabric.*.E_PORT.*.*.timeseriesc3discards, 20), 4, 6, 7)"
+                            }
+                        ],
+                        "title": "C3 Discards for $Fabric",
+                        "transform": "timeseries_aggregations",
+                        "type": "table"
+                    },
+                    {
+                        "columns": [
+                            {
+                                "text": "Avg",
+                                "value": "avg"
+                            },
+                            {
+                                "text": "Max",
+                                "value": "max"
+                            }
+                        ],
+                        "datasource": "default",
+                        "fontSize": "100%",
+                        "gridPos": {
+                            "h": 10,
+                            "w": 6,
+                            "x": 6,
+                            "y": 64
+                        },
+                        "id": 33,
+                        "links": [
+
+                        ],
+                        "pageSize": null,
+                        "scroll": true,
+                        "showHeader": true,
+                        "sort": {
+                            "col": 1,
+                            "desc": true
+                        },
+                        "styles": [
+                            {
+                                "alias": "Time",
+                                "dateFormat": "YYYY-MM-DD HH:mm:ss",
+                                "pattern": "Time",
+                                "type": "date"
+                            },
+                            {
+                                "alias": "",
+                                "colorMode": "row",
+                                "colors": [
+                                    "rgba(50, 172, 45, 0.97)",
+                                    "rgba(237, 129, 40, 0.89)",
+                                    "rgba(245, 54, 54, 0.9)"
+                                ],
+                                "decimals": 2,
+                                "pattern": "/.*/",
+                                "thresholds": [
+                                    "1"
+                                ],
+                                "type": "number",
+                                "unit": "short"
+                            }
+                        ],
+                        "targets": [
+                            {
+                                "refId": "A",
+                                "target": "aliasByNode(highestAverage(brocade.stats.ports.$Fabric.*.E_PORT.*.*.timeseriesc3discardsother, 20), 4, 6, 7)"
+                            }
+                        ],
+                        "title": "Other C3 Discards for $Fabric",
+                        "transform": "timeseries_aggregations",
+                        "type": "table"
+                    },
+                    {
+                        "columns": [
+                            {
+                                "text": "Avg",
+                                "value": "avg"
+                            },
+                            {
+                                "text": "Max",
+                                "value": "max"
+                            }
+                        ],
+                        "datasource": "default",
+                        "fontSize": "100%",
+                        "gridPos": {
+                            "h": 10,
+                            "w": 6,
+                            "x": 12,
+                            "y": 64
+                        },
+                        "id": 34,
+                        "links": [
+
+                        ],
+                        "pageSize": null,
+                        "scroll": true,
+                        "showHeader": true,
+                        "sort": {
+                            "col": 1,
+                            "desc": true
+                        },
+                        "styles": [
+                            {
+                                "alias": "Time",
+                                "dateFormat": "YYYY-MM-DD HH:mm:ss",
+                                "pattern": "Time",
+                                "type": "date"
+                            },
+                            {
+                                "alias": "",
+                                "colorMode": "row",
+                                "colors": [
+                                    "rgba(50, 172, 45, 0.97)",
+                                    "rgba(237, 129, 40, 0.89)",
+                                    "rgba(245, 54, 54, 0.9)"
+                                ],
+                                "decimals": 2,
+                                "pattern": "/.*/",
+                                "thresholds": [
+                                    "1"
+                                ],
+                                "type": "number",
+                                "unit": "short"
+                            }
+                        ],
+                        "targets": [
+                            {
+                                "refId": "A",
+                                "target": "aliasByNode(highestAverage(brocade.stats.ports.$Fabric.*.E_PORT.*.*.timeseriesc3discardsrxto, 20), 4, 6, 7)"
+                            }
+                        ],
+                        "title": "TX Timeout C3 Discards for $Fabric",
+                        "transform": "timeseries_aggregations",
+                        "type": "table"
+                    },
+                    {
+                        "columns": [
+                            {
+                                "text": "Avg",
+                                "value": "avg"
+                            },
+                            {
+                                "text": "Max",
+                                "value": "max"
+                            }
+                        ],
+                        "datasource": "default",
+                        "fontSize": "100%",
+                        "gridPos": {
+                            "h": 10,
+                            "w": 6,
+                            "x": 18,
+                            "y": 64
+                        },
+                        "id": 41,
+                        "links": [
+
+                        ],
+                        "pageSize": null,
+                        "scroll": true,
+                        "showHeader": true,
+                        "sort": {
+                            "col": 1,
+                            "desc": true
+                        },
+                        "styles": [
+                            {
+                                "alias": "Time",
+                                "dateFormat": "YYYY-MM-DD HH:mm:ss",
+                                "pattern": "Time",
+                                "type": "date"
+                            },
+                            {
+                                "alias": "",
+                                "colorMode": "row",
+                                "colors": [
+                                    "rgba(50, 172, 45, 0.97)",
+                                    "rgba(237, 129, 40, 0.89)",
+                                    "rgba(245, 54, 54, 0.9)"
+                                ],
+                                "decimals": 2,
+                                "pattern": "/.*/",
+                                "thresholds": [
+                                    "1"
+                                ],
+                                "type": "number",
+                                "unit": "short"
+                            }
+                        ],
+                        "targets": [
+                            {
+                                "refId": "A",
+                                "target": "aliasByNode(highestAverage(brocade.stats.ports.$Fabric.*.E_PORT.*.*.timeseriesc3discardstxto, 20), 4, 6, 7)"
+                            }
+                        ],
+                        "title": "TX Timeout C3 Discards for $Fabric",
+                        "transform": "timeseries_aggregations",
+                        "type": "table"
+                    },
+                    {
+                        "columns": [
+                            {
+                                "text": "Avg",
+                                "value": "avg"
+                            },
+                            {
+                                "text": "Max",
+                                "value": "max"
+                            }
+                        ],
+                        "datasource": "default",
+                        "fontSize": "100%",
+                        "gridPos": {
+                            "h": 10,
+                            "w": 6,
+                            "x": 0,
+                            "y": 74
+                        },
+                        "id": 35,
+                        "links": [
+
+                        ],
+                        "pageSize": null,
+                        "scroll": true,
+                        "showHeader": true,
+                        "sort": {
+                            "col": 1,
+                            "desc": true
+                        },
+                        "styles": [
+                            {
+                                "alias": "Time",
+                                "dateFormat": "YYYY-MM-DD HH:mm:ss",
+                                "pattern": "Time",
+                                "type": "date"
+                            },
+                            {
+                                "alias": "",
+                                "colorMode": "row",
+                                "colors": [
+                                    "rgba(50, 172, 45, 0.97)",
+                                    "rgba(237, 129, 40, 0.89)",
+                                    "rgba(245, 54, 54, 0.9)"
+                                ],
+                                "decimals": 2,
+                                "pattern": "/.*/",
+                                "thresholds": [
+                                    "1"
+                                ],
+                                "type": "number",
+                                "unit": "short"
+                            }
+                        ],
+                        "targets": [
+                            {
+                                "refId": "A",
+                                "target": "aliasByNode(highestAverage(brocade.stats.ports.$Fabric.*.E_PORT.*.*.timeseriesc3discardstxto, 20), 4, 6, 7)"
+                            }
+                        ],
+                        "title": "Destination Unreachable C3 Discards for $Fabric",
+                        "transform": "timeseries_aggregations",
+                        "type": "table"
+                    },
+                    {
+                        "columns": [
+                            {
+                                "text": "Avg",
+                                "value": "avg"
+                            },
+                            {
+                                "text": "Max",
+                                "value": "max"
+                            }
+                        ],
+                        "datasource": "default",
+                        "fontSize": "100%",
+                        "gridPos": {
+                            "h": 10,
+                            "w": 6,
+                            "x": 6,
+                            "y": 74
+                        },
+                        "id": 37,
+                        "links": [
+
+                        ],
+                        "pageSize": null,
+                        "scroll": true,
+                        "showHeader": true,
+                        "sort": {
+                            "col": 1,
+                            "desc": true
+                        },
+                        "styles": [
+                            {
+                                "alias": "Time",
+                                "dateFormat": "YYYY-MM-DD HH:mm:ss",
+                                "pattern": "Time",
+                                "type": "date"
+                            },
+                            {
+                                "alias": "",
+                                "colorMode": "row",
+                                "colors": [
+                                    "rgba(50, 172, 45, 0.97)",
+                                    "rgba(237, 129, 40, 0.89)",
+                                    "rgba(245, 54, 54, 0.9)"
+                                ],
+                                "decimals": 2,
+                                "pattern": "/.*/",
+                                "thresholds": [
+                                    "1"
+                                ],
+                                "type": "number",
+                                "unit": "short"
+                            }
+                        ],
+                        "targets": [
+                            {
+                                "refId": "A",
+                                "target": "aliasByNode(highestAverage(brocade.stats.ports.$Fabric.*.E_PORT.*.*.timeseriesinvalidorderedsets, 20), 4, 6, 7)"
+                            }
+                        ],
+                        "title": "Invalid Ordered Set for $Fabric",
+                        "transform": "timeseries_aggregations",
+                        "type": "table"
+                    },
+                    {
+                        "columns": [
+                            {
+                                "text": "Avg",
+                                "value": "avg"
+                            },
+                            {
+                                "text": "Max",
+                                "value": "max"
+                            }
+                        ],
+                        "datasource": "default",
+                        "fontSize": "100%",
+                        "gridPos": {
+                            "h": 10,
+                            "w": 6,
+                            "x": 12,
+                            "y": 74
+                        },
+                        "id": 38,
+                        "links": [
+
+                        ],
+                        "pageSize": null,
+                        "scroll": true,
+                        "showHeader": true,
+                        "sort": {
+                            "col": 1,
+                            "desc": true
+                        },
+                        "styles": [
+                            {
+                                "alias": "Time",
+                                "dateFormat": "YYYY-MM-DD HH:mm:ss",
+                                "pattern": "Time",
+                                "type": "date"
+                            },
+                            {
+                                "alias": "",
+                                "colorMode": "row",
+                                "colors": [
+                                    "rgba(50, 172, 45, 0.97)",
+                                    "rgba(237, 129, 40, 0.89)",
+                                    "rgba(245, 54, 54, 0.9)"
+                                ],
+                                "decimals": 2,
+                                "pattern": "/.*/",
+                                "thresholds": [
+                                    "1"
+                                ],
+                                "type": "number",
+                                "unit": "short"
+                            }
+                        ],
+                        "targets": [
+                            {
+                                "refId": "A",
+                                "target": "aliasByNode(highestAverage(brocade.stats.ports.$Fabric.*.E_PORT.*.*.timeseriesinvalidtransmissions, 20), 4, 6, 7)"
+                            }
+                        ],
+                        "title": "Invalid Transmission Words for $Fabric",
+                        "transform": "timeseries_aggregations",
+                        "type": "table"
+                    },
+                    {
+                        "columns": [
+                            {
+                                "text": "Avg",
+                                "value": "avg"
+                            },
+                            {
+                                "text": "Max",
+                                "value": "max"
+                            }
+                        ],
+                        "datasource": "default",
+                        "fontSize": "100%",
+                        "gridPos": {
+                            "h": 10,
+                            "w": 6,
+                            "x": 18,
+                            "y": 74
+                        },
+                        "id": 40,
+                        "links": [
+
+                        ],
+                        "pageSize": null,
+                        "scroll": true,
+                        "showHeader": true,
+                        "sort": {
+                            "col": 1,
+                            "desc": true
+                        },
+                        "styles": [
+                            {
+                                "alias": "Time",
+                                "dateFormat": "YYYY-MM-DD HH:mm:ss",
+                                "pattern": "Time",
+                                "type": "date"
+                            },
+                            {
+                                "alias": "",
+                                "colorMode": "row",
+                                "colors": [
+                                    "rgba(50, 172, 45, 0.97)",
+                                    "rgba(237, 129, 40, 0.89)",
+                                    "rgba(245, 54, 54, 0.9)"
+                                ],
+                                "decimals": 2,
+                                "pattern": "/.*/",
+                                "thresholds": [
+                                    "1"
+                                ],
+                                "type": "number",
+                                "unit": "short"
+                            }
+                        ],
+                        "targets": [
+                            {
+                                "refId": "A",
+                                "target": "aliasByNode(highestAverage(brocade.stats.ports.$Fabric.*.E_PORT.*.*.timeseriessequenceerrors, 20), 4, 6, 7)"
+                            }
+                        ],
+                        "title": "Sequence Errors for $Fabric",
+                        "transform": "timeseries_aggregations",
+                        "type": "table"
+                    }
+                ],
+                "repeat": null,
+                "title": "Errors: Standard Distance ISLs",
+                "type": "row"
+            }
+        ],
+        "schemaVersion": 16,
+        "style": "dark",
+        "tags": [
+            "Brocade",
+            "BETA"
+        ],
+        "templating": {
+            "list": [
+                {
+                    "allValue": null,
+                    "current": {
+                        "text": "Fabric1",
+                        "value": [
+                            "Fabric1"
+                        ]
+                    },
+                    "datasource": "default",
+                    "hide": 0,
+                    "includeAll": false,
+                    "label": null,
+                    "multi": true,
+                    "name": "Fabric",
+                    "options": [
+
+                    ],
+                    "query": "brocade.stats.ports.*",
+                    "refresh": 1,
+                    "regex": "",
+                    "sort": 0,
+                    "tagValuesQuery": "",
+                    "tags": [
+
+                    ],
+                    "tagsQuery": "",
+                    "type": "query",
+                    "useTags": false
+                }
+            ]
+        },
+        "time": {
+            "from": "now-6h",
+            "to": "now"
+        },
+        "timepicker": {
+            "refresh_intervals": [
+                "5s",
+                "10s",
+                "30s",
+                "1m",
+                "5m",
+                "15m",
+                "30m",
+                "1h",
+                "2h",
+                "1d"
+            ],
+            "time_options": [
+                "5m",
+                "15m",
+                "1h",
+                "6h",
+                "12h",
+                "24h",
+                "2d",
+                "7d",
+                "30d"
+            ]
+        },
+        "timezone": "",
+        "title": "Brocade: ISL Status",
+        "uid": "U8np_Yezz",
+        "version": 2
+    },
+    "overwrite": true
+}
