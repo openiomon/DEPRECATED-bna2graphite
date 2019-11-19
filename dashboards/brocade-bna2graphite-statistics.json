@@ -10,8 +10,13 @@
         "expires": "0001-01-01T00:00:00Z",
         "created": "2017-05-15T15:30:07+02:00",
         "updated": "2018-05-14T09:12:50+02:00",
+<<<<<<< HEAD
         "updatedBy": "USER",
         "createdBy": "USER",
+=======
+        "updatedBy": "XNE6009W",
+        "createdBy": "XNE6009W",
+>>>>>>> 822f8dd00b189dd05b171b5b837105ffd32323a3
         "version": 14,
         "hasAcl": false,
         "isFolder": false,

@@ -10,7 +10,11 @@
         "expires": "0001-01-01T00:00:00Z",
         "created": "2018-05-14T09:11:59+02:00",
         "updated": "2019-08-14T07:51:11+02:00",
+<<<<<<< HEAD
         "updatedBy": "USER",
+=======
+        "updatedBy": "XNE6009W",
+>>>>>>> 822f8dd00b189dd05b171b5b837105ffd32323a3
         "createdBy": "Anonymous",
         "version": 3,
         "hasAcl": false,
