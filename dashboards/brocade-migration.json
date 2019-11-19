@@ -1,0 +1,2345 @@
+{
+    "meta": {
+        "type": "db",
+        "canSave": true,
+        "canEdit": true,
+        "canAdmin": false,
+        "canStar": true,
+        "slug": "brocade-migration",
+        "url": "/d/EunplLezk/brocade-migration",
+        "expires": "0001-01-01T00:00:00Z",
+        "created": "2018-05-14T09:11:59+02:00",
+        "updated": "2018-05-14T09:12:50+02:00",
+        "updatedBy": "USER",
+        "createdBy": "Anonymous",
+        "version": 2,
+        "hasAcl": false,
+        "isFolder": false,
+        "folderId": 143,
+        "folderTitle": "Brocade",
+        "folderUrl": "/dashboards/f/b0xePvnmz/brocade",
+        "provisioned": false,
+        "provisionedExternalId": ""
+    },
+    "dashboard": {
+        "annotations": {
+            "list": [
+                {
+                    "builtIn": 1,
+                    "datasource": "default",
+                    "enable": true,
+                    "hide": true,
+                    "iconColor": "rgba(0, 211, 255, 1)",
+                    "name": "Annotations & Alerts",
+                    "type": "dashboard"
+                }
+            ]
+        },
+        "editable": true,
+        "gnetId": null,
+        "graphTooltip": 0,
+        "id": null,
+        "links": [
+
+        ],
+        "panels": [
+            {
+                "collapsed": false,
+                "gridPos": {
+                    "h": 8,
+                    "w": 24,
+                    "x": 0,
+                    "y": 0
+                },
+                "id": 17,
+                "panels": [
+
+                ],
+                "repeat": null,
+                "title": "Fabric 1 - X6-8 / DCX Kopplung",
+                "type": "row"
+            },
+            {
+                "aliasColors": {
+
+                },
+                "bars": false,
+                "dashLength": 10,
+                "dashes": false,
+                "datasource": "default",
+                "fill": 1,
+                "gridPos": {
+                    "h": 8,
+                    "w": 12,
+                    "x": 0,
+                    "y": 1
+                },
+                "id": 1,
+                "legend": {
+                    "alignAsTable": true,
+                    "avg": true,
+                    "current": false,
+                    "max": true,
+                    "min": false,
+                    "show": true,
+                    "sort": "max",
+                    "sortDesc": true,
+                    "total": false,
+                    "values": true
+                },
+                "lines": true,
+                "linewidth": 1,
+                "links": [
+
+                ],
+                "nullPointMode": "null",
+                "percentage": false,
+                "pointradius": 5,
+                "points": false,
+                "renderer": "flot",
+                "seriesOverrides": [
+
+                ],
+                "spaceLength": 10,
+                "stack": false,
+                "steppedLine": false,
+                "targets": [
+                    {
+                        "refId": "A",
+                        "target": "brocade.stats.ports.Fabric1.SWITCH01-1.E_PORT.4.*.timeseriestraffic.rx"
+                    },
+                    {
+                        "refId": "B",
+                        "target": "brocade.stats.ports.Fabric1.SWITCH01-1.E_PORT.4.*.timeseriestraffic.tx"
+                    },
+                    {
+                        "refId": "C",
+                        "target": "brocade.stats.ports.Fabric1.SWITCH01-1.E_PORT.5.*.timeseriestraffic.rx"
+                    },
+                    {
+                        "refId": "D",
+                        "target": "brocade.stats.ports.Fabric1.SWITCH01-1.E_PORT.5.*.timeseriestraffic.tx"
+                    },
+                    {
+                        "refId": "E",
+                        "target": "brocade.stats.ports.Fabric1.SWITCH01-1.E_PORT.6.*.timeseriestraffic.rx"
+                    },
+                    {
+                        "refId": "F",
+                        "target": "brocade.stats.ports.Fabric1.SWITCH01-1.E_PORT.6.*.timeseriestraffic.tx"
+                    },
+                    {
+                        "refId": "G",
+                        "target": "brocade.stats.ports.Fabric1.SWITCH01-1.E_PORT.9.*.timeseriestraffic.rx"
+                    },
+                    {
+                        "refId": "H",
+                        "target": "brocade.stats.ports.Fabric1.SWITCH01-1.E_PORT.9.*.timeseriestraffic.tx"
+                    }
+                ],
+                "thresholds": [
+                    {
+                        "colorMode": "critical",
+                        "fill": true,
+                        "line": true,
+                        "op": "gt",
+                        "value": 850
+                    }
+                ],
+                "timeFrom": null,
+                "timeShift": null,
+                "title": "E-Port  Throughput Chassis 1",
+                "tooltip": {
+                    "shared": true,
+                    "sort": 0,
+                    "value_type": "individual"
+                },
+                "type": "graph",
+                "xaxis": {
+                    "buckets": null,
+                    "mode": "time",
+                    "name": null,
+                    "show": true,
+                    "values": [
+
+                    ]
+                },
+                "yaxes": [
+                    {
+                        "format": "MBs",
+                        "label": null,
+                        "logBase": 1,
+                        "max": "1000",
+                        "min": "0",
+                        "show": true
+                    },
+                    {
+                        "format": "short",
+                        "label": null,
+                        "logBase": 1,
+                        "max": null,
+                        "min": null,
+                        "show": true
+                    }
+                ]
+            },
+            {
+                "aliasColors": {
+
+                },
+                "bars": false,
+                "dashLength": 10,
+                "dashes": false,
+                "datasource": "default",
+                "fill": 1,
+                "gridPos": {
+                    "h": 8,
+                    "w": 12,
+                    "x": 12,
+                    "y": 1
+                },
+                "id": 3,
+                "legend": {
+                    "alignAsTable": true,
+                    "avg": true,
+                    "current": false,
+                    "max": true,
+                    "min": false,
+                    "show": true,
+                    "sort": "max",
+                    "sortDesc": true,
+                    "total": false,
+                    "values": true
+                },
+                "lines": true,
+                "linewidth": 1,
+                "links": [
+
+                ],
+                "nullPointMode": "null",
+                "percentage": false,
+                "pointradius": 5,
+                "points": false,
+                "renderer": "flot",
+                "seriesOverrides": [
+
+                ],
+                "spaceLength": 10,
+                "stack": false,
+                "steppedLine": false,
+                "targets": [
+                    {
+                        "refId": "A",
+                        "target": "brocade.stats.ports.Fabric1.SWITCH01-2.E_PORT.4.*.timeseriestraffic.rx"
+                    },
+                    {
+                        "refId": "B",
+                        "target": "brocade.stats.ports.Fabric1.SWITCH01-2.E_PORT.4.*.timeseriestraffic.tx"
+                    },
+                    {
+                        "refId": "C",
+                        "target": "brocade.stats.ports.Fabric1.SWITCH01-2.E_PORT.5.*.timeseriestraffic.rx"
+                    },
+                    {
+                        "refId": "D",
+                        "target": "brocade.stats.ports.Fabric1.SWITCH01-2.E_PORT.5.*.timeseriestraffic.tx"
+                    },
+                    {
+                        "refId": "E",
+                        "target": "brocade.stats.ports.Fabric1.SWITCH01-2.E_PORT.6.*.timeseriestraffic.rx"
+                    },
+                    {
+                        "refId": "F",
+                        "target": "brocade.stats.ports.Fabric1.SWITCH01-2.E_PORT.6.*.timeseriestraffic.tx"
+                    },
+                    {
+                        "refId": "G",
+                        "target": "brocade.stats.ports.Fabric1.SWITCH01-2.E_PORT.9.*.timeseriestraffic.rx"
+                    },
+                    {
+                        "refId": "H",
+                        "target": "brocade.stats.ports.Fabric1.SWITCH01-2.E_PORT.9.*.timeseriestraffic.tx"
+                    }
+                ],
+                "thresholds": [
+                    {
+                        "colorMode": "critical",
+                        "fill": true,
+                        "line": true,
+                        "op": "gt",
+                        "value": 850
+                    }
+                ],
+                "timeFrom": null,
+                "timeShift": null,
+                "title": "E-Port  Throughput Chassis 2",
+                "tooltip": {
+                    "shared": true,
+                    "sort": 0,
+                    "value_type": "individual"
+                },
+                "type": "graph",
+                "xaxis": {
+                    "buckets": null,
+                    "mode": "time",
+                    "name": null,
+                    "show": true,
+                    "values": [
+
+                    ]
+                },
+                "yaxes": [
+                    {
+                        "format": "MBs",
+                        "label": null,
+                        "logBase": 1,
+                        "max": "1000",
+                        "min": "0",
+                        "show": true
+                    },
+                    {
+                        "format": "short",
+                        "label": null,
+                        "logBase": 1,
+                        "max": null,
+                        "min": null,
+                        "show": true
+                    }
+                ]
+            },
+            {
+                "aliasColors": {
+
+                },
+                "bars": false,
+                "dashLength": 10,
+                "dashes": false,
+                "datasource": "default",
+                "fill": 1,
+                "gridPos": {
+                    "h": 8,
+                    "w": 12,
+                    "x": 0,
+                    "y": 9
+                },
+                "id": 2,
+                "legend": {
+                    "alignAsTable": true,
+                    "avg": true,
+                    "current": false,
+                    "max": true,
+                    "min": false,
+                    "show": true,
+                    "sort": "max",
+                    "sortDesc": true,
+                    "total": false,
+                    "values": true
+                },
+                "lines": true,
+                "linewidth": 1,
+                "links": [
+
+                ],
+                "nullPointMode": "null",
+                "percentage": false,
+                "pointradius": 5,
+                "points": false,
+                "renderer": "flot",
+                "seriesOverrides": [
+
+                ],
+                "spaceLength": 10,
+                "stack": false,
+                "steppedLine": false,
+                "targets": [
+                    {
+                        "refId": "A",
+                        "target": "brocade.stats.ports.Fabric1.SWITCH01-1.E_PORT.4.*.timeseriesutilpercentage.rx"
+                    },
+                    {
+                        "refId": "B",
+                        "target": "brocade.stats.ports.Fabric1.SWITCH01-1.E_PORT.4.*.timeseriesutilpercentage.tx"
+                    },
+                    {
+                        "refId": "C",
+                        "target": "brocade.stats.ports.Fabric1.SWITCH01-1.E_PORT.5.*.timeseriesutilpercentage.rx"
+                    },
+                    {
+                        "refId": "D",
+                        "target": "brocade.stats.ports.Fabric1.SWITCH01-1.E_PORT.5.*.timeseriesutilpercentage.tx"
+                    },
+                    {
+                        "refId": "E",
+                        "target": "brocade.stats.ports.Fabric1.SWITCH01-1.E_PORT.6.*.timeseriesutilpercentage.rx"
+                    },
+                    {
+                        "refId": "F",
+                        "target": "brocade.stats.ports.Fabric1.SWITCH01-1.E_PORT.6.*.timeseriesutilpercentage.tx"
+                    },
+                    {
+                        "refId": "G",
+                        "target": "brocade.stats.ports.Fabric1.SWITCH01-1.E_PORT.9.*.timeseriesutilpercentage.rx"
+                    },
+                    {
+                        "refId": "H",
+                        "target": "brocade.stats.ports.Fabric1.SWITCH01-1.E_PORT.9.*.timeseriesutilpercentage.tx"
+                    }
+                ],
+                "thresholds": [
+
+                ],
+                "timeFrom": null,
+                "timeShift": null,
+                "title": "E-Port  Utilization Chassis 1",
+                "tooltip": {
+                    "shared": true,
+                    "sort": 0,
+                    "value_type": "individual"
+                },
+                "type": "graph",
+                "xaxis": {
+                    "buckets": null,
+                    "mode": "time",
+                    "name": null,
+                    "show": true,
+                    "values": [
+
+                    ]
+                },
+                "yaxes": [
+                    {
+                        "format": "percent",
+                        "label": null,
+                        "logBase": 1,
+                        "max": "100",
+                        "min": "0",
+                        "show": true
+                    },
+                    {
+                        "format": "short",
+                        "label": null,
+                        "logBase": 1,
+                        "max": null,
+                        "min": null,
+                        "show": true
+                    }
+                ]
+            },
+            {
+                "aliasColors": {
+
+                },
+                "bars": false,
+                "dashLength": 10,
+                "dashes": false,
+                "datasource": "default",
+                "fill": 1,
+                "gridPos": {
+                    "h": 8,
+                    "w": 12,
+                    "x": 12,
+                    "y": 9
+                },
+                "id": 4,
+                "legend": {
+                    "alignAsTable": true,
+                    "avg": true,
+                    "current": false,
+                    "max": true,
+                    "min": false,
+                    "show": true,
+                    "sort": "max",
+                    "sortDesc": true,
+                    "total": false,
+                    "values": true
+                },
+                "lines": true,
+                "linewidth": 1,
+                "links": [
+
+                ],
+                "nullPointMode": "null",
+                "percentage": false,
+                "pointradius": 5,
+                "points": false,
+                "renderer": "flot",
+                "seriesOverrides": [
+
+                ],
+                "spaceLength": 10,
+                "stack": false,
+                "steppedLine": false,
+                "targets": [
+                    {
+                        "refId": "A",
+                        "target": "brocade.stats.ports.Fabric1.SWITCH01-2.E_PORT.4.*.timeseriesutilpercentage.rx"
+                    },
+                    {
+                        "refId": "B",
+                        "target": "brocade.stats.ports.Fabric1.SWITCH01-2.E_PORT.4.*.timeseriesutilpercentage.tx"
+                    },
+                    {
+                        "refId": "C",
+                        "target": "brocade.stats.ports.Fabric1.SWITCH01-2.E_PORT.5.*.timeseriesutilpercentage.rx"
+                    },
+                    {
+                        "refId": "D",
+                        "target": "brocade.stats.ports.Fabric1.SWITCH01-2.E_PORT.5.*.timeseriesutilpercentage.tx"
+                    },
+                    {
+                        "refId": "E",
+                        "target": "brocade.stats.ports.Fabric1.SWITCH01-2.E_PORT.6.*.timeseriesutilpercentage.rx"
+                    },
+                    {
+                        "refId": "F",
+                        "target": "brocade.stats.ports.Fabric1.SWITCH01-2.E_PORT.6.*.timeseriesutilpercentage.tx"
+                    },
+                    {
+                        "refId": "G",
+                        "target": "brocade.stats.ports.Fabric1.SWITCH01-2.E_PORT.9.*.timeseriesutilpercentage.rx"
+                    },
+                    {
+                        "refId": "H",
+                        "target": "brocade.stats.ports.Fabric1.SWITCH01-2.E_PORT.9.*.timeseriesutilpercentage.tx"
+                    }
+                ],
+                "thresholds": [
+
+                ],
+                "timeFrom": null,
+                "timeShift": null,
+                "title": "E-Port  Utilization Chassis 2",
+                "tooltip": {
+                    "shared": true,
+                    "sort": 0,
+                    "value_type": "individual"
+                },
+                "type": "graph",
+                "xaxis": {
+                    "buckets": null,
+                    "mode": "time",
+                    "name": null,
+                    "show": true,
+                    "values": [
+
+                    ]
+                },
+                "yaxes": [
+                    {
+                        "format": "percent",
+                        "label": null,
+                        "logBase": 1,
+                        "max": "100",
+                        "min": "0",
+                        "show": true
+                    },
+                    {
+                        "format": "short",
+                        "label": null,
+                        "logBase": 1,
+                        "max": null,
+                        "min": null,
+                        "show": true
+                    }
+                ]
+            },
+            {
+                "collapsed": false,
+                "gridPos": {
+                    "h": 8,
+                    "w": 24,
+                    "x": 0,
+                    "y": 17
+                },
+                "id": 18,
+                "panels": [
+
+                ],
+                "repeat": null,
+                "title": "Fabric 2 - X6-8 / DCX Kopplung",
+                "type": "row"
+            },
+            {
+                "aliasColors": {
+
+                },
+                "bars": false,
+                "dashLength": 10,
+                "dashes": false,
+                "datasource": "default",
+                "fill": 1,
+                "gridPos": {
+                    "h": 8,
+                    "w": 12,
+                    "x": 0,
+                    "y": 18
+                },
+                "id": 5,
+                "legend": {
+                    "alignAsTable": true,
+                    "avg": true,
+                    "current": false,
+                    "max": true,
+                    "min": false,
+                    "show": true,
+                    "sort": "max",
+                    "sortDesc": true,
+                    "total": false,
+                    "values": true
+                },
+                "lines": true,
+                "linewidth": 1,
+                "links": [
+
+                ],
+                "nullPointMode": "null",
+                "percentage": false,
+                "pointradius": 5,
+                "points": false,
+                "renderer": "flot",
+                "seriesOverrides": [
+
+                ],
+                "spaceLength": 10,
+                "stack": false,
+                "steppedLine": false,
+                "targets": [
+                    {
+                        "refId": "A",
+                        "target": "brocade.stats.ports.Fabric2.SWITCH02-1.E_PORT.4.*.timeseriestraffic.rx"
+                    },
+                    {
+                        "refId": "B",
+                        "target": "brocade.stats.ports.Fabric2.SWITCH02-1.E_PORT.4.*.timeseriestraffic.tx"
+                    },
+                    {
+                        "refId": "C",
+                        "target": "brocade.stats.ports.Fabric2.SWITCH02-1.E_PORT.5.*.timeseriestraffic.rx"
+                    },
+                    {
+                        "refId": "D",
+                        "target": "brocade.stats.ports.Fabric2.SWITCH02-1.E_PORT.5.*.timeseriestraffic.tx"
+                    },
+                    {
+                        "refId": "E",
+                        "target": "brocade.stats.ports.Fabric2.SWITCH02-1.E_PORT.6.*.timeseriestraffic.rx"
+                    },
+                    {
+                        "refId": "F",
+                        "target": "brocade.stats.ports.Fabric2.SWITCH02-1.E_PORT.6.*.timeseriestraffic.tx"
+                    },
+                    {
+                        "refId": "G",
+                        "target": "brocade.stats.ports.Fabric2.SWITCH02-1.E_PORT.9.*.timeseriestraffic.rx"
+                    },
+                    {
+                        "refId": "H",
+                        "target": "brocade.stats.ports.Fabric2.SWITCH02-1.E_PORT.9.*.timeseriestraffic.tx"
+                    }
+                ],
+                "thresholds": [
+                    {
+                        "colorMode": "critical",
+                        "fill": true,
+                        "line": true,
+                        "op": "gt",
+                        "value": 850
+                    }
+                ],
+                "timeFrom": null,
+                "timeShift": null,
+                "title": "E-Port  Throughput Chassis 1",
+                "tooltip": {
+                    "shared": true,
+                    "sort": 0,
+                    "value_type": "individual"
+                },
+                "type": "graph",
+                "xaxis": {
+                    "buckets": null,
+                    "mode": "time",
+                    "name": null,
+                    "show": true,
+                    "values": [
+
+                    ]
+                },
+                "yaxes": [
+                    {
+                        "format": "MBs",
+                        "label": null,
+                        "logBase": 1,
+                        "max": "1000",
+                        "min": "0",
+                        "show": true
+                    },
+                    {
+                        "format": "short",
+                        "label": null,
+                        "logBase": 1,
+                        "max": null,
+                        "min": null,
+                        "show": true
+                    }
+                ]
+            },
+            {
+                "aliasColors": {
+
+                },
+                "bars": false,
+                "dashLength": 10,
+                "dashes": false,
+                "datasource": "default",
+                "fill": 1,
+                "gridPos": {
+                    "h": 8,
+                    "w": 12,
+                    "x": 12,
+                    "y": 18
+                },
+                "id": 6,
+                "legend": {
+                    "alignAsTable": true,
+                    "avg": true,
+                    "current": false,
+                    "max": true,
+                    "min": false,
+                    "show": true,
+                    "sort": "max",
+                    "sortDesc": true,
+                    "total": false,
+                    "values": true
+                },
+                "lines": true,
+                "linewidth": 1,
+                "links": [
+
+                ],
+                "nullPointMode": "null",
+                "percentage": false,
+                "pointradius": 5,
+                "points": false,
+                "renderer": "flot",
+                "seriesOverrides": [
+
+                ],
+                "spaceLength": 10,
+                "stack": false,
+                "steppedLine": false,
+                "targets": [
+                    {
+                        "refId": "A",
+                        "target": "brocade.stats.ports.Fabric2.SWITCH02-2.E_PORT.4.*.timeseriestraffic.rx"
+                    },
+                    {
+                        "refId": "B",
+                        "target": "brocade.stats.ports.Fabric2.SWITCH02-2.E_PORT.4.*.timeseriestraffic.tx"
+                    },
+                    {
+                        "refId": "C",
+                        "target": "brocade.stats.ports.Fabric2.SWITCH02-2.E_PORT.5.*.timeseriestraffic.rx"
+                    },
+                    {
+                        "refId": "D",
+                        "target": "brocade.stats.ports.Fabric2.SWITCH02-2.E_PORT.5.*.timeseriestraffic.tx"
+                    },
+                    {
+                        "refId": "E",
+                        "target": "brocade.stats.ports.Fabric2.SWITCH02-2.E_PORT.6.*.timeseriestraffic.rx"
+                    },
+                    {
+                        "refId": "F",
+                        "target": "brocade.stats.ports.Fabric2.SWITCH02-2.E_PORT.6.*.timeseriestraffic.tx"
+                    },
+                    {
+                        "refId": "G",
+                        "target": "brocade.stats.ports.Fabric2.SWITCH02-2.E_PORT.9.*.timeseriestraffic.rx"
+                    },
+                    {
+                        "refId": "H",
+                        "target": "brocade.stats.ports.Fabric2.SWITCH02-2.E_PORT.9.*.timeseriestraffic.tx"
+                    }
+                ],
+                "thresholds": [
+                    {
+                        "colorMode": "critical",
+                        "fill": true,
+                        "line": true,
+                        "op": "gt",
+                        "value": 850
+                    }
+                ],
+                "timeFrom": null,
+                "timeShift": null,
+                "title": "E-Port  Throughput Chassis 2",
+                "tooltip": {
+                    "shared": true,
+                    "sort": 0,
+                    "value_type": "individual"
+                },
+                "type": "graph",
+                "xaxis": {
+                    "buckets": null,
+                    "mode": "time",
+                    "name": null,
+                    "show": true,
+                    "values": [
+
+                    ]
+                },
+                "yaxes": [
+                    {
+                        "format": "MBs",
+                        "label": null,
+                        "logBase": 1,
+                        "max": "1000",
+                        "min": "0",
+                        "show": true
+                    },
+                    {
+                        "format": "short",
+                        "label": null,
+                        "logBase": 1,
+                        "max": null,
+                        "min": null,
+                        "show": true
+                    }
+                ]
+            },
+            {
+                "aliasColors": {
+
+                },
+                "bars": false,
+                "dashLength": 10,
+                "dashes": false,
+                "datasource": "default",
+                "fill": 1,
+                "gridPos": {
+                    "h": 8,
+                    "w": 12,
+                    "x": 0,
+                    "y": 26
+                },
+                "id": 7,
+                "legend": {
+                    "alignAsTable": true,
+                    "avg": true,
+                    "current": false,
+                    "max": true,
+                    "min": false,
+                    "show": true,
+                    "sort": "max",
+                    "sortDesc": true,
+                    "total": false,
+                    "values": true
+                },
+                "lines": true,
+                "linewidth": 1,
+                "links": [
+
+                ],
+                "nullPointMode": "null",
+                "percentage": false,
+                "pointradius": 5,
+                "points": false,
+                "renderer": "flot",
+                "seriesOverrides": [
+
+                ],
+                "spaceLength": 10,
+                "stack": false,
+                "steppedLine": false,
+                "targets": [
+                    {
+                        "refId": "A",
+                        "target": "brocade.stats.ports.Fabric2.SWITCH02-1.E_PORT.4.*.timeseriesutilpercentage.rx"
+                    },
+                    {
+                        "refId": "B",
+                        "target": "brocade.stats.ports.Fabric2.SWITCH02-1.E_PORT.4.*.timeseriesutilpercentage.tx"
+                    },
+                    {
+                        "refId": "C",
+                        "target": "brocade.stats.ports.Fabric2.SWITCH02-1.E_PORT.5.*.timeseriesutilpercentage.rx"
+                    },
+                    {
+                        "refId": "D",
+                        "target": "brocade.stats.ports.Fabric2.SWITCH02-1.E_PORT.5.*.timeseriesutilpercentage.tx"
+                    },
+                    {
+                        "refId": "E",
+                        "target": "brocade.stats.ports.Fabric2.SWITCH02-1.E_PORT.6.*.timeseriesutilpercentage.rx"
+                    },
+                    {
+                        "refId": "F",
+                        "target": "brocade.stats.ports.Fabric2.SWITCH02-1.E_PORT.6.*.timeseriesutilpercentage.tx"
+                    },
+                    {
+                        "refId": "G",
+                        "target": "brocade.stats.ports.Fabric2.SWITCH02-1.E_PORT.9.*.timeseriesutilpercentage.rx"
+                    },
+                    {
+                        "refId": "H",
+                        "target": "brocade.stats.ports.Fabric2.SWITCH02-1.E_PORT.9.*.timeseriesutilpercentage.tx"
+                    }
+                ],
+                "thresholds": [
+
+                ],
+                "timeFrom": null,
+                "timeShift": null,
+                "title": "E-Port  Utilization Chassis 1",
+                "tooltip": {
+                    "shared": true,
+                    "sort": 0,
+                    "value_type": "individual"
+                },
+                "type": "graph",
+                "xaxis": {
+                    "buckets": null,
+                    "mode": "time",
+                    "name": null,
+                    "show": true,
+                    "values": [
+
+                    ]
+                },
+                "yaxes": [
+                    {
+                        "format": "percent",
+                        "label": null,
+                        "logBase": 1,
+                        "max": "100",
+                        "min": "0",
+                        "show": true
+                    },
+                    {
+                        "format": "short",
+                        "label": null,
+                        "logBase": 1,
+                        "max": null,
+                        "min": null,
+                        "show": true
+                    }
+                ]
+            },
+            {
+                "alert": {
+                    "conditions": [
+                        {
+                            "evaluator": {
+                                "params": [
+                                    95
+                                ],
+                                "type": "gt"
+                            },
+                            "operator": {
+                                "type": "and"
+                            },
+                            "query": {
+                                "params": [
+                                    "A",
+                                    "5m",
+                                    "now-2h"
+                                ]
+                            },
+                            "reducer": {
+                                "params": [
+
+                                ],
+                                "type": "max"
+                            },
+                            "type": "query"
+                        },
+                        {
+                            "evaluator": {
+                                "params": [
+                                    95
+                                ],
+                                "type": "gt"
+                            },
+                            "operator": {
+                                "type": "or"
+                            },
+                            "query": {
+                                "params": [
+                                    "B",
+                                    "5m",
+                                    "now-2h"
+                                ]
+                            },
+                            "reducer": {
+                                "params": [
+
+                                ],
+                                "type": "max"
+                            },
+                            "type": "query"
+                        },
+                        {
+                            "evaluator": {
+                                "params": [
+                                    95
+                                ],
+                                "type": "gt"
+                            },
+                            "operator": {
+                                "type": "or"
+                            },
+                            "query": {
+                                "params": [
+                                    "C",
+                                    "5m",
+                                    "now-2h"
+                                ]
+                            },
+                            "reducer": {
+                                "params": [
+
+                                ],
+                                "type": "max"
+                            },
+                            "type": "query"
+                        },
+                        {
+                            "evaluator": {
+                                "params": [
+                                    95
+                                ],
+                                "type": "gt"
+                            },
+                            "operator": {
+                                "type": "or"
+                            },
+                            "query": {
+                                "params": [
+                                    "D",
+                                    "5m",
+                                    "now-2h"
+                                ]
+                            },
+                            "reducer": {
+                                "params": [
+
+                                ],
+                                "type": "max"
+                            },
+                            "type": "query"
+                        },
+                        {
+                            "evaluator": {
+                                "params": [
+                                    95
+                                ],
+                                "type": "gt"
+                            },
+                            "operator": {
+                                "type": "or"
+                            },
+                            "query": {
+                                "params": [
+                                    "E",
+                                    "5m",
+                                    "now-2h"
+                                ]
+                            },
+                            "reducer": {
+                                "params": [
+
+                                ],
+                                "type": "max"
+                            },
+                            "type": "query"
+                        },
+                        {
+                            "evaluator": {
+                                "params": [
+                                    95
+                                ],
+                                "type": "gt"
+                            },
+                            "operator": {
+                                "type": "or"
+                            },
+                            "query": {
+                                "params": [
+                                    "F",
+                                    "5m",
+                                    "now-2h"
+                                ]
+                            },
+                            "reducer": {
+                                "params": [
+
+                                ],
+                                "type": "max"
+                            },
+                            "type": "query"
+                        },
+                        {
+                            "evaluator": {
+                                "params": [
+                                    95
+                                ],
+                                "type": "gt"
+                            },
+                            "operator": {
+                                "type": "or"
+                            },
+                            "query": {
+                                "params": [
+                                    "G",
+                                    "5m",
+                                    "now-2h"
+                                ]
+                            },
+                            "reducer": {
+                                "params": [
+
+                                ],
+                                "type": "max"
+                            },
+                            "type": "query"
+                        },
+                        {
+                            "evaluator": {
+                                "params": [
+                                    95
+                                ],
+                                "type": "gt"
+                            },
+                            "operator": {
+                                "type": "or"
+                            },
+                            "query": {
+                                "params": [
+                                    "H",
+                                    "5m",
+                                    "now-2h"
+                                ]
+                            },
+                            "reducer": {
+                                "params": [
+
+                                ],
+                                "type": "max"
+                            },
+                            "type": "query"
+                        }
+                    ],
+                    "executionErrorState": "keep_state",
+                    "frequency": "60s",
+                    "handler": 1,
+                    "message": "E-Port Utilization Fabric 2 Chassis 2",
+                    "name": "E-Port  Utilization Chassis 2 alert",
+                    "noDataState": "keep_state",
+                    "notifications": [
+
+                    ]
+                },
+                "aliasColors": {
+
+                },
+                "bars": false,
+                "dashLength": 10,
+                "dashes": false,
+                "datasource": "default",
+                "fill": 1,
+                "gridPos": {
+                    "h": 8,
+                    "w": 12,
+                    "x": 12,
+                    "y": 26
+                },
+                "id": 8,
+                "legend": {
+                    "alignAsTable": true,
+                    "avg": true,
+                    "current": false,
+                    "max": true,
+                    "min": false,
+                    "show": true,
+                    "sort": "max",
+                    "sortDesc": true,
+                    "total": false,
+                    "values": true
+                },
+                "lines": true,
+                "linewidth": 1,
+                "links": [
+
+                ],
+                "nullPointMode": "null",
+                "percentage": false,
+                "pointradius": 5,
+                "points": false,
+                "renderer": "flot",
+                "seriesOverrides": [
+
+                ],
+                "spaceLength": 10,
+                "stack": false,
+                "steppedLine": false,
+                "targets": [
+                    {
+                        "refId": "A",
+                        "target": "brocade.stats.ports.Fabric2.SWITCH02-2.E_PORT.4.*.timeseriesutilpercentage.rx"
+                    },
+                    {
+                        "refId": "B",
+                        "target": "brocade.stats.ports.Fabric2.SWITCH02-2.E_PORT.4.*.timeseriesutilpercentage.tx"
+                    },
+                    {
+                        "refId": "C",
+                        "target": "brocade.stats.ports.Fabric2.SWITCH02-2.E_PORT.5.*.timeseriesutilpercentage.rx"
+                    },
+                    {
+                        "refId": "D",
+                        "target": "brocade.stats.ports.Fabric2.SWITCH02-2.E_PORT.5.*.timeseriesutilpercentage.tx"
+                    },
+                    {
+                        "refId": "E",
+                        "target": "brocade.stats.ports.Fabric2.SWITCH02-2.E_PORT.6.*.timeseriesutilpercentage.rx"
+                    },
+                    {
+                        "refId": "F",
+                        "target": "brocade.stats.ports.Fabric2.SWITCH02-2.E_PORT.6.*.timeseriesutilpercentage.tx"
+                    },
+                    {
+                        "refId": "G",
+                        "target": "brocade.stats.ports.Fabric2.SWITCH02-2.E_PORT.9.*.timeseriesutilpercentage.rx"
+                    },
+                    {
+                        "refId": "H",
+                        "target": "brocade.stats.ports.Fabric2.SWITCH02-2.E_PORT.9.*.timeseriesutilpercentage.tx"
+                    }
+                ],
+                "thresholds": [
+                    {
+                        "colorMode": "critical",
+                        "fill": true,
+                        "line": true,
+                        "op": "gt",
+                        "value": 95
+                    }
+                ],
+                "timeFrom": null,
+                "timeShift": null,
+                "title": "E-Port  Utilization Chassis 2",
+                "tooltip": {
+                    "shared": true,
+                    "sort": 0,
+                    "value_type": "individual"
+                },
+                "type": "graph",
+                "xaxis": {
+                    "buckets": null,
+                    "mode": "time",
+                    "name": null,
+                    "show": true,
+                    "values": [
+
+                    ]
+                },
+                "yaxes": [
+                    {
+                        "format": "percent",
+                        "label": null,
+                        "logBase": 1,
+                        "max": "100",
+                        "min": "0",
+                        "show": true
+                    },
+                    {
+                        "format": "short",
+                        "label": null,
+                        "logBase": 1,
+                        "max": null,
+                        "min": null,
+                        "show": true
+                    }
+                ]
+            },
+            {
+                "collapsed": false,
+                "gridPos": {
+                    "h": 7,
+                    "w": 24,
+                    "x": 0,
+                    "y": 34
+                },
+                "id": 19,
+                "panels": [
+
+                ],
+                "repeat": null,
+                "title": "Fabric 1 - RZ Kopplung FR1 <=> FBE",
+                "type": "row"
+            },
+            {
+                "aliasColors": {
+
+                },
+                "bars": false,
+                "dashLength": 10,
+                "dashes": false,
+                "datasource": "default",
+                "fill": 1,
+                "gridPos": {
+                    "h": 7,
+                    "w": 12,
+                    "x": 0,
+                    "y": 35
+                },
+                "id": 9,
+                "legend": {
+                    "alignAsTable": true,
+                    "avg": true,
+                    "current": false,
+                    "max": true,
+                    "min": false,
+                    "show": true,
+                    "sort": "avg",
+                    "sortDesc": true,
+                    "total": false,
+                    "values": true
+                },
+                "lines": true,
+                "linewidth": 1,
+                "links": [
+
+                ],
+                "nullPointMode": "null",
+                "percentage": false,
+                "pointradius": 5,
+                "points": false,
+                "renderer": "flot",
+                "seriesOverrides": [
+
+                ],
+                "spaceLength": 10,
+                "stack": false,
+                "steppedLine": false,
+                "targets": [
+                    {
+                        "refId": "A",
+                        "target": "brocade.stats.ports.Fabric1.SWITCH01-1.E_PORT.3.0.timeseriestraffic.rx"
+                    },
+                    {
+                        "refId": "B",
+                        "target": "brocade.stats.ports.Fabric1.SWITCH01-1.E_PORT.3.0.timeseriestraffic.tx"
+                    },
+                    {
+                        "refId": "C",
+                        "target": "brocade.stats.ports.Fabric1.SWITCH01-1.E_PORT.4.0.timeseriestraffic.rx"
+                    },
+                    {
+                        "refId": "D",
+                        "target": "brocade.stats.ports.Fabric1.SWITCH01-1.E_PORT.4.0.timeseriestraffic.tx"
+                    },
+                    {
+                        "refId": "E",
+                        "target": "brocade.stats.ports.Fabric1.SWITCH01-2.E_PORT.3.0.timeseriestraffic.rx"
+                    },
+                    {
+                        "refId": "F",
+                        "target": "brocade.stats.ports.Fabric1.SWITCH01-2.E_PORT.3.0.timeseriestraffic.tx"
+                    },
+                    {
+                        "refId": "G",
+                        "target": "brocade.stats.ports.Fabric1.SWITCH01-2.E_PORT.4.0.timeseriestraffic.rx"
+                    },
+                    {
+                        "refId": "H",
+                        "target": "brocade.stats.ports.Fabric1.SWITCH01-2.E_PORT.4.0.timeseriestraffic.tx"
+                    }
+                ],
+                "thresholds": [
+                    {
+                        "colorMode": "critical",
+                        "fill": true,
+                        "line": true,
+                        "op": "gt",
+                        "value": 1700
+                    }
+                ],
+                "timeFrom": null,
+                "timeShift": null,
+                "title": "FR1 E-Port Link Throughput Chassis 1 + 2",
+                "tooltip": {
+                    "shared": true,
+                    "sort": 0,
+                    "value_type": "individual"
+                },
+                "type": "graph",
+                "xaxis": {
+                    "buckets": null,
+                    "mode": "time",
+                    "name": null,
+                    "show": true,
+                    "values": [
+
+                    ]
+                },
+                "yaxes": [
+                    {
+                        "format": "MBs",
+                        "label": null,
+                        "logBase": 1,
+                        "max": "2100",
+                        "min": "0",
+                        "show": true
+                    },
+                    {
+                        "format": "short",
+                        "label": null,
+                        "logBase": 1,
+                        "max": null,
+                        "min": null,
+                        "show": true
+                    }
+                ]
+            },
+            {
+                "aliasColors": {
+
+                },
+                "bars": false,
+                "dashLength": 10,
+                "dashes": false,
+                "datasource": "default",
+                "fill": 1,
+                "gridPos": {
+                    "h": 7,
+                    "w": 12,
+                    "x": 12,
+                    "y": 35
+                },
+                "id": 10,
+                "legend": {
+                    "alignAsTable": true,
+                    "avg": true,
+                    "current": false,
+                    "max": true,
+                    "min": false,
+                    "show": true,
+                    "sort": "avg",
+                    "sortDesc": true,
+                    "total": false,
+                    "values": true
+                },
+                "lines": true,
+                "linewidth": 1,
+                "links": [
+
+                ],
+                "nullPointMode": "null",
+                "percentage": false,
+                "pointradius": 5,
+                "points": false,
+                "renderer": "flot",
+                "seriesOverrides": [
+
+                ],
+                "spaceLength": 10,
+                "stack": false,
+                "steppedLine": false,
+                "targets": [
+                    {
+                        "refId": "A",
+                        "target": "brocade.stats.ports.Fabric1.SWITCH01-1.E_PORT.3.0.timeseriestraffic.rx"
+                    },
+                    {
+                        "refId": "B",
+                        "target": "brocade.stats.ports.Fabric1.SWITCH01-1.E_PORT.3.0.timeseriestraffic.tx"
+                    },
+                    {
+                        "refId": "C",
+                        "target": "brocade.stats.ports.Fabric1.SWITCH01-1.E_PORT.4.0.timeseriestraffic.rx"
+                    },
+                    {
+                        "refId": "D",
+                        "target": "brocade.stats.ports.Fabric1.SWITCH01-1.E_PORT.4.0.timeseriestraffic.tx"
+                    },
+                    {
+                        "refId": "E",
+                        "target": "brocade.stats.ports.Fabric1.SWITCH01-2.E_PORT.3.0.timeseriestraffic.rx"
+                    },
+                    {
+                        "refId": "F",
+                        "target": "brocade.stats.ports.Fabric1.SWITCH01-2.E_PORT.3.0.timeseriestraffic.tx"
+                    },
+                    {
+                        "refId": "G",
+                        "target": "brocade.stats.ports.Fabric1.SWITCH01-2.E_PORT.4.0.timeseriestraffic.rx"
+                    },
+                    {
+                        "refId": "H",
+                        "target": "brocade.stats.ports.Fabric1.SWITCH01-2.E_PORT.4.0.timeseriestraffic.tx"
+                    }
+                ],
+                "thresholds": [
+                    {
+                        "colorMode": "critical",
+                        "fill": true,
+                        "line": true,
+                        "op": "gt",
+                        "value": 1700
+                    }
+                ],
+                "timeFrom": null,
+                "timeShift": null,
+                "title": "FBE E-Port Link Throughput Chassis 1 + 2",
+                "tooltip": {
+                    "shared": true,
+                    "sort": 0,
+                    "value_type": "individual"
+                },
+                "type": "graph",
+                "xaxis": {
+                    "buckets": null,
+                    "mode": "time",
+                    "name": null,
+                    "show": true,
+                    "values": [
+
+                    ]
+                },
+                "yaxes": [
+                    {
+                        "format": "MBs",
+                        "label": null,
+                        "logBase": 1,
+                        "max": "2100",
+                        "min": "0",
+                        "show": true
+                    },
+                    {
+                        "format": "short",
+                        "label": null,
+                        "logBase": 1,
+                        "max": null,
+                        "min": null,
+                        "show": false
+                    }
+                ]
+            },
+            {
+                "aliasColors": {
+
+                },
+                "bars": false,
+                "dashLength": 10,
+                "dashes": false,
+                "datasource": "default",
+                "fill": 1,
+                "gridPos": {
+                    "h": 7,
+                    "w": 12,
+                    "x": 0,
+                    "y": 42
+                },
+                "id": 11,
+                "legend": {
+                    "alignAsTable": true,
+                    "avg": true,
+                    "current": false,
+                    "max": true,
+                    "min": false,
+                    "show": true,
+                    "sort": "avg",
+                    "sortDesc": true,
+                    "total": false,
+                    "values": true
+                },
+                "lines": true,
+                "linewidth": 1,
+                "links": [
+
+                ],
+                "nullPointMode": "null",
+                "percentage": false,
+                "pointradius": 5,
+                "points": false,
+                "renderer": "flot",
+                "seriesOverrides": [
+
+                ],
+                "spaceLength": 10,
+                "stack": false,
+                "steppedLine": false,
+                "targets": [
+                    {
+                        "refId": "A",
+                        "target": "brocade.stats.ports.Fabric1.SWITCH01-1.E_PORT.3.0.timeseriesutilpercentage.rx"
+                    },
+                    {
+                        "refId": "B",
+                        "target": "brocade.stats.ports.Fabric1.SWITCH01-1.E_PORT.3.0.timeseriesutilpercentage.tx"
+                    },
+                    {
+                        "refId": "C",
+                        "target": "brocade.stats.ports.Fabric1.SWITCH01-1.E_PORT.4.0.timeseriesutilpercentage.rx"
+                    },
+                    {
+                        "refId": "D",
+                        "target": "brocade.stats.ports.Fabric1.SWITCH01-1.E_PORT.4.0.timeseriesutilpercentage.tx"
+                    },
+                    {
+                        "refId": "E",
+                        "target": "brocade.stats.ports.Fabric1.SWITCH01-2.E_PORT.3.0.timeseriesutilpercentage.rx"
+                    },
+                    {
+                        "refId": "F",
+                        "target": "brocade.stats.ports.Fabric1.SWITCH01-2.E_PORT.3.0.timeseriesutilpercentage.tx"
+                    },
+                    {
+                        "refId": "G",
+                        "target": "brocade.stats.ports.Fabric1.SWITCH01-2.E_PORT.4.0.timeseriesutilpercentage.rx"
+                    },
+                    {
+                        "refId": "H",
+                        "target": "brocade.stats.ports.Fabric1.SWITCH01-2.E_PORT.4.0.timeseriesutilpercentage.tx"
+                    }
+                ],
+                "thresholds": [
+
+                ],
+                "timeFrom": null,
+                "timeShift": null,
+                "title": "FR1 E-Port Utilization Chassis 1 + 2",
+                "tooltip": {
+                    "shared": true,
+                    "sort": 0,
+                    "value_type": "individual"
+                },
+                "type": "graph",
+                "xaxis": {
+                    "buckets": null,
+                    "mode": "time",
+                    "name": null,
+                    "show": true,
+                    "values": [
+
+                    ]
+                },
+                "yaxes": [
+                    {
+                        "format": "percent",
+                        "label": null,
+                        "logBase": 1,
+                        "max": "110",
+                        "min": "0",
+                        "show": true
+                    },
+                    {
+                        "format": "short",
+                        "label": null,
+                        "logBase": 1,
+                        "max": null,
+                        "min": null,
+                        "show": true
+                    }
+                ]
+            },
+            {
+                "aliasColors": {
+
+                },
+                "bars": false,
+                "dashLength": 10,
+                "dashes": false,
+                "datasource": "default",
+                "fill": 1,
+                "gridPos": {
+                    "h": 7,
+                    "w": 12,
+                    "x": 12,
+                    "y": 42
+                },
+                "id": 12,
+                "legend": {
+                    "alignAsTable": true,
+                    "avg": true,
+                    "current": false,
+                    "max": true,
+                    "min": false,
+                    "show": true,
+                    "sort": "avg",
+                    "sortDesc": true,
+                    "total": false,
+                    "values": true
+                },
+                "lines": true,
+                "linewidth": 1,
+                "links": [
+
+                ],
+                "nullPointMode": "null",
+                "percentage": false,
+                "pointradius": 5,
+                "points": false,
+                "renderer": "flot",
+                "seriesOverrides": [
+
+                ],
+                "spaceLength": 10,
+                "stack": false,
+                "steppedLine": false,
+                "targets": [
+                    {
+                        "refId": "A",
+                        "target": "brocade.stats.ports.Fabric1.SWITCH01-1.E_PORT.3.0.timeseriesutilpercentage.rx"
+                    },
+                    {
+                        "refId": "B",
+                        "target": "brocade.stats.ports.Fabric1.SWITCH01-1.E_PORT.3.0.timeseriesutilpercentage.tx"
+                    },
+                    {
+                        "refId": "C",
+                        "target": "brocade.stats.ports.Fabric1.SWITCH01-1.E_PORT.4.0.timeseriesutilpercentage.rx"
+                    },
+                    {
+                        "refId": "D",
+                        "target": "brocade.stats.ports.Fabric1.SWITCH01-1.E_PORT.4.0.timeseriesutilpercentage.tx"
+                    },
+                    {
+                        "refId": "E",
+                        "target": "brocade.stats.ports.Fabric1.SWITCH01-2.E_PORT.3.0.timeseriesutilpercentage.rx"
+                    },
+                    {
+                        "refId": "F",
+                        "target": "brocade.stats.ports.Fabric1.SWITCH01-2.E_PORT.3.0.timeseriesutilpercentage.tx"
+                    },
+                    {
+                        "refId": "G",
+                        "target": "brocade.stats.ports.Fabric1.SWITCH01-2.E_PORT.4.0.timeseriesutilpercentage.rx"
+                    },
+                    {
+                        "refId": "H",
+                        "target": "brocade.stats.ports.Fabric1.SWITCH01-2.E_PORT.4.0.timeseriesutilpercentage.tx"
+                    }
+                ],
+                "thresholds": [
+
+                ],
+                "timeFrom": null,
+                "timeShift": null,
+                "title": "FBE E-Port Utilization Chassis 1 + 2",
+                "tooltip": {
+                    "shared": true,
+                    "sort": 0,
+                    "value_type": "individual"
+                },
+                "type": "graph",
+                "xaxis": {
+                    "buckets": null,
+                    "mode": "time",
+                    "name": null,
+                    "show": true,
+                    "values": [
+
+                    ]
+                },
+                "yaxes": [
+                    {
+                        "format": "percent",
+                        "label": null,
+                        "logBase": 1,
+                        "max": "110",
+                        "min": "0",
+                        "show": true
+                    },
+                    {
+                        "format": "short",
+                        "label": null,
+                        "logBase": 1,
+                        "max": null,
+                        "min": null,
+                        "show": true
+                    }
+                ]
+            },
+            {
+                "collapsed": false,
+                "gridPos": {
+                    "h": 7,
+                    "w": 24,
+                    "x": 0,
+                    "y": 49
+                },
+                "id": 20,
+                "panels": [
+
+                ],
+                "repeat": null,
+                "title": "Fabric 2 - RZ Kopplung FR1 <=> FBE",
+                "type": "row"
+            },
+            {
+                "aliasColors": {
+
+                },
+                "bars": false,
+                "dashLength": 10,
+                "dashes": false,
+                "datasource": "default",
+                "fill": 1,
+                "gridPos": {
+                    "h": 7,
+                    "w": 12,
+                    "x": 0,
+                    "y": 50
+                },
+                "id": 13,
+                "legend": {
+                    "alignAsTable": true,
+                    "avg": true,
+                    "current": false,
+                    "max": true,
+                    "min": false,
+                    "show": true,
+                    "sort": "avg",
+                    "sortDesc": true,
+                    "total": false,
+                    "values": true
+                },
+                "lines": true,
+                "linewidth": 1,
+                "links": [
+
+                ],
+                "nullPointMode": "null",
+                "percentage": false,
+                "pointradius": 5,
+                "points": false,
+                "renderer": "flot",
+                "seriesOverrides": [
+
+                ],
+                "spaceLength": 10,
+                "stack": false,
+                "steppedLine": false,
+                "targets": [
+                    {
+                        "refId": "A",
+                        "target": "brocade.stats.ports.Fabric2.SWITCH02-1.E_PORT.3.0.timeseriestraffic.rx"
+                    },
+                    {
+                        "refId": "B",
+                        "target": "brocade.stats.ports.Fabric2.SWITCH02-1.E_PORT.3.0.timeseriestraffic.tx"
+                    },
+                    {
+                        "refId": "C",
+                        "target": "brocade.stats.ports.Fabric2.SWITCH02-1.E_PORT.4.0.timeseriestraffic.rx"
+                    },
+                    {
+                        "refId": "D",
+                        "target": "brocade.stats.ports.Fabric2.SWITCH02-1.E_PORT.4.0.timeseriestraffic.tx"
+                    },
+                    {
+                        "refId": "E",
+                        "target": "brocade.stats.ports.Fabric2.SWITCH02-2.E_PORT.3.0.timeseriestraffic.rx"
+                    },
+                    {
+                        "refId": "F",
+                        "target": "brocade.stats.ports.Fabric2.SWITCH02-2.E_PORT.3.0.timeseriestraffic.tx",
+                        "textEditor": false
+                    },
+                    {
+                        "refId": "G",
+                        "target": "brocade.stats.ports.Fabric2.SWITCH02-2.E_PORT.4.0.timeseriestraffic.rx",
+                        "textEditor": false
+                    },
+                    {
+                        "refId": "H",
+                        "target": "brocade.stats.ports.Fabric2.SWITCH02-2.E_PORT.4.0.timeseriestraffic.tx",
+                        "textEditor": false
+                    }
+                ],
+                "thresholds": [
+                    {
+                        "colorMode": "critical",
+                        "fill": true,
+                        "line": true,
+                        "op": "gt",
+                        "value": 1700
+                    }
+                ],
+                "timeFrom": null,
+                "timeShift": null,
+                "title": "FR1 E-Port Link Throughput Chassis 1 + 2",
+                "tooltip": {
+                    "shared": true,
+                    "sort": 0,
+                    "value_type": "individual"
+                },
+                "type": "graph",
+                "xaxis": {
+                    "buckets": null,
+                    "mode": "time",
+                    "name": null,
+                    "show": true,
+                    "values": [
+
+                    ]
+                },
+                "yaxes": [
+                    {
+                        "format": "MBs",
+                        "label": null,
+                        "logBase": 1,
+                        "max": "2100",
+                        "min": "0",
+                        "show": true
+                    },
+                    {
+                        "format": "short",
+                        "label": null,
+                        "logBase": 1,
+                        "max": null,
+                        "min": null,
+                        "show": true
+                    }
+                ]
+            },
+            {
+                "aliasColors": {
+
+                },
+                "bars": false,
+                "dashLength": 10,
+                "dashes": false,
+                "datasource": "default",
+                "fill": 1,
+                "gridPos": {
+                    "h": 7,
+                    "w": 12,
+                    "x": 12,
+                    "y": 50
+                },
+                "id": 14,
+                "legend": {
+                    "alignAsTable": true,
+                    "avg": true,
+                    "current": false,
+                    "max": true,
+                    "min": false,
+                    "show": true,
+                    "sort": "avg",
+                    "sortDesc": true,
+                    "total": false,
+                    "values": true
+                },
+                "lines": true,
+                "linewidth": 1,
+                "links": [
+
+                ],
+                "nullPointMode": "null",
+                "percentage": false,
+                "pointradius": 5,
+                "points": false,
+                "renderer": "flot",
+                "seriesOverrides": [
+
+                ],
+                "spaceLength": 10,
+                "stack": false,
+                "steppedLine": false,
+                "targets": [
+                    {
+                        "refId": "A",
+                        "target": "brocade.stats.ports.Fabric2.SWITCH02-1.E_PORT.3.0.timeseriestraffic.rx",
+                        "textEditor": false
+                    },
+                    {
+                        "refId": "B",
+                        "target": "brocade.stats.ports.Fabric2.SWITCH02-1.E_PORT.3.0.timeseriestraffic.tx",
+                        "textEditor": false
+                    },
+                    {
+                        "refId": "C",
+                        "target": "brocade.stats.ports.Fabric2.SWITCH02-1.E_PORT.4.0.timeseriestraffic.rx",
+                        "textEditor": false
+                    },
+                    {
+                        "refId": "D",
+                        "target": "brocade.stats.ports.Fabric2.SWITCH02-1.E_PORT.4.0.timeseriestraffic.tx",
+                        "textEditor": false
+                    },
+                    {
+                        "refId": "E",
+                        "target": "brocade.stats.ports.Fabric2.SWITCH02-2.E_PORT.3.0.timeseriestraffic.rx",
+                        "textEditor": false
+                    },
+                    {
+                        "refId": "F",
+                        "target": "brocade.stats.ports.Fabric2.SWITCH02-2.E_PORT.3.0.timeseriestraffic.tx",
+                        "textEditor": false
+                    },
+                    {
+                        "refId": "G",
+                        "target": "brocade.stats.ports.Fabric2.SWITCH02-2.E_PORT.4.0.timeseriestraffic.rx",
+                        "textEditor": false
+                    },
+                    {
+                        "refId": "H",
+                        "target": "brocade.stats.ports.Fabric2.SWITCH02-2.E_PORT.4.0.timeseriestraffic.tx",
+                        "textEditor": false
+                    }
+                ],
+                "thresholds": [
+                    {
+                        "colorMode": "critical",
+                        "fill": true,
+                        "line": true,
+                        "op": "gt",
+                        "value": 1700
+                    }
+                ],
+                "timeFrom": null,
+                "timeShift": null,
+                "title": "FBE E-Port Link Throughput Chassis 1 + 2",
+                "tooltip": {
+                    "shared": true,
+                    "sort": 0,
+                    "value_type": "individual"
+                },
+                "type": "graph",
+                "xaxis": {
+                    "buckets": null,
+                    "mode": "time",
+                    "name": null,
+                    "show": true,
+                    "values": [
+
+                    ]
+                },
+                "yaxes": [
+                    {
+                        "format": "MBs",
+                        "label": null,
+                        "logBase": 1,
+                        "max": "2100",
+                        "min": "0",
+                        "show": true
+                    },
+                    {
+                        "format": "short",
+                        "label": null,
+                        "logBase": 1,
+                        "max": null,
+                        "min": null,
+                        "show": false
+                    }
+                ]
+            },
+            {
+                "aliasColors": {
+
+                },
+                "bars": false,
+                "dashLength": 10,
+                "dashes": false,
+                "datasource": "default",
+                "fill": 1,
+                "gridPos": {
+                    "h": 7,
+                    "w": 12,
+                    "x": 0,
+                    "y": 57
+                },
+                "id": 15,
+                "legend": {
+                    "alignAsTable": true,
+                    "avg": true,
+                    "current": false,
+                    "max": true,
+                    "min": false,
+                    "show": true,
+                    "sort": "avg",
+                    "sortDesc": true,
+                    "total": false,
+                    "values": true
+                },
+                "lines": true,
+                "linewidth": 1,
+                "links": [
+
+                ],
+                "nullPointMode": "null",
+                "percentage": false,
+                "pointradius": 5,
+                "points": false,
+                "renderer": "flot",
+                "seriesOverrides": [
+
+                ],
+                "spaceLength": 10,
+                "stack": false,
+                "steppedLine": false,
+                "targets": [
+                    {
+                        "refId": "A",
+                        "target": "brocade.stats.ports.Fabric2.SWITCH02-1.E_PORT.3.0.timeseriesutilpercentage.rx",
+                        "textEditor": false
+                    },
+                    {
+                        "refId": "B",
+                        "target": "brocade.stats.ports.Fabric2.SWITCH02-1.E_PORT.3.0.timeseriesutilpercentage.tx",
+                        "textEditor": false
+                    },
+                    {
+                        "refId": "C",
+                        "target": "brocade.stats.ports.Fabric2.SWITCH02-1.E_PORT.4.0.timeseriesutilpercentage.rx",
+                        "textEditor": false
+                    },
+                    {
+                        "refId": "D",
+                        "target": "brocade.stats.ports.Fabric2.SWITCH02-1.E_PORT.4.0.timeseriesutilpercentage.tx",
+                        "textEditor": false
+                    },
+                    {
+                        "refId": "E",
+                        "target": "brocade.stats.ports.Fabric2.SWITCH02-2.E_PORT.3.0.timeseriesutilpercentage.rx",
+                        "textEditor": false
+                    },
+                    {
+                        "refId": "F",
+                        "target": "brocade.stats.ports.Fabric2.SWITCH02-2.E_PORT.3.0.timeseriesutilpercentage.tx",
+                        "textEditor": false
+                    },
+                    {
+                        "refId": "G",
+                        "target": "brocade.stats.ports.Fabric2.SWITCH02-2.E_PORT.4.0.timeseriesutilpercentage.rx",
+                        "textEditor": false
+                    },
+                    {
+                        "refId": "H",
+                        "target": "brocade.stats.ports.Fabric2.SWITCH02-2.E_PORT.4.0.timeseriesutilpercentage.tx",
+                        "textEditor": false
+                    }
+                ],
+                "thresholds": [
+                    {
+                        "colorMode": "critical",
+                        "fill": true,
+                        "line": true,
+                        "op": "gt"
+                    }
+                ],
+                "timeFrom": null,
+                "timeShift": null,
+                "title": "FR1 E-Port Utilization Chassis 1 + 2",
+                "tooltip": {
+                    "shared": true,
+                    "sort": 0,
+                    "value_type": "individual"
+                },
+                "type": "graph",
+                "xaxis": {
+                    "buckets": null,
+                    "mode": "time",
+                    "name": null,
+                    "show": true,
+                    "values": [
+
+                    ]
+                },
+                "yaxes": [
+                    {
+                        "format": "percent",
+                        "label": null,
+                        "logBase": 1,
+                        "max": "110",
+                        "min": "0",
+                        "show": true
+                    },
+                    {
+                        "format": "short",
+                        "label": null,
+                        "logBase": 1,
+                        "max": null,
+                        "min": null,
+                        "show": true
+                    }
+                ]
+            },
+            {
+                "aliasColors": {
+
+                },
+                "bars": false,
+                "dashLength": 10,
+                "dashes": false,
+                "datasource": "default",
+                "fill": 1,
+                "gridPos": {
+                    "h": 7,
+                    "w": 12,
+                    "x": 12,
+                    "y": 57
+                },
+                "id": 16,
+                "legend": {
+                    "alignAsTable": true,
+                    "avg": true,
+                    "current": false,
+                    "max": true,
+                    "min": false,
+                    "show": true,
+                    "sort": "avg",
+                    "sortDesc": true,
+                    "total": false,
+                    "values": true
+                },
+                "lines": true,
+                "linewidth": 1,
+                "links": [
+
+                ],
+                "nullPointMode": "null",
+                "percentage": false,
+                "pointradius": 5,
+                "points": false,
+                "renderer": "flot",
+                "seriesOverrides": [
+
+                ],
+                "spaceLength": 10,
+                "stack": false,
+                "steppedLine": false,
+                "targets": [
+                    {
+                        "refId": "A",
+                        "target": "brocade.stats.ports.Fabric2.SWITCH02-1.E_PORT.3.0.timeseriesutilpercentage.rx",
+                        "textEditor": false
+                    },
+                    {
+                        "refId": "B",
+                        "target": "brocade.stats.ports.Fabric2.SWITCH02-1.E_PORT.3.0.timeseriesutilpercentage.tx",
+                        "textEditor": false
+                    },
+                    {
+                        "refId": "C",
+                        "target": "brocade.stats.ports.Fabric2.SWITCH02-1.E_PORT.4.0.timeseriesutilpercentage.rx",
+                        "textEditor": false
+                    },
+                    {
+                        "refId": "D",
+                        "target": "brocade.stats.ports.Fabric2.SWITCH02-1.E_PORT.4.0.timeseriesutilpercentage.tx",
+                        "textEditor": false
+                    },
+                    {
+                        "refId": "E",
+                        "target": "brocade.stats.ports.Fabric2.SWITCH02-2.E_PORT.3.0.timeseriesutilpercentage.rx",
+                        "textEditor": false
+                    },
+                    {
+                        "refId": "F",
+                        "target": "brocade.stats.ports.Fabric2.SWITCH02-2.E_PORT.3.0.timeseriesutilpercentage.tx",
+                        "textEditor": false
+                    },
+                    {
+                        "refId": "G",
+                        "target": "brocade.stats.ports.Fabric2.SWITCH02-2.E_PORT.4.0.timeseriesutilpercentage.rx",
+                        "textEditor": false
+                    },
+                    {
+                        "refId": "H",
+                        "target": "brocade.stats.ports.Fabric2.SWITCH02-2.E_PORT.4.0.timeseriesutilpercentage.tx",
+                        "textEditor": false
+                    }
+                ],
+                "thresholds": [
+
+                ],
+                "timeFrom": null,
+                "timeShift": null,
+                "title": "FBE E-Port Utilization Chassis 1 + 2",
+                "tooltip": {
+                    "shared": true,
+                    "sort": 0,
+                    "value_type": "individual"
+                },
+                "type": "graph",
+                "xaxis": {
+                    "buckets": null,
+                    "mode": "time",
+                    "name": null,
+                    "show": true,
+                    "values": [
+
+                    ]
+                },
+                "yaxes": [
+                    {
+                        "format": "percent",
+                        "label": null,
+                        "logBase": 1,
+                        "max": "110",
+                        "min": "0",
+                        "show": true
+                    },
+                    {
+                        "format": "short",
+                        "label": null,
+                        "logBase": 1,
+                        "max": null,
+                        "min": null,
+                        "show": true
+                    }
+                ]
+            }
+        ],
+        "refresh": "1h",
+        "schemaVersion": 16,
+        "style": "dark",
+        "tags": [
+            "Brocade",
+            "Migration"
+        ],
+        "templating": {
+            "list": [
+
+            ]
+        },
+        "time": {
+            "from": "now-24h",
+            "to": "now"
+        },
+        "timepicker": {
+            "refresh_intervals": [
+                "5s",
+                "10s",
+                "30s",
+                "1m",
+                "5m",
+                "15m",
+                "30m",
+                "1h",
+                "2h",
+                "1d"
+            ],
+            "time_options": [
+                "5m",
+                "15m",
+                "1h",
+                "6h",
+                "12h",
+                "24h",
+                "2d",
+                "7d",
+                "30d"
+            ]
+        },
+        "timezone": "browser",
+        "title": "Brocade: Migration",
+        "uid": "EunplLezk",
+        "version": 2
+    },
+    "overwrite": true
+}
