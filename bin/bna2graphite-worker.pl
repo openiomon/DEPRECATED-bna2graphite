@@ -119,7 +119,7 @@ sub printUsage {
         print("OPTIONS:\n");
         print("   -conf <file>                  conf file containig parameter for the import\n");
         print("   -bna <BNA fqdn>.              Full qualified domain name of the BNA server\n");
-        print("   -minutes <number of minutes>  Number of minutes that should be imported (between 30 and 1440)\n");
+        print("   -minutes <number of minutes>  Number of minutes that should be imported (between 30 and 480)\n");
         print("   -daemon                       Flag which will supress the output to console\n");
         print("   -h                            print this output\n");
         print("\n");
@@ -141,7 +141,7 @@ sub parseCmdArgs{
     } else {
         readconfig();
     }
-    if(($pollinterval<30) || ($pollinterval >1440)) {
+    if(($pollinterval<30) || ($pollinterval >480)) {
         print ("Invalid nunber of minutes specified: ".$pollinterval."\n\n");
         printUsage();
         exit(1);
@@ -954,8 +954,8 @@ sub getminutestoimport {
     my $minutes = ceil($deltaseconds/60);
     # Roundup to 5 minutes
     $minutes = ceil($minutes/5)*5;
-    if($minutes>1440) {
-        $minutes=1440;
+    if($minutes>480) {
+        $minutes=480;
     }
     $log->info("Next run should import ".$minutes." minutes of data from BNA!");
     return($minutes);
