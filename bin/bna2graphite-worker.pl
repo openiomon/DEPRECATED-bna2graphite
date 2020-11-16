@@ -699,7 +699,7 @@ sub getportstats {
     foreach my $fabric (sort keys %switchinfo) {
         foreach my $switch (sort keys %{$switchinfo{$fabric}}) {
             if($switch =~ "^fcr_.d_") {
-                log->debug("Omitting data collection for switch ".$switch." of fabric ".$fabric." since it looks like a fiberchannel routing from domain!");
+                $log->debug("Omitting data collection for switch ".$switch." of fabric ".$fabric." since it looks like a fiberchannel routing from domain!");
                 next;
             }
             foreach my $metrictype (sort keys %{$metrics{"port"}}) {
