@@ -10,11 +10,7 @@
         "expires": "0001-01-01T00:00:00Z",
         "created": "2018-05-14T09:11:59+02:00",
         "updated": "2019-01-23T14:51:00+01:00",
-<<<<<<< HEAD
         "updatedBy": "USER",
-=======
-        "updatedBy": "USER",
->>>>>>> 822f8dd00b189dd05b171b5b837105ffd32323a3
         "createdBy": "Anonymous",
         "version": 4,
         "hasAcl": false,
