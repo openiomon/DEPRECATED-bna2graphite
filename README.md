@@ -1,3 +1,9 @@
+# DEPRECATED
+Due to the end of service life of the Brocade Network Advisor this modul of OpenIOmon is deprectaed.
+Since SANnav will not provide access to the error and performance statistics metrics need to be retrieved from the SAN switches / directors directly.
+
+Please swap to FOS2GRAPHITE!
+
 # Table of Contents
 
 * [Features](#features)
